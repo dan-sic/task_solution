@@ -5,6 +5,10 @@ import { Observable } from "rxjs";
 import { map, tap } from "rxjs/operators";
 import { PositionService } from "./position.service";
 
+type longitude = number;
+type latitude = number;
+type coordinates = [longitude, latitude];
+
 @Injectable({
   providedIn: "root"
 })
@@ -15,6 +19,10 @@ export class MapServiceCustom {
   private _latestUnitFeatureCollection: GeoJSON.FeatureCollection<
     GeoJSON.Point
   >;
+
+  private _tailCoordinates: { [key: number]: coordinates[] } = {};
+  private readonly UNIT_TAIL_LENGTH = 4;
+  private readonly TAIL_COLOR = "#80cf93";
 
   constructor(
     private readonly apiJSONService: ApiJSONService,
@@ -69,13 +77,83 @@ export class MapServiceCustom {
     );
   }
 
-  private generateFeatureCollection(
+  getUnitTailFeaturesUpdate(): Observable<
+    GeoJSON.FeatureCollection<GeoJSON.LineString>
+  > {
+    return this.positionService.signalRHubHubPositions$.pipe(
+      tap(units => this.updateUnitTailCoords(units)),
+      map(units => {
+        return this.generateUnitTailFeatureCollection();
+      })
+    );
+  }
+
+  private updateUnitTailCoords(units: UnitPositionModel[]): void {
+    for (let unit of units) {
+      const { unitId } = unit;
+      const { longitude, latitude } = unit.position;
+      const isNotUnitTailPositionRegistered = !this._tailCoordinates[unitId];
+
+      if (isNotUnitTailPositionRegistered) {
+        this._tailCoordinates[unitId] = [
+          [longitude, latitude],
+          [longitude, latitude]
+        ];
+        continue;
+      }
+      const currentUnitTailCoords = this._tailCoordinates[unitId];
+      const newUnitTailCoordinates = [
+        [longitude, latitude],
+        ...currentUnitTailCoords
+      ];
+
+      if (newUnitTailCoordinates.length > this.UNIT_TAIL_LENGTH) {
+        newUnitTailCoordinates.pop();
+      }
+
+      this._tailCoordinates[unitId] = newUnitTailCoordinates as [
+        number,
+        number
+      ][];
+    }
+  }
+
+  private generateUnitTailFeatureCollection(): GeoJSON.FeatureCollection<
+    GeoJSON.LineString
+  > {
+    const features = [];
+
+    for (let unitId in this._tailCoordinates) {
+      features.push({
+        type: "Feature",
+        geometry: {
+          type: "LineString",
+          coordinates: this._tailCoordinates[unitId]
+        },
+        properties: {
+          color: this.TAIL_COLOR
+        }
+      });
+    }
+
+    return {
+      type: "FeatureCollection",
+      features
+    };
+  }
+
+  private generateUnitFeatureCollection(
     unitPositionObject: { [key: number]: UnitPositionModel },
     unitIds: number[]
   ): GeoJSON.FeatureCollection<GeoJSON.Point> {
+    console.log("LatestUnitFeatureCOllection");
+    console.log(this._latestUnitFeatureCollection);
+    console.log("UnitPositionObject:");
+    console.log(unitPositionObject);
     return {
       type: "FeatureCollection",
       features: this._latestUnitFeatureCollection.features.map(feature => {
+        console.log();
         const isUnitPresentInSignalRPayload = unitIds.includes(
           feature.properties.id
         );
