@@ -24,6 +24,25 @@
         >
         </mgl-geojson-source>
 
+        <mgl-geojson-source
+          *ngIf="unitTailFeatureCollection"
+          id="tail"
+          [data]="unitTailFeatureCollection"
+        >
+        </mgl-geojson-source>
+
+        <mgl-layer
+          *ngIf="unitTailFeatureCollection"
+          id="tail"
+          type="line"
+          source="tail"
+          [layout]="{ 'line-join': 'round', 'line-cap': 'round' }"
+          [paint]="{
+            'line-width': 4,
+            'line-color': ['get', 'color']
+          }"
+        ></mgl-layer>
+
         <mgl-layer
           *ngIf="unitFeatureCollection && greenImageLoaded"
           id="unitPositions"
@@ -33,6 +52,7 @@
             'icon-image': 'greencar',
             'icon-rotate': ['get', 'direction']
           }"
+          style="z-index: 500;"
         ></mgl-layer>
 
         <mgl-image
