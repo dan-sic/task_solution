@@ -50,4 +50,62 @@ export class MapServiceCustom {
       }
     };
   }
+
+  getUnitFeaturesUpdate(): Observable<
+    GeoJSON.FeatureCollection<GeoJSON.Point>
+  > {
+    let unitIds: number[] = [];
+
+    return this.positionService.signalRHubHubPositions$.pipe(
+      tap(units => this.keepReferenceToCurrentUnitIds(units, unitIds)),
+      map(this.convertToObjectOfUnits),
+      map(unitPositionObject => {
+        this._latestUnitFeatureCollection = this.generateFeatureCollection(
+          unitPositionObject,
+          unitIds
+        );
+        return this._latestUnitFeatureCollection;
+      })
+    );
+  }
+
+  private generateFeatureCollection(
+    unitPositionObject: { [key: number]: UnitPositionModel },
+    unitIds: number[]
+  ): GeoJSON.FeatureCollection<GeoJSON.Point> {
+    return {
+      type: "FeatureCollection",
+      features: this._latestUnitFeatureCollection.features.map(feature => {
+        const isUnitPresentInSignalRPayload = unitIds.includes(
+          feature.properties.id
+        );
+
+        if (isUnitPresentInSignalRPayload) {
+          const currentUnitPositionObject =
+            unitPositionObject[feature.properties.id];
+          return this.createUnitFeature(currentUnitPositionObject);
+        } else {
+          return feature;
+        }
+      })
+    };
+  }
+
+  private keepReferenceToCurrentUnitIds(
+    units: UnitPositionModel[],
+    unitIds: number[]
+  ) {
+    units.forEach(unit => {
+      unitIds.push(unit.unitId);
+    });
+  }
+
+  private convertToObjectOfUnits(
+    units: UnitPositionModel[]
+  ): { [key: number]: UnitPositionModel } {
+    return units.reduce((obj, unit) => {
+      obj[unit.unitId] = unit;
+      return obj;
+    }, {});
+  }
 }
