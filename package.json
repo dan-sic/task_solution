@@ -33,7 +33,7 @@
     "moment": "^2.24.0",
     "ngx-infinite-scroll": "^8.0.0",
     "ngx-mapbox-gl": "^2.3.2",
-    "npm": "^6.13.0",
+    "npm": "^6.9.0",
     "rxjs": "~6.3.3",
     "simplebar": "^4.0.0-alpha.9",
     "supercluster": "^6.0.1",
@@ -41,7 +41,7 @@
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.803.19",
+    "@angular-devkit/build-angular": "~0.10.0",
     "@angular/cli": "~7.0.5",
     "@angular/compiler-cli": "~7.0.0",
     "@angular/language-service": "~7.0.0",
