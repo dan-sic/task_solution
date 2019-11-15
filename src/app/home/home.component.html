@@ -1,5 +1,4 @@
 <div class="row">
-
   <div class="top-sidebar">
     <app-sidebar class="home-sidebar"></app-sidebar>
   </div>
@@ -13,10 +12,28 @@
         [center]="center"
         [cursorStyle]="cursorStyle"
         [fitBoundsOptions]="{
-      padding: {top: 50, left: 350, bottom:50, right: 50}
-    }"
+          padding: { top: 50, left: 350, bottom: 50, right: 50 }
+        }"
         (load)="map = $event"
-        (render)="render()">
+        (render)="render()"
+      >
+        <mgl-geojson-source
+          *ngIf="unitFeatureCollection && greenImageLoaded"
+          id="unitPositions"
+          [data]="unitFeatureCollection"
+        >
+        </mgl-geojson-source>
+
+        <mgl-layer
+          *ngIf="unitFeatureCollection && greenImageLoaded"
+          id="unitPositions"
+          type="symbol"
+          source="unitPositions"
+          [layout]="{
+            'icon-image': 'greencar',
+            'icon-rotate': ['get', 'direction']
+          }"
+        ></mgl-layer>
 
         <mgl-image
           id="greencar"
@@ -32,10 +49,7 @@
         >
         </mgl-image>
 
-        <mgl-control
-          mglNavigation
-        ></mgl-control>
-
+        <mgl-control mglNavigation></mgl-control>
       </mgl-map>
     </div>
   </div>

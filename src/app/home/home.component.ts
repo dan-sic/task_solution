@@ -1,15 +1,16 @@
-import {Component, OnInit} from '@angular/core';
-import {mapStyle} from '../shared/map-style';
-import {LngLatBounds, Map, MapMouseEvent} from 'mapbox-gl';
-import {Utils} from '../shared/utils';
+import { Component, OnInit } from "@angular/core";
+import { mapStyle } from "../shared/map-style";
+import { LngLatBounds, Map, MapMouseEvent } from "mapbox-gl";
+import { Utils } from "../shared/utils";
+import { MapServiceCustom } from "./services/map.service";
+import { take } from "rxjs/operators";
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: "app-home",
+  templateUrl: "./home.component.html",
+  styleUrls: ["./home.component.css"]
 })
 export class HomeComponent implements OnInit {
-
   public map: Map;
   public center: number[] = [21.02001668629524, 52.2881799498405];
   public zoom: number[] = [6];
@@ -22,7 +23,9 @@ export class HomeComponent implements OnInit {
   private bounds: LngLatBounds;
   private utils: Utils;
 
-  constructor() {
+  unitFeatureCollection: GeoJSON.FeatureCollection<GeoJSON.Point>;
+
+  constructor(private readonly mapService: MapServiceCustom) {
     this.style = mapStyle;
     this.utils = new Utils();
   }
@@ -38,6 +41,15 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.mapService
+      .getUnitFeatures()
+      .pipe(take(1))
+      .subscribe(unitFeatures => {
+        this.unitFeatureCollection = {
+          type: "FeatureCollection",
+          features: unitFeatures
+        };
+      });
     this.onResize();
     this.render();
   }
@@ -49,21 +61,22 @@ export class HomeComponent implements OnInit {
 
       // todo: należy ustalić pozycje graniczne wszystkich pojazdów i odpowiednio dostosować granice mapy
 
-      window.dispatchEvent(new Event('resize'));
+      window.dispatchEvent(new Event("resize"));
       // this.map.fitBounds(this.bounds, {padding: {top: 20, left: 370, bottom: 20, right: 20}});
     }
   }
 
   onResize() {
-    this.utils.debounce(function () {
+    this.utils.debounce(function() {
       const windowHeight = window.innerHeight;
       const navbarHeight = 73;
-      const element = (<HTMLElement> document.getElementsByClassName('home-map')[0]);
+      const element = <HTMLElement>(
+        document.getElementsByClassName("home-map")[0]
+      );
       if (element) {
-        element.style.height = windowHeight - navbarHeight + 'px';
-        window.dispatchEvent(new Event('resize'));
+        element.style.height = windowHeight - navbarHeight + "px";
+        window.dispatchEvent(new Event("resize"));
       }
     }, 250)();
   }
-
 }
