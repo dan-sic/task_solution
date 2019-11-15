@@ -25,8 +25,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   private bounds: LngLatBounds;
   private utils: Utils;
   private _unitPositionSubscription: Subscription;
+  private _unitTailSubscription: Subscription;
 
   unitFeatureCollection: GeoJSON.FeatureCollection<GeoJSON.Point>;
+  unitTailFeatureCollection: GeoJSON.FeatureCollection<GeoJSON.LineString>;
 
   constructor(
     private readonly mapService: MapServiceCustom,
@@ -57,6 +59,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.positionService.subscribe();
     this.positionService.invoke();
     this.subscribeToUnitPositionUpdates();
+    this.subscribeToUnitTailUpdates();
 
     this.onResize();
     this.render();
@@ -64,6 +67,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this._unitPositionSubscription.unsubscribe();
+    this._unitTailSubscription.unsubscribe();
     this.positionService.close();
   }
 
@@ -98,6 +102,14 @@ export class HomeComponent implements OnInit, OnDestroy {
       .getUnitFeaturesUpdate()
       .subscribe(unitFeatureCollection => {
         this.unitFeatureCollection = unitFeatureCollection;
+      });
+  }
+
+  private subscribeToUnitTailUpdates() {
+    this._unitTailSubscription = this.mapService
+      .getUnitTailFeaturesUpdate()
+      .subscribe(unitTailFeatureCollection => {
+        this.unitTailFeatureCollection = unitTailFeatureCollection;
       });
   }
 }
