@@ -6,6 +6,7 @@ import {
   UnitModelApiResponse
 } from "src/app/units/components/unit-list/UnitModel";
 import { map } from "rxjs/operators";
+import { UnitPositionModel } from "src/app/home/models/UnitPositionModels";
 
 @Injectable({
   providedIn: "root"
@@ -21,5 +22,11 @@ export class ApiJSONService {
           return res.data.items;
         })
       );
+  }
+
+  public getUnitPositions(): Observable<UnitPositionModel[]> {
+    return this.http.get<UnitPositionModel[]>(
+      "assets/JSONdata/GetPositions.json"
+    );
   }
 }
