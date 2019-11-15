@@ -65,10 +65,12 @@ export class MapServiceCustom {
     let unitIds: number[] = [];
 
     return this.positionService.signalRHubHubPositions$.pipe(
-      tap(units => this.keepReferenceToCurrentUnitIds(units, unitIds)),
+      tap(units => {
+        this.keepReferenceToCurrentUnitIds(units, unitIds);
+      }),
       map(this.convertToObjectOfUnits),
       map(unitPositionObject => {
-        this._latestUnitFeatureCollection = this.generateFeatureCollection(
+        this._latestUnitFeatureCollection = this.generateUnitFeatureCollection(
           unitPositionObject,
           unitIds
         );
