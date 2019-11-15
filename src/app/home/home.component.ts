@@ -1,16 +1,18 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, OnDestroy } from "@angular/core";
 import { mapStyle } from "../shared/map-style";
 import { LngLatBounds, Map, MapMouseEvent } from "mapbox-gl";
 import { Utils } from "../shared/utils";
 import { MapServiceCustom } from "./services/map.service";
 import { take } from "rxjs/operators";
+import { PositionService } from "./services/position.service";
+import { Subscription } from "rxjs";
 
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
   styleUrls: ["./home.component.css"]
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
   public map: Map;
   public center: number[] = [21.02001668629524, 52.2881799498405];
   public zoom: number[] = [6];
@@ -22,10 +24,14 @@ export class HomeComponent implements OnInit {
   public selectedUnitPopup: GeoJSON.Feature<GeoJSON.Point>;
   private bounds: LngLatBounds;
   private utils: Utils;
+  private _unitPositionSubscription: Subscription;
 
   unitFeatureCollection: GeoJSON.FeatureCollection<GeoJSON.Point>;
 
-  constructor(private readonly mapService: MapServiceCustom) {
+  constructor(
+    private readonly mapService: MapServiceCustom,
+    private readonly positionService: PositionService
+  ) {
     this.style = mapStyle;
     this.utils = new Utils();
   }
@@ -42,16 +48,23 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.mapService
-      .getUnitFeatures()
+      .getInitialUnitFeatureCollection()
       .pipe(take(1))
-      .subscribe(unitFeatures => {
-        this.unitFeatureCollection = {
-          type: "FeatureCollection",
-          features: unitFeatures
-        };
+      .subscribe(unitFeatureCollection => {
+        this.unitFeatureCollection = unitFeatureCollection;
       });
+
+    this.positionService.subscribe();
+    this.positionService.invoke();
+    this.subscribeToUnitPositionUpdates();
+
     this.onResize();
     this.render();
+  }
+
+  ngOnDestroy() {
+    this._unitPositionSubscription.unsubscribe();
+    this.positionService.close();
   }
 
   render() {
@@ -78,5 +91,13 @@ export class HomeComponent implements OnInit {
         window.dispatchEvent(new Event("resize"));
       }
     }, 250)();
+  }
+
+  private subscribeToUnitPositionUpdates() {
+    this._unitPositionSubscription = this.mapService
+      .getUnitFeaturesUpdate()
+      .subscribe(unitFeatureCollection => {
+        this.unitFeatureCollection = unitFeatureCollection;
+      });
   }
 }
