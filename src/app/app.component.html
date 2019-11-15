@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div id="device-table-component" class="container-fluid">
+  <div class="row">
+    <div class="menu" [ngClass]="{'small-menu': hideMenu}" *ngIf="currentUser" id="menu">
+
+    </div>
+    <div  [ngClass]="{'content-panel': currentUser, 'col-md-12 ml-sm-auto col-lg-12': !currentUser}">
+
+      <div role="main">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ngx-loading-bar></ngx-loading-bar>

@@ -1,0 +1,263 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+body {
+  font-size: 12px !important; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  font-family: 'Roboto', sans-serif !important; }
+
+body#login {
+  background-image: url("../assets/images/login-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 200%;
+  padding: 10px; }
+
+a {
+  cursor: pointer; }
+
+.container-fluid {
+  padding-top: 5px; }
+
+.bg-navbar {
+  background-color: #FFF;
+  color: #373737 !important; }
+
+.navbar a, .navbar button {
+  color: #373737 !important; }
+
+.form-group .ng-touched.ng-invalid {
+  border: 1px solid #b21f2d !important; }
+
+mgl-map {
+  height: 100%;
+  width: 100%; }
+
+.map {
+  padding: 0px !important; }
+
+.mapboxgl-canvas {
+  position: relative !important; }
+
+#loading-bar-spinner {
+  width: 120px !important;
+  height: 120px !important;
+  margin: -60px 0px 0px -60px;
+  top: 50% !important;
+  left: 50% !important;
+  background-color: #FFF !important;
+  padding: 10px !important;
+  -webkit-box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.43);
+  box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.43); }
+
+[_nghost-c3] {
+  position: initial !important; }
+
+[_nghost-c3] > div[_ngcontent-c3] {
+  pointer-events: auto !important; }
+
+#loading-bar {
+  position: absolute !important;
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  opacity: 0.5;
+  z-index: 10001;
+  overflow: hidden;
+  top: 0;
+  left: 0; }
+
+.spinner-icon {
+  width: 100px !important;
+  height: 100px !important;
+  border-right: 6px solid transparent !important; }
+
+.ng-select {
+  padding: 0px !important;
+  border: none !important;
+  font-size: 12px !important; }
+
+.small-menu .menu-name {
+  display: none; }
+
+.small-menu {
+  width: 80px !important; }
+
+.small-menu .sidebar {
+  width: 72px !important; }
+
+.small-menu .sidebar .drop-list {
+  position: absolute;
+  width: 250px !important; }
+
+.small-menu .sidebar .top-list {
+  width: 72px !important; }
+
+.small-menu .sidebar .menu-icon {
+  margin-left: 4px; }
+
+.menu-icon {
+  margin-left: 4px; }
+
+.home-small-menu {
+  padding-left: 95px !important; }
+
+.menu {
+  width: 187px;
+  position: absolute;
+  z-index: 1001; }
+
+.main-menu {
+  background-color: #FFF !important;
+  color: #373737 !important;
+  border: none;
+  box-shadow: 5px 0px 10px 0px rgba(0, 0, 0, 0.1) !important; }
+  .main-menu .list-group-item-action {
+    color: #373737 !important; }
+  .main-menu .list-group-item-action:hover {
+    background-color: #46a2a9 !important;
+    color: #FFF !important; }
+  .main-menu .selected {
+    background-color: #FFF !important;
+    color: #46a2a9 !important; }
+  .main-menu .list-group-item {
+    border: none; }
+  .main-menu #search {
+    width: 63px;
+    margin: 0;
+    height: 20px;
+    border: none;
+    font-size: 12px;
+    color: #373737; }
+  .main-menu #search::placeholder {
+    color: #373737; }
+  .main-menu .toggle-menu {
+    bottom: 0px;
+    position: absolute;
+    width: 100%; }
+    .main-menu .toggle-menu .chevron {
+      float: right;
+      color: #373737;
+      width: 20px;
+      height: 18px;
+      margin: 10px;
+      text-align: center;
+      cursor: pointer; }
+    .main-menu .toggle-menu .chevron:hover {
+      color: #46a2a9; }
+  .main-menu .toggle-menu:hover {
+    color: #46a2a9; }
+
+.logo {
+  width: 156px;
+  height: 32px;
+  background-image: url("../assets/images/logo_horizontal.png");
+  background-size: cover; }
+
+.top-sidebar {
+  position: absolute;
+  z-index: 1000;
+  padding: 24px;
+  width: 355px;
+  height: calc(100% - 70px);
+  min-width: 150px;
+  max-width: 426px;
+  background-color: #FFF;
+  box-shadow: 5px 0px 10px 0px rgba(0, 0, 0, 0.16); }
+
+.green-icon {
+  background-image: url("../assets/icons/car-green.png"); }
+
+.red-icon {
+  background-image: url("../assets/icons/car-red.png"); }
+
+/*.marker-cluster {
+  width: 45px;
+  height: 80px;
+  background-image: url('../assets/icons/car-group.png');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+}*/
+.marker-cluster {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 199, 63, 0.61);
+  background-color: #E0AA39;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer; }
+
+.marker {
+  width: 30px;
+  height: 40px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.marker-popup {
+  line-height: normal !important;
+  transform: translate(0px, 20px) translate(50px, 0px);
+  width: 110px;
+  height: 35px; }
+
+.pagination {
+  margin-bottom: 0px;
+  padding-bottom: 0px; }
+
+.ng-select {
+  border-color: #E8E9EC !important; }
+
+.ng-select-container {
+  height: 40px !important;
+  border-bottom-color: #E8E9EC; }
+
+.ng-value-container {
+  color: rgba(0, 0, 0, 0.6); }
+
+.red {
+  background-color: #CF7272; }
+
+.yellow {
+  background-color: #E1DE84; }
+
+.green {
+  background-color: #80CF93; }
+
+.ng-select-container {
+  border: none !important;
+  background-color: #ededed !important;
+  color: black; }
+
+.ng-select-container input::placeholder {
+  color: black !important; }
+
+.mapboxgl-popup-content {
+  -webkit-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.16) !important;
+  -moz-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.16) !important;
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.16) !important; }
+
+.address.trackMapAddress {
+  width: 180px;
+  min-height: 20px; }
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,3593 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>car details</title>
+<style id="applicationStylesheet" type="text/css">
+	body {
+		margin: 0;
+		padding: 0;
+	}
+	:root {
+		--web-view-ids: Car_label;
+	}
+	#Car_label * {
+		margin: 0;
+		padding: 0;
+	}
+	#Car_label {
+		position: absolute;
+		box-sizing: border-box;
+		background: #E5E5E5;
+		width: 1256px;
+		height: 1269px;
+		background-color: rgba(255,255,255,1);
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		opacity: 1;
+		--web-view-name: Car label;
+		--web-view-id: Car_label;
+		--web-enable-deep-linking: true;
+	}
+	#____Artboard_Content___Header_A9_Group_21 {
+		opacity: 1;
+		position: absolute;
+		width: 2855px;
+		height: 240px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Box_A9_Rectangle_30 {
+		opacity: 1;
+		fill: transparent;
+	}
+	.Box_A9_Rectangle_30 {
+		position: absolute;
+		overflow: visible;
+		width: 2855px;
+		height: 240px;
+		left: 0px;
+		top: 0px;
+	}
+	#Car_label_A9_Text_17 {
+		opacity: 1;
+		position: absolute;
+		left: 139px;
+		top: 106px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 219px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 56px;
+		color: rgba(0,0,0,1);
+	}
+	#Divider_A9_Path_18 {
+		opacity: 1;
+		fill: rgba(0,0,0,0.122);
+	}
+	.Divider_A9_Path_18 {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 239px;
+		left: 0px;
+		width: 2855px;
+		height: 1px;
+	}
+	#Shadow___03dp {
+		opacity: 1;
+		position: absolute;
+		width: 96.405px;
+		height: 30.265px;
+		left: 170px;
+		top: 339.505px;
+		overflow: visible;
+	}
+	#Shadow___03dp_A9_Rectangle_2 {
+		opacity: 1;
+		filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.161));
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0, 0, 0, 0.16);
+		stroke-width: 0.30000001192092896px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Shadow___03dp_A9_Rectangle_2 {
+		position: absolute;
+		overflow: visible;
+		width: 111.405px;
+		height: 45.265px;
+		left: 0px;
+		top: 0px;
+	}
+	#DW_65423 {
+		opacity: 1;
+		position: absolute;
+		left: 202px;
+		top: 338px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 59px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(0,0,0,0.8);
+		letter-spacing: 0.3079999923706055px;
+	}
+	#ID144_km_h {
+		opacity: 1;
+		position: absolute;
+		left: 202px;
+		top: 353px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 55px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(207,114,114,1);
+		letter-spacing: 0.3079999923706055px;
+	}
+	#car_purple {
+		opacity: 1;
+		position: absolute;
+		width: 24.856px;
+		height: 49.711px;
+		left: 121px;
+		top: 327px;
+		overflow: visible;
+	}
+	#Rectangle_73 {
+		opacity: 1;
+		filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.251));
+		fill: rgba(50,120,125,1);
+	}
+	.Rectangle_73 {
+		position: absolute;
+		overflow: visible;
+		width: 54.855px;
+		height: 79.711px;
+		left: 0px;
+		top: 0px;
+	}
+	#Rectangle_74 {
+		opacity: 1;
+		fill: rgba(0,0,0,0.482);
+	}
+	.Rectangle_74 {
+		position: absolute;
+		overflow: visible;
+		width: 20.713px;
+		height: 31.07px;
+		left: 2.071px;
+		top: 12.428px;
+	}
+	#Rectangle_75 {
+		opacity: 1;
+		fill: rgba(70,162,169,1);
+	}
+	.Rectangle_75 {
+		position: absolute;
+		overflow: visible;
+		width: 16.57px;
+		height: 18.642px;
+		left: 4.143px;
+		top: 21.749px;
+	}
+	#Ellipse_243 {
+		opacity: 1;
+		fill: rgba(128,207,147,1);
+	}
+	.Ellipse_243 {
+		position: absolute;
+		overflow: visible;
+		width: 20px;
+		height: 20px;
+		left: 175px;
+		top: 345px;
+	}
+	#business_time_light {
+		opacity: 1;
+		position: absolute;
+		width: 16px;
+		height: 12.8px;
+		left: 177px;
+		top: 349px;
+		overflow: visible;
+	}
+	#business_time_light_A9_Path_2 {
+		opacity: 1;
+		fill: rgba(255,255,255,0.878);
+	}
+	.business_time_light_A9_Path_2 {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 16px;
+		height: 12.8px;
+	}
+	#car_purple_A9_Group_5 {
+		opacity: 1;
+		position: absolute;
+		width: 24.856px;
+		height: 49.711px;
+		left: 117px;
+		top: 541px;
+		overflow: visible;
+	}
+	#Rectangle_73_A9_Rectangle_6 {
+		opacity: 1;
+		filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.251));
+		fill: rgba(50,120,125,1);
+	}
+	.Rectangle_73_A9_Rectangle_6 {
+		position: absolute;
+		overflow: visible;
+		width: 54.855px;
+		height: 79.711px;
+		left: 0px;
+		top: 0px;
+	}
+	#Rectangle_74_A9_Rectangle_7 {
+		opacity: 1;
+		fill: rgba(0,0,0,0.482);
+	}
+	.Rectangle_74_A9_Rectangle_7 {
+		position: absolute;
+		overflow: visible;
+		width: 20.713px;
+		height: 31.07px;
+		left: 2.071px;
+		top: 12.428px;
+	}
+	#Rectangle_75_A9_Rectangle_8 {
+		opacity: 1;
+		fill: rgba(70,162,169,1);
+	}
+	.Rectangle_75_A9_Rectangle_8 {
+		position: absolute;
+		overflow: visible;
+		width: 16.57px;
+		height: 18.642px;
+		left: 4.143px;
+		top: 21.749px;
+	}
+	#car_purple_A9_Group_6 {
+		opacity: 1;
+		position: absolute;
+		width: 24.856px;
+		height: 49.711px;
+		left: 118px;
+		top: 818px;
+		overflow: visible;
+	}
+	#Rectangle_73_A9_Rectangle_9 {
+		opacity: 1;
+		filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.251));
+		fill: rgba(50,120,125,1);
+	}
+	.Rectangle_73_A9_Rectangle_9 {
+		position: absolute;
+		overflow: visible;
+		width: 54.855px;
+		height: 79.711px;
+		left: 0px;
+		top: 0px;
+	}
+	#Rectangle_74_A9_Rectangle_10 {
+		opacity: 1;
+		fill: rgba(0,0,0,0.482);
+	}
+	.Rectangle_74_A9_Rectangle_10 {
+		position: absolute;
+		overflow: visible;
+		width: 20.713px;
+		height: 31.07px;
+		left: 2.071px;
+		top: 12.428px;
+	}
+	#Rectangle_75_A9_Rectangle_11 {
+		opacity: 1;
+		fill: rgba(70,162,169,1);
+	}
+	.Rectangle_75_A9_Rectangle_11 {
+		position: absolute;
+		overflow: visible;
+		width: 16.57px;
+		height: 18.642px;
+		left: 4.143px;
+		top: 21.749px;
+	}
+	#Path_686 {
+		opacity: 1;
+		filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.161));
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0, 0, 0, 0.16);
+		stroke-width: 0.30000001192092896px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_686 {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 480.175px;
+		left: 168.937px;
+		width: 277.436px;
+		height: 202.578px;
+	}
+	#Path_1001 {
+		opacity: 1;
+		filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.31));
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0, 0, 0, 0.16);
+		stroke-width: 0.30000001192092896px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_1001 {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 757.175px;
+		left: 168.937px;
+		width: 277.436px;
+		height: 202.578px;
+	}
+	#Ellipse_244 {
+		opacity: 1;
+		fill: rgba(128,207,147,1);
+	}
+	.Ellipse_244 {
+		position: absolute;
+		overflow: visible;
+		width: 19.163px;
+		height: 19.163px;
+		left: 183.418px;
+		top: 504.418px;
+	}
+	#Ellipse_246 {
+		opacity: 1;
+		fill: rgba(128,207,147,1);
+	}
+	.Ellipse_246 {
+		position: absolute;
+		overflow: visible;
+		width: 19.163px;
+		height: 19.163px;
+		left: 183.418px;
+		top: 781.418px;
+	}
+	#business_time_light_A9_Group_7 {
+		opacity: 1;
+		position: absolute;
+		width: 14.171px;
+		height: 11.337px;
+		left: 186.713px;
+		top: 508.012px;
+		overflow: visible;
+	}
+	#business_time_light_A9_Path_5 {
+		opacity: 1;
+		fill: rgba(255,255,255,0.878);
+	}
+	.business_time_light_A9_Path_5 {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 14.171px;
+		height: 11.337px;
+	}
+	#business_time_light_A9_Group_8 {
+		opacity: 1;
+		position: absolute;
+		width: 14.171px;
+		height: 11.337px;
+		left: 186.713px;
+		top: 785.012px;
+		overflow: visible;
+	}
+	#business_time_light_A9_Path_6 {
+		opacity: 1;
+		fill: rgba(255,255,255,0.878);
+	}
+	.business_time_light_A9_Path_6 {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 14.171px;
+		height: 11.337px;
+	}
+	#DW_65423_12___ {
+		opacity: 1;
+		position: absolute;
+		left: 215px;
+		top: 488px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 141px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(0,0,0,0.8);
+		letter-spacing: 0.12899999618530272px;
+	}
+	#DW_65423_12____A9_Text_5 {
+		opacity: 1;
+		position: absolute;
+		left: 215px;
+		top: 765px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 141px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(0,0,0,0.8);
+		letter-spacing: 0.12899999618530272px;
+	}
+	#Robotnicza_40__53_608_Wroc_aw {
+		opacity: 1;
+		position: absolute;
+		left: 215px;
+		top: 518px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 201px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(0,0,0,0.8);
+		letter-spacing: 0.09600000381469727px;
+	}
+	#Robotnicza_40__53_608_Wroc_aw_A9_Text_7 {
+		opacity: 1;
+		position: absolute;
+		left: 215px;
+		top: 795px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 201px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(0,0,0,0.4);
+		letter-spacing: 0.09600000381469727px;
+	}
+	#Rectangle_1792 {
+		opacity: 1;
+		fill: rgba(243,243,243,1);
+	}
+	.Rectangle_1792 {
+		position: absolute;
+		overflow: visible;
+		width: 153px;
+		height: 83px;
+		left: 170px;
+		top: 542px;
+	}
+	#Rectangle_1827 {
+		opacity: 1;
+		fill: rgba(243,243,243,1);
+	}
+	.Rectangle_1827 {
+		position: absolute;
+		overflow: visible;
+		width: 153px;
+		height: 83px;
+		left: 170px;
+		top: 819px;
+	}
+	#Buttons___Text___Enabled {
+		opacity: 1;
+		position: absolute;
+		width: 93px;
+		height: 36px;
+		left: 170px;
+		top: 629px;
+		overflow: visible;
+	}
+	#Box_A9_Rectangle_14 {
+		opacity: 1;
+		fill: transparent;
+	}
+	.Box_A9_Rectangle_14 {
+		position: absolute;
+		overflow: visible;
+		width: 93px;
+		height: 36px;
+		left: 0px;
+		top: 0px;
+	}
+	#DETAILS {
+		opacity: 1;
+		position: absolute;
+		left: 15px;
+		top: 8px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 63px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(70,162,169,1);
+		letter-spacing: 0.8909999847412109px;
+	}
+	#Buttons___Text___Enabled_A9_Group_10 {
+		opacity: 1;
+		position: absolute;
+		width: 93px;
+		height: 36px;
+		left: 170px;
+		top: 906px;
+		overflow: visible;
+	}
+	#Box_A9_Rectangle_15 {
+		opacity: 1;
+		fill: transparent;
+	}
+	.Box_A9_Rectangle_15 {
+		position: absolute;
+		overflow: visible;
+		width: 93px;
+		height: 36px;
+		left: 0px;
+		top: 0px;
+	}
+	#DETAILS_A9_Text_9 {
+		opacity: 1;
+		position: absolute;
+		left: 15px;
+		top: 8px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 63px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(70,162,169,1);
+		letter-spacing: 0.8909999847412109px;
+	}
+	#Buttons___Text___Enabled_A9_Group_11 {
+		opacity: 1;
+		position: absolute;
+		width: 93px;
+		height: 36px;
+		left: 260px;
+		top: 629px;
+		overflow: visible;
+	}
+	#Box_A9_Rectangle_16 {
+		opacity: 1;
+		fill: transparent;
+	}
+	.Box_A9_Rectangle_16 {
+		position: absolute;
+		overflow: visible;
+		width: 93px;
+		height: 36px;
+		left: 0px;
+		top: 0px;
+	}
+	#SETTINGS {
+		opacity: 1;
+		position: absolute;
+		left: 9px;
+		top: 8px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 75px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(70,162,169,1);
+		letter-spacing: 0.8909999847412109px;
+	}
+	#Buttons___Text___Enabled_A9_Group_12 {
+		opacity: 1;
+		position: absolute;
+		width: 93px;
+		height: 36px;
+		left: 260px;
+		top: 906px;
+		overflow: visible;
+	}
+	#Box_A9_Rectangle_17 {
+		opacity: 1;
+		fill: transparent;
+	}
+	.Box_A9_Rectangle_17 {
+		position: absolute;
+		overflow: visible;
+		width: 93px;
+		height: 36px;
+		left: 0px;
+		top: 0px;
+	}
+	#SETTINGS_A9_Text_11 {
+		opacity: 1;
+		position: absolute;
+		left: 9px;
+		top: 8px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 75px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(70,162,169,1);
+		letter-spacing: 0.8909999847412109px;
+	}
+	#Line_3 {
+		opacity: 1;
+		fill: transparent;
+		stroke: rgba(0, 0, 0, 0.16);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_3 {
+		overflow: visible;
+		position: absolute;
+		top: 542.5px;
+		left: 168.5px;
+		width: 263px;
+		height: 1px;
+	}
+	#Line_45 {
+		opacity: 1;
+		fill: transparent;
+		stroke: rgba(0, 0, 0, 0.16);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_45 {
+		overflow: visible;
+		position: absolute;
+		top: 819.5px;
+		left: 168.5px;
+		width: 263px;
+		height: 1px;
+	}
+	#Rectangle_1785 {
+		opacity: 1;
+		fill: rgba(225,222,132,1);
+		stroke: rgb(225, 222, 132);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_1785 {
+		position: absolute;
+		overflow: visible;
+		width: 63px;
+		height: 18px;
+		left: 358px;
+		top: 576px;
+	}
+	#Rectangle_1824 {
+		opacity: 1;
+		fill: rgba(225,222,132,1);
+	}
+	.Rectangle_1824 {
+		position: absolute;
+		overflow: visible;
+		width: 63px;
+		height: 18px;
+		left: 358px;
+		top: 853px;
+	}
+	#Rectangle_1793 {
+		opacity: 1;
+		fill: transparent;
+		stroke: rgba(0, 0, 0, 0.39);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_1793 {
+		position: absolute;
+		overflow: visible;
+		width: 63px;
+		height: 14px;
+		left: 358px;
+		top: 552px;
+	}
+	#Rectangle_1825 {
+		opacity: 1;
+		fill: transparent;
+		stroke: rgba(0, 0, 0, 0.39);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_1825 {
+		position: absolute;
+		overflow: visible;
+		width: 63px;
+		height: 14px;
+		left: 358px;
+		top: 829px;
+	}
+	#Rectangle_1794 {
+		opacity: 1;
+		fill: rgba(128,207,147,1);
+	}
+	.Rectangle_1794 {
+		position: absolute;
+		overflow: visible;
+		width: 46px;
+		height: 12px;
+		left: 359px;
+		top: 553px;
+	}
+	#Rectangle_1826 {
+		opacity: 1;
+		fill: rgba(128,207,147,1);
+	}
+	.Rectangle_1826 {
+		position: absolute;
+		overflow: visible;
+		width: 46px;
+		height: 12px;
+		left: 359px;
+		top: 830px;
+	}
+	#Enhance {
+		opacity: 1;
+		position: absolute;
+		width: 40px;
+		height: 19px;
+		left: 369px;
+		top: 574px;
+		overflow: visible;
+	}
+	#ID55_pkt {
+		opacity: 1;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 41px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.06699999809265136px;
+	}
+	#Enhance_A9_Group_14 {
+		opacity: 1;
+		position: absolute;
+		width: 40px;
+		height: 19px;
+		left: 370px;
+		top: 852px;
+		overflow: visible;
+	}
+	#ID55_pkt_A9_Text_13 {
+		opacity: 1;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 41px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.06699999809265136px;
+	}
+	#Line_4 {
+		opacity: 1;
+		fill: transparent;
+		stroke: rgb(112, 112, 112);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_4 {
+		overflow: visible;
+		position: absolute;
+		top: 558.594px;
+		left: 367.5px;
+		width: 1px;
+		height: 6.906px;
+	}
+	#Line_40 {
+		opacity: 1;
+		fill: transparent;
+		stroke: rgb(112, 112, 112);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_40 {
+		overflow: visible;
+		position: absolute;
+		top: 835.594px;
+		left: 367.5px;
+		width: 1px;
+		height: 6.906px;
+	}
+	#Line_5 {
+		opacity: 1;
+		fill: transparent;
+		stroke: rgb(112, 112, 112);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_5 {
+		overflow: visible;
+		position: absolute;
+		top: 558.594px;
+		left: 375.5px;
+		width: 1px;
+		height: 6.906px;
+	}
+	#Line_41 {
+		opacity: 1;
+		fill: transparent;
+		stroke: rgb(112, 112, 112);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_41 {
+		overflow: visible;
+		position: absolute;
+		top: 835.594px;
+		left: 375.5px;
+		width: 1px;
+		height: 6.906px;
+	}
+	#Line_6 {
+		opacity: 1;
+		fill: transparent;
+		stroke: rgb(112, 112, 112);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_6 {
+		overflow: visible;
+		position: absolute;
+		top: 558.594px;
+		left: 383.5px;
+		width: 1px;
+		height: 6.906px;
+	}
+	#Line_42 {
+		opacity: 1;
+		fill: transparent;
+		stroke: rgb(112, 112, 112);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_42 {
+		overflow: visible;
+		position: absolute;
+		top: 835.594px;
+		left: 383.5px;
+		width: 1px;
+		height: 6.906px;
+	}
+	#Line_7 {
+		opacity: 1;
+		fill: transparent;
+		stroke: rgb(112, 112, 112);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_7 {
+		overflow: visible;
+		position: absolute;
+		top: 558.594px;
+		left: 391.5px;
+		width: 1px;
+		height: 6.906px;
+	}
+	#Line_43 {
+		opacity: 1;
+		fill: transparent;
+		stroke: rgb(112, 112, 112);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_43 {
+		overflow: visible;
+		position: absolute;
+		top: 835.594px;
+		left: 391.5px;
+		width: 1px;
+		height: 6.906px;
+	}
+	#Line_8 {
+		opacity: 1;
+		fill: transparent;
+		stroke: rgb(112, 112, 112);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_8 {
+		overflow: visible;
+		position: absolute;
+		top: 558.594px;
+		left: 403.5px;
+		width: 1px;
+		height: 6.906px;
+	}
+	#Line_44 {
+		opacity: 1;
+		fill: transparent;
+		stroke: rgb(112, 112, 112);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Line_44 {
+		overflow: visible;
+		position: absolute;
+		top: 835.594px;
+		left: 403.5px;
+		width: 1px;
+		height: 6.906px;
+	}
+	#gas_pump_light {
+		opacity: 1;
+		fill: rgba(0,0,0,0.8);
+	}
+	.gas_pump_light {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 550px;
+		left: 334px;
+		width: 16.372px;
+		height: 16.372px;
+	}
+	#gas_pump_light_A9_Path_8 {
+		opacity: 1;
+		fill: rgba(0,0,0,0.8);
+	}
+	.gas_pump_light_A9_Path_8 {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 827px;
+		left: 334px;
+		width: 16.372px;
+		height: 16.372px;
+	}
+	#leaf_light {
+		opacity: 1;
+		fill: rgba(0,0,0,0.8);
+	}
+	.leaf_light {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 578.5px;
+		left: 333px;
+		width: 17.374px;
+		height: 15.443px;
+	}
+	#leaf_light_A9_Path_10 {
+		opacity: 1;
+		fill: rgba(0,0,0,0.8);
+	}
+	.leaf_light_A9_Path_10 {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 855.5px;
+		left: 333px;
+		width: 17.374px;
+		height: 15.443px;
+	}
+	#____Text___Body_2___Selected__ {
+		opacity: 1;
+		position: absolute;
+		width: 135.835px;
+		height: 92px;
+		left: 183px;
+		top: 548px;
+		overflow: visible;
+	}
+	#____Text___Body_2___Selected___A9_Text_14 {
+		opacity: 1;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		width: 136.835px;
+		height: 92px;
+		line-height: 20px;
+		margin-top: -4px;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(0,0,0,0.8);
+		letter-spacing: 0.17399999618530274px;
+	}
+	#____Text___Body_2___Selected___A9_Group_16 {
+		opacity: 1;
+		position: absolute;
+		width: 135.835px;
+		height: 92px;
+		left: 183px;
+		top: 825px;
+		overflow: visible;
+	}
+	#____Text___Body_2___Selected___A9_Text_15 {
+		opacity: 1;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		width: 136.835px;
+		height: 92px;
+		line-height: 20px;
+		margin-top: -4px;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(0,0,0,0.8);
+		letter-spacing: 0.17399999618530274px;
+	}
+	#business_time_light_A9_Path_11 {
+		opacity: 1;
+		fill: rgba(128,207,147,1);
+	}
+	.business_time_light_A9_Path_11 {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 607.881px;
+		left: 334px;
+		width: 21.538px;
+		height: 17.231px;
+	}
+	#business_time_light_A9_Path_12 {
+		opacity: 1;
+		fill: rgba(128,207,147,1);
+	}
+	.business_time_light_A9_Path_12 {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 884.881px;
+		left: 334px;
+		width: 21.538px;
+		height: 17.231px;
+	}
+	#business_time_light_A9_Group_17 {
+		opacity: 1;
+		position: absolute;
+		width: 21.538px;
+		height: 17.231px;
+		left: 366.895px;
+		top: 607.881px;
+		overflow: visible;
+	}
+	#business_time_light_A9_Path_13 {
+		opacity: 1;
+		fill: rgba(55,55,55,0.169);
+	}
+	.business_time_light_A9_Path_13 {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 21.538px;
+		height: 17.231px;
+	}
+	#business_time_light_A9_Group_18 {
+		opacity: 1;
+		position: absolute;
+		width: 21.538px;
+		height: 17.231px;
+		left: 366.895px;
+		top: 884.881px;
+		overflow: visible;
+	}
+	#business_time_light_A9_Path_14 {
+		opacity: 1;
+		fill: rgba(207,114,114,1);
+	}
+	.business_time_light_A9_Path_14 {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 21.538px;
+		height: 17.231px;
+	}
+	#business_time_light_A9_Group_19 {
+		opacity: 1;
+		position: absolute;
+		width: 21.538px;
+		height: 17.231px;
+		left: 402.224px;
+		top: 607.881px;
+		overflow: visible;
+	}
+	#business_time_light_A9_Path_15 {
+		opacity: 1;
+		fill: rgba(55,55,55,0.169);
+	}
+	.business_time_light_A9_Path_15 {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 21.538px;
+		height: 17.231px;
+	}
+	#business_time_light_A9_Group_20 {
+		opacity: 1;
+		position: absolute;
+		width: 21.538px;
+		height: 17.231px;
+		left: 402.224px;
+		top: 884.881px;
+		overflow: visible;
+	}
+	#business_time_light_A9_Path_16 {
+		opacity: 1;
+		fill: rgba(55,55,55,0.169);
+	}
+	.business_time_light_A9_Path_16 {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 21.538px;
+		height: 17.231px;
+	}
+	#Rectangle_1795 {
+		opacity: 0.3;
+		fill: rgba(133,123,123,1);
+	}
+	.Rectangle_1795 {
+		position: absolute;
+		overflow: visible;
+		width: 2px;
+		height: 46px;
+		left: 321px;
+		top: 561px;
+	}
+	#Rectangle_1828 {
+		opacity: 0.3;
+		fill: rgba(133,123,123,1);
+	}
+	.Rectangle_1828 {
+		position: absolute;
+		overflow: visible;
+		width: 2px;
+		height: 46px;
+		left: 321px;
+		top: 838px;
+	}
+	#Rectangle_1829 {
+		opacity: 0.93;
+		filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.161));
+		fill: rgba(243,243,243,1);
+	}
+	.Rectangle_1829 {
+		position: absolute;
+		overflow: visible;
+		width: 347.828px;
+		height: 54.138px;
+		left: 208.552px;
+		top: 797.345px;
+	}
+	#Robotnicza_40__53_608__Wroc_aw {
+		opacity: 1;
+		position: absolute;
+		left: 214.586px;
+		top: 800.374px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 295px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(0,0,0,0.8);
+		letter-spacing: 0.3320000076293945px;
+	}
+	#____Artboard_Content___Header_A9_Group_21 {
+		opacity: 1;
+		position: absolute;
+		width: 2855px;
+		height: 240px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Box_A9_Rectangle_30 {
+		opacity: 1;
+		fill: transparent;
+	}
+	.Box_A9_Rectangle_30 {
+		position: absolute;
+		overflow: visible;
+		width: 2855px;
+		height: 240px;
+		left: 0px;
+		top: 0px;
+	}
+	#Car_label_A9_Text_17 {
+		opacity: 1;
+		position: absolute;
+		left: 139px;
+		top: 106px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 219px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 56px;
+		color: rgba(0,0,0,1);
+	}
+	#Divider_A9_Path_18 {
+		opacity: 1;
+		fill: rgba(0,0,0,0.122);
+	}
+	.Divider_A9_Path_18 {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 239px;
+		left: 0px;
+		width: 2855px;
+		height: 1px;
+	}
+	#Rectangle_1801 {
+		opacity: 1;
+		fill: rgba(243,243,243,0.278);
+		stroke: rgb(232, 232, 232);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_1801 {
+		position: absolute;
+		overflow: visible;
+		width: 536px;
+		height: 1029px;
+		left: 720px;
+		top: 240px;
+	}
+	#Rectangle_1830 {
+		opacity: 1;
+		fill: rgba(243,243,243,0.278);
+		stroke: rgb(232, 232, 232);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_1830 {
+		position: absolute;
+		overflow: visible;
+		width: 737px;
+		height: 279.457px;
+		left: 0px;
+		top: 989.543px;
+	}
+	#____Artboard_Content___Header_A9_Group_22 {
+		opacity: 1;
+		position: absolute;
+		width: 2855px;
+		height: 240px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Box_A9_Rectangle_30 {
+		opacity: 1;
+		fill: transparent;
+	}
+	.Box_A9_Rectangle_30 {
+		position: absolute;
+		overflow: visible;
+		width: 2855px;
+		height: 240px;
+		left: 0px;
+		top: 0px;
+	}
+	#Divider_A9_Path_18 {
+		opacity: 1;
+		fill: rgba(0,0,0,0.122);
+	}
+	.Divider_A9_Path_18 {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 239px;
+		left: 0px;
+		width: 2855px;
+		height: 1px;
+	}
+	#Specification_label {
+		opacity: 1;
+		position: absolute;
+		left: 787px;
+		top: 260px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 369px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 36px;
+		color: rgba(0,0,0,1);
+	}
+	#DETAILS_LABEL {
+		opacity: 1;
+		position: absolute;
+		left: 162px;
+		top: 419px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 254px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 36px;
+		color: rgba(0,0,0,1);
+	}
+	#LABEL {
+		opacity: 1;
+		position: absolute;
+		left: 168px;
+		top: 263px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 106px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 36px;
+		color: rgba(0,0,0,1);
+	}
+	#LABEL_A9_Text_21 {
+		opacity: 1;
+		position: absolute;
+		left: 787px;
+		top: 353px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 106px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 36px;
+		color: rgba(0,0,0,1);
+	}
+	#DETAILS_LABEL___hint__ {
+		opacity: 1;
+		position: absolute;
+		left: 164px;
+		top: 696px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 381px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 36px;
+		color: rgba(0,0,0,1);
+	}
+	#Elevation {
+		opacity: 1;
+		position: absolute;
+		left: 983px;
+		top: 420px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 87px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(0,0,0,0.388);
+		letter-spacing: 0.3320000076293945px;
+	}
+	#Typography {
+		opacity: 1;
+		position: absolute;
+		left: 787px;
+		top: 415px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 111px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(0,0,0,0.388);
+		letter-spacing: 0.3320000076293945px;
+	}
+	#Shadow___04dp {
+		opacity: 1;
+		position: absolute;
+		width: 129.38px;
+		height: 45.13px;
+		left: 983px;
+		top: 469.985px;
+		overflow: visible;
+	}
+	#Shadow___04dp_A9_Path_19 {
+		opacity: 1;
+		filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.141));
+		fill: rgba(255,255,255,1);
+	}
+	.Shadow___04dp_A9_Path_19 {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 144.38px;
+		height: 60.13px;
+	}
+	#ID4dp {
+		opacity: 0.5;
+		position: absolute;
+		left: 983px;
+		top: 533px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 32px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(0,0,0,1);
+		letter-spacing: 0.275px;
+	}
+	#ID6dp {
+		opacity: 0.5;
+		position: absolute;
+		left: 798px;
+		top: 1198px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 32px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(0,0,0,1);
+		letter-spacing: 0.275px;
+	}
+	#Rectangle_1831 {
+		opacity: 0.93;
+		filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.161));
+		fill: rgba(243,243,243,1);
+	}
+	.Rectangle_1831 {
+		position: absolute;
+		overflow: visible;
+		width: 347.828px;
+		height: 54.138px;
+		left: 794.552px;
+		top: 1147.345px;
+	}
+	#Robotnicza_40__53_608__Wroc_aw_A9_Text_27 {
+		opacity: 1;
+		position: absolute;
+		left: 800.586px;
+		top: 1150.374px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 295px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(0,0,0,0.8);
+		letter-spacing: 0.3320000076293945px;
+	}
+	#Roboto_12_BOLD___80_ {
+		opacity: 1;
+		position: absolute;
+		left: 785px;
+		top: 463px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 130px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(0,0,0,0.8);
+		letter-spacing: 0.3079999923706055px;
+	}
+	#Roboto_12_regular___100_ {
+		opacity: 1;
+		position: absolute;
+		left: 785px;
+		top: 477px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 143px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(207,114,114,1);
+		letter-spacing: 0.3079999923706055px;
+	}
+	#Rectangle_1832 {
+		opacity: 1;
+		fill: rgba(219,76,181,0.51);
+	}
+	.Rectangle_1832 {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 76px;
+		left: 146px;
+		top: 321px;
+	}
+	#ID24_px {
+		opacity: 1;
+		position: absolute;
+		left: 147.816px;
+		top: 341.067px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 21px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,0.388);
+		letter-spacing: 0.3320000076293945px;
+	}
+	#Rectangle_1833 {
+		opacity: 1;
+		fill: rgba(219,76,181,0.51);
+	}
+	.Rectangle_1833 {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 76px;
+		left: 143px;
+		top: 526px;
+	}
+	#ID24_px_A9_Text_31 {
+		opacity: 1;
+		position: absolute;
+		left: 144.816px;
+		top: 546.067px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 21px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,0.388);
+		letter-spacing: 0.3320000076293945px;
+	}
+	#Rectangle_1834 {
+		opacity: 1;
+		fill: rgba(219,76,181,0.51);
+	}
+	.Rectangle_1834 {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 76px;
+		left: 143px;
+		top: 808px;
+	}
+	#ID24_px_A9_Text_32 {
+		opacity: 1;
+		position: absolute;
+		left: 144.816px;
+		top: 828.067px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 21px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,0.388);
+		letter-spacing: 0.3320000076293945px;
+	}
+	#Shadow___03dp_A9_Group_24 {
+		opacity: 1;
+		position: absolute;
+		width: 96.405px;
+		height: 30.265px;
+		left: 785px;
+		top: 538.505px;
+		overflow: visible;
+	}
+	#Shadow___03dp_A9_Rectangle_35 {
+		opacity: 1;
+		filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.161));
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0, 0, 0, 0.16);
+		stroke-width: 0.30000001192092896px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Shadow___03dp_A9_Rectangle_35 {
+		position: absolute;
+		overflow: visible;
+		width: 111.405px;
+		height: 45.265px;
+		left: 0px;
+		top: 0px;
+	}
+	#ID31px {
+		opacity: 1;
+		position: absolute;
+		left: 748.816px;
+		top: 545.067px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 28px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(219,76,181,0.51);
+		letter-spacing: 0.3320000076293945px;
+	}
+	#ID0_3px_border__000000_16_ {
+		opacity: 1;
+		position: absolute;
+		left: 890.816px;
+		top: 536.067px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 78px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(219,76,181,0.51);
+		letter-spacing: 0.3320000076293945px;
+	}
+	#business_trip_active {
+		opacity: 1;
+		position: absolute;
+		left: 811.816px;
+		top: 604.067px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 112px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(0,0,0,0.388);
+		letter-spacing: 0.3320000076293945px;
+	}
+	#private_trip_active {
+		opacity: 1;
+		position: absolute;
+		left: 811.816px;
+		top: 643.067px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 100px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(0,0,0,0.388);
+		letter-spacing: 0.3320000076293945px;
+	}
+	#dynamic_width {
+		opacity: 1;
+		position: absolute;
+		left: 792.816px;
+		top: 517.067px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 83px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(219,76,181,0.51);
+		letter-spacing: 0.3320000076293945px;
+	}
+	#Ellipse_247 {
+		opacity: 1;
+		fill: rgba(128,207,147,1);
+	}
+	.Ellipse_247 {
+		position: absolute;
+		overflow: visible;
+		width: 20px;
+		height: 20px;
+		left: 785px;
+		top: 603px;
+	}
+	#business_time_light_A9_Group_25 {
+		opacity: 1;
+		position: absolute;
+		width: 16px;
+		height: 12.8px;
+		left: 787px;
+		top: 607px;
+		overflow: visible;
+	}
+	#business_time_light_A9_Path_20 {
+		opacity: 1;
+		fill: rgba(255,255,255,0.878);
+	}
+	.business_time_light_A9_Path_20 {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 16px;
+		height: 12.8px;
+	}
+	#Group_343 {
+		opacity: 1;
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		left: 971px;
+		top: 603px;
+		overflow: visible;
+	}
+	#Ellipse_248 {
+		opacity: 1;
+		fill: rgba(207,114,114,1);
+	}
+	.Ellipse_248 {
+		position: absolute;
+		overflow: visible;
+		width: 20px;
+		height: 20px;
+		left: 0px;
+		top: 0px;
+	}
+	#business_time_light_A9_Group_27 {
+		opacity: 1;
+		position: absolute;
+		width: 16px;
+		height: 12.8px;
+		left: 2px;
+		top: 4px;
+		overflow: visible;
+	}
+	#business_time_light_A9_Path_21 {
+		opacity: 1;
+		fill: rgba(255,255,255,0.878);
+	}
+	.business_time_light_A9_Path_21 {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 16px;
+		height: 12.8px;
+	}
+	#Group_344 {
+		opacity: 1;
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		left: 971px;
+		top: 642px;
+		overflow: visible;
+	}
+	#Ellipse_250 {
+		opacity: 1;
+		fill: rgba(207,114,114,1);
+	}
+	.Ellipse_250 {
+		position: absolute;
+		overflow: visible;
+		width: 20px;
+		height: 20px;
+		left: 0px;
+		top: 0px;
+	}
+	#coffee_light {
+		opacity: 1;
+		fill: rgba(255,255,255,0.8);
+	}
+	.coffee_light {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 5px;
+		left: 2px;
+		width: 16px;
+		height: 10.667px;
+	}
+	#Group_345 {
+		opacity: 1;
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		left: 785px;
+		top: 642px;
+		overflow: visible;
+	}
+	#Ellipse_249 {
+		opacity: 1;
+		fill: rgba(128,207,147,1);
+	}
+	.Ellipse_249 {
+		position: absolute;
+		overflow: visible;
+		width: 20px;
+		height: 20px;
+		left: 0px;
+		top: 0px;
+	}
+	#coffee_light_A9_Path_23 {
+		opacity: 1;
+		fill: rgba(255,255,255,0.8);
+	}
+	.coffee_light_A9_Path_23 {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 5px;
+		left: 2px;
+		width: 16px;
+		height: 10.667px;
+	}
+	#business_trip_inactive {
+		opacity: 1;
+		position: absolute;
+		left: 998.816px;
+		top: 604.067px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 122px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(0,0,0,0.388);
+		letter-spacing: 0.3320000076293945px;
+	}
+	#private_trip_inactive {
+		opacity: 1;
+		position: absolute;
+		left: 998.816px;
+		top: 643.067px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 110px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(0,0,0,0.388);
+		letter-spacing: 0.3320000076293945px;
+	}
+	#details_label {
+		opacity: 1;
+		position: absolute;
+		left: 787px;
+		top: 696px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 254px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 36px;
+		color: rgba(0,0,0,1);
+	}
+	#Elevation_A9_Text_41 {
+		opacity: 1;
+		position: absolute;
+		left: 1059px;
+		top: 761px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 87px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(0,0,0,0.388);
+		letter-spacing: 0.3320000076293945px;
+	}
+	#Typography_A9_Text_42 {
+		opacity: 1;
+		position: absolute;
+		left: 787px;
+		top: 758px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 111px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(0,0,0,0.388);
+		letter-spacing: 0.3320000076293945px;
+	}
+	#Buttons {
+		opacity: 1;
+		position: absolute;
+		left: 45px;
+		top: 994px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 74px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(0,0,0,0.388);
+		letter-spacing: 0.3320000076293945px;
+	}
+	#Shadow___04dp_A9_Group_30 {
+		opacity: 1;
+		position: absolute;
+		width: 129.38px;
+		height: 45.13px;
+		left: 1059px;
+		top: 809.985px;
+		overflow: visible;
+	}
+	#Shadow___04dp_A9_Path_24 {
+		opacity: 1;
+		filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.161));
+		fill: rgba(255,255,255,1);
+	}
+	.Shadow___04dp_A9_Path_24 {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 144.38px;
+		height: 60.13px;
+	}
+	#ID4dp_A9_Text_44 {
+		opacity: 0.5;
+		position: absolute;
+		left: 1064px;
+		top: 878px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 32px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(0,0,0,1);
+		letter-spacing: 0.275px;
+	}
+	#ID4dp_A9_Text_45 {
+		opacity: 0.5;
+		position: absolute;
+		left: 788px;
+		top: 1079px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 32px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(0,0,0,1);
+		letter-spacing: 0.275px;
+	}
+	#Roboto_20_medium___80_ {
+		opacity: 1;
+		position: absolute;
+		left: 785px;
+		top: 798px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 238px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(0,0,0,0.8);
+		letter-spacing: 0.3079999923706055px;
+	}
+	#Roboto_12_regular___100__A9_Text_47 {
+		opacity: 1;
+		position: absolute;
+		left: 785px;
+		top: 820px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 143px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(0,0,0,0.8);
+		letter-spacing: 0.3079999923706055px;
+	}
+	#ID31px_A9_Text_48 {
+		opacity: 1;
+		position: absolute;
+		left: 748.816px;
+		top: 962.067px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 28px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(219,76,181,0.51);
+		letter-spacing: 0.3320000076293945px;
+	}
+	#ID263 {
+		opacity: 1;
+		position: absolute;
+		left: 900.816px;
+		top: 859.067px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 22px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(219,76,181,0.51);
+		letter-spacing: 0.3320000076293945px;
+	}
+	#Path_1002 {
+		opacity: 1;
+		filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.161));
+		fill: rgba(255,255,255,1);
+		stroke: rgba(0, 0, 0, 0.16);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_1002 {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 882.175px;
+		left: 783.937px;
+		width: 277.436px;
+		height: 202.578px;
+	}
+	#Group_71 {
+		opacity: 1;
+		position: absolute;
+		width: 593px;
+		height: 36px;
+		left: 35px;
+		top: 1040px;
+		overflow: visible;
+	}
+	#Buttons___Text___Pressed {
+		opacity: 1;
+		position: absolute;
+		width: 93px;
+		height: 36px;
+		left: 500px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_378 {
+		opacity: 1;
+		fill: rgba(255,255,255,1);
+	}
+	.Rectangle_378 {
+		position: absolute;
+		overflow: visible;
+		width: 93px;
+		height: 36px;
+		left: 0px;
+		top: 0px;
+	}
+	#Press {
+		opacity: 1;
+		position: absolute;
+		width: 93px;
+		height: 36px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#BUTTON {
+		opacity: 1;
+		position: absolute;
+		left: 16px;
+		top: 10px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		width: 63px;
+		height: 16px;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(70,162,169,1);
+		letter-spacing: 0.8909999847412109px;
+	}
+	#Rectangle_379 {
+		opacity: 1;
+		fill: transparent;
+		stroke: rgb(195, 195, 195);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_379 {
+		position: absolute;
+		overflow: visible;
+		width: 93px;
+		height: 36px;
+		left: 0px;
+		top: 0px;
+	}
+	#Buttons___Text___Focused {
+		opacity: 1;
+		position: absolute;
+		width: 93px;
+		height: 36px;
+		left: 375px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_377_A9_Rectangle_39 {
+		opacity: 0.12;
+		fill: rgba(70,162,169,1);
+	}
+	.Rectangle_377_A9_Rectangle_39 {
+		position: absolute;
+		overflow: visible;
+		width: 93px;
+		height: 36px;
+		left: 0px;
+		top: 0px;
+	}
+	#BUTTON_A9_Text_51 {
+		opacity: 1;
+		position: absolute;
+		left: 16px;
+		top: 8px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 62px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(50,120,125,1);
+		letter-spacing: 0.8909999847412109px;
+	}
+	#Buttons___Text___Hover {
+		opacity: 1;
+		position: absolute;
+		width: 93px;
+		height: 36px;
+		left: 250px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Path_1003 {
+		opacity: 1;
+		fill: rgba(70,162,169,0.09);
+	}
+	.Path_1003 {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 93px;
+		height: 36px;
+	}
+	#BUTTON_A9_Text_52 {
+		opacity: 1;
+		position: absolute;
+		left: 16px;
+		top: 8px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 62px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(70,162,169,0.761);
+		letter-spacing: 0.8909999847412109px;
+	}
+	#____CURSOR_TYPE___Hand {
+		opacity: 1;
+		position: absolute;
+		width: 14.085px;
+		height: 20.498px;
+		left: 39px;
+		top: 8px;
+		overflow: visible;
+	}
+	#Path_973 {
+		opacity: 1;
+		filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.2));
+		fill: rgba(0,0,0,1);
+	}
+	.Path_973 {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 23.084px;
+		height: 29.498px;
+	}
+	#Path_975 {
+		opacity: 1;
+		fill: rgba(255,255,255,1);
+	}
+	.Path_975 {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 1px;
+		left: 1.004px;
+		width: 12.081px;
+		height: 18.498px;
+	}
+	#Buttons___Text___Disabled {
+		opacity: 1;
+		position: absolute;
+		width: 93px;
+		height: 36px;
+		left: 125px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_377_A9_Rectangle_40 {
+		opacity: 0.12;
+		fill: rgba(0,0,0,1);
+	}
+	.Rectangle_377_A9_Rectangle_40 {
+		position: absolute;
+		overflow: visible;
+		width: 93px;
+		height: 36px;
+		left: 0px;
+		top: 0px;
+	}
+	#BUTTON_A9_Text_53 {
+		opacity: 1;
+		position: absolute;
+		left: 16px;
+		top: 8px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 62px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(0,0,0,0.38);
+		letter-spacing: 0.8909999847412109px;
+	}
+	#Buttons___Text___Enabled_A9_SymbolInstance_1 {
+		opacity: 1;
+		position: absolute;
+		width: 93px;
+		height: 36px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Box_A9_Rectangle_41 {
+		opacity: 1;
+		fill: transparent;
+	}
+	.Box_A9_Rectangle_41 {
+		position: absolute;
+		overflow: visible;
+		width: 93px;
+		height: 36px;
+		left: 0px;
+		top: 0px;
+	}
+	#BUTTON_A9_Text_54 {
+		opacity: 1;
+		position: absolute;
+		left: 16px;
+		top: 8px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 61px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(70,162,169,1);
+		letter-spacing: 0.8909999847412109px;
+	}
+	#Icons {
+		opacity: 1;
+		position: absolute;
+		left: 45px;
+		top: 1115px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 52px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(0,0,0,0.388);
+		letter-spacing: 0.3320000076293945px;
+	}
+	#Rectangle_1798 {
+		opacity: 1;
+		fill: rgba(219,76,181,0.302);
+	}
+	.Rectangle_1798 {
+		position: absolute;
+		overflow: visible;
+		width: 81.079px;
+		height: 81.079px;
+		left: 128.007px;
+		top: 1171.663px;
+	}
+	#Rectangle_1799 {
+		opacity: 1;
+		fill: rgba(219,76,181,0.51);
+	}
+	.Rectangle_1799 {
+		position: absolute;
+		overflow: visible;
+		width: 40.54px;
+		height: 40.539px;
+		left: 148.277px;
+		top: 1191.933px;
+	}
+	#globe_europe_light {
+		opacity: 1;
+		fill: rgba(0,0,0,0.6);
+	}
+	.globe_europe_light {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 1192.371px;
+		left: 148.277px;
+		width: 40.54px;
+		height: 40.539px;
+	}
+	#ID16 {
+		opacity: 1;
+		position: absolute;
+		left: 160.101px;
+		top: 1169.663px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 21px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,0.388);
+		letter-spacing: 0.3320000076293945px;
+	}
+	#ID16_A9_Text_57 {
+		opacity: 1;
+		position: absolute;
+		left: 188.816px;
+		top: 1200.067px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 21px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,0,0,0.388);
+		letter-spacing: 0.3320000076293945px;
+	}
+	#ID32 {
+		opacity: 1;
+		position: absolute;
+		left: 155.034px;
+		top: 1139.258px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 28px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 23px;
+		color: rgba(0,0,0,0.388);
+		letter-spacing: 0.3320000076293945px;
+	}
+	#ID32_A9_Text_59 {
+		opacity: 1;
+		position: absolute;
+		left: 95.914px;
+		top: 1196.689px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 28px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 23px;
+		color: rgba(0,0,0,0.388);
+		letter-spacing: 0.3320000076293945px;
+	}
+	#business_time_light_A9_Path_31 {
+		opacity: 1;
+		fill: rgba(128,207,147,1);
+	}
+	.business_time_light_A9_Path_31 {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 1168.881px;
+		left: 291px;
+		width: 21.538px;
+		height: 17.231px;
+	}
+	#business_time_light_A9_Group_38 {
+		opacity: 1;
+		position: absolute;
+		width: 21.538px;
+		height: 17.231px;
+		left: 290.895px;
+		top: 1198.881px;
+		overflow: visible;
+	}
+	#business_time_light_A9_Path_32 {
+		opacity: 1;
+		fill: rgba(207,114,114,1);
+	}
+	.business_time_light_A9_Path_32 {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 21.538px;
+		height: 17.231px;
+	}
+	#business_time_light_A9_Group_39 {
+		opacity: 1;
+		position: absolute;
+		width: 21.538px;
+		height: 17.231px;
+		left: 291.224px;
+		top: 1228.881px;
+		overflow: visible;
+	}
+	#business_time_light_A9_Path_33 {
+		opacity: 1;
+		fill: rgba(55,55,55,0.169);
+	}
+	.business_time_light_A9_Path_33 {
+		transform: matrix(1,0,0,1,0,0);
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 21.538px;
+		height: 17.231px;
+	}
+	#Sensor_active {
+		opacity: 1;
+		position: absolute;
+		left: 330.816px;
+		top: 1168.067px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 78px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(0,0,0,0.388);
+		letter-spacing: 0.3320000076293945px;
+	}
+	#Sensor_issue {
+		opacity: 1;
+		position: absolute;
+		left: 329.816px;
+		top: 1200.067px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 74px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(0,0,0,0.388);
+		letter-spacing: 0.3320000076293945px;
+	}
+	#Sensor_unavailable {
+		opacity: 1;
+		position: absolute;
+		left: 330.816px;
+		top: 1230.067px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 108px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(0,0,0,0.388);
+		letter-spacing: 0.3320000076293945px;
+	}
+	#Rectangle_1865 {
+		opacity: 1;
+		fill: rgba(70,162,169,0.6);
+	}
+	.Rectangle_1865 {
+		position: absolute;
+		overflow: visible;
+		width: 67px;
+		height: 18px;
+		left: 356px;
+		top: 492px;
+	}
+	#ID144_km_h_A9_Text_63 {
+		opacity: 1;
+		position: absolute;
+		left: 363px;
+		top: 492px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 55px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.3079999923706055px;
+	}
+	#Rectangle_1865_A9_Rectangle_45 {
+		opacity: 1;
+		fill: rgba(70,162,169,0.6);
+	}
+	.Rectangle_1865_A9_Rectangle_45 {
+		position: absolute;
+		overflow: visible;
+		width: 67px;
+		height: 18px;
+		left: 357px;
+		top: 767px;
+	}
+	#ID144_km_h_A9_Text_64 {
+		opacity: 1;
+		position: absolute;
+		left: 364px;
+		top: 767px;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		width: 55px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.3079999923706055px;
+	}
+</style>
+</head>
+<body>
+<div id="Car_label">
+	<div id="____Artboard_Content___Header_A9_Group_21">
+		<svg class="Box_A9_Rectangle_30">
+			<rect id="Box_A9_Rectangle_30" rx="0" ry="0" x="0" y="0" width="2855" height="240">
+			</rect>
+		</svg>
+		<div id="Car_label_A9_Text_17">
+			<span>Car label</span>
+		</div>
+		<svg class="Divider_A9_Path_18" viewBox="-5 -1606 2855 1">
+			<path id="Divider_A9_Path_18" d="M -5 -1605 L 2849.999755859375 -1605 L 2849.999755859375 -1606 L -5 -1606 L -5 -1605 Z">
+			</path>
+		</svg>
+	</div>
+	<div id="Shadow___03dp">
+		<svg class="Shadow___03dp_A9_Rectangle_2">
+			<rect id="Shadow___03dp_A9_Rectangle_2" rx="2" ry="2" x="0" y="0" width="96.405" height="30.265">
+			</rect>
+		</svg>
+	</div>
+	<div id="DW_65423">
+		<span>DW 65423</span>
+	</div>
+	<div id="ID144_km_h">
+		<span>144 km/h</span>
+	</div>
+	<div id="car_purple">
+		<svg class="Rectangle_73">
+			<rect id="Rectangle_73" rx="8" ry="8" x="0" y="0" width="24.856" height="49.711">
+			</rect>
+		</svg>
+		<svg class="Rectangle_74">
+			<rect id="Rectangle_74" rx="8" ry="8" x="0" y="0" width="20.713" height="31.07">
+			</rect>
+		</svg>
+		<svg class="Rectangle_75">
+			<rect id="Rectangle_75" rx="6" ry="6" x="0" y="0" width="16.57" height="18.642">
+			</rect>
+		</svg>
+	</div>
+	<svg class="Ellipse_243">
+		<ellipse id="Ellipse_243" rx="10" ry="10" cx="10" cy="10">
+		</ellipse>
+	</svg>
+	<div id="business_time_light">
+		<svg class="business_time_light_A9_Path_2" viewBox="0 0 16 12.8">
+			<path id="business_time_light_A9_Path_2" d="M 1.199999690055847 10.40000057220459 C 0.9794999957084656 10.40000057220459 0.800000011920929 10.22049999237061 0.800000011920929 10.00000095367432 L 0.800000011920929 6.400000095367432 L 4.799998760223389 6.400000095367432 L 4.799998760223389 7.40000057220459 C 4.799998760223389 7.731249809265137 5.06874942779541 8.000000953674316 5.399999618530273 8.000000953674316 L 7.400000095367432 8.000000953674316 C 7.731249332427979 8.000000953674316 8 7.731249809265137 8 7.40000057220459 L 8 6.400000095367432 L 9.005749702453613 6.400000095367432 C 9.257247924804688 6.095250129699707 9.550998687744141 5.827500820159912 9.875 5.599999904632568 L 0.800000011920929 5.599999904632568 L 0.800000011920929 3.599999666213989 C 0.800000011920929 3.379499912261963 0.9794999957084656 3.200000047683716 1.199999690055847 3.200000047683716 L 11.59999847412109 3.200000047683716 C 11.8204984664917 3.200000047683716 11.99999904632568 3.379499912261963 11.99999904632568 3.599999666213989 L 11.99999904632568 4.820250034332275 C 12.13199901580811 4.808250904083252 12.26499843597412 4.799999237060547 12.39999961853027 4.799999237060547 C 12.53499794006348 4.799999237060547 12.66800117492676 4.808250904083252 12.80000019073486 4.820250034332275 L 12.80000019073486 3.599999666213989 C 12.80000019073486 2.937249660491943 12.26274871826172 2.399999618530273 11.59999847412109 2.399999618530273 L 8.800000190734863 2.399999618530273 L 8.800000190734863 0.5999999046325684 C 8.800000190734863 0.2685000002384186 8.531499862670898 0 8.19999885559082 0 L 4.59999942779541 0 C 4.268499851226807 0 4 0.2685000002384186 4 0.5999999046325684 L 4 2.399999618530273 L 1.199999690055847 2.399999618530273 C 0.5372499823570251 2.399999618530273 0 2.937249660491943 0 3.599999666213989 L 0 10.00000095367432 C 0 10.66275024414063 0.5372499823570251 11.19999980926514 1.199999690055847 11.19999980926514 L 8.484249114990234 11.19999980926514 C 8.353431701660156 10.94432353973389 8.248171806335449 10.67635726928711 8.169999122619629 10.40000057220459 L 1.199999690055847 10.40000057220459 Z M 5.59999942779541 6.400000095367432 L 7.19999885559082 6.400000095367432 L 7.19999885559082 7.199999332427979 L 5.59999942779541 7.199999332427979 L 5.59999942779541 6.400000095367432 Z M 4.799998760223389 0.800000011920929 L 8 0.800000011920929 L 8 2.399999618530273 L 4.799998760223389 2.399999618530273 L 4.799998760223389 0.800000011920929 Z M 13.75724983215332 8.80000114440918 L 12.80000019073486 8.80000114440918 L 12.80000019073486 7.442749977111816 C 12.80000019073486 7.309250831604004 12.690749168396 7.199999332427979 12.55725002288818 7.199999332427979 L 12.24299907684326 7.199999332427979 C 12.10949993133545 7.199999332427979 12.00024795532227 7.309250831604004 12.00024795532227 7.442749977111816 L 12.00024795532227 9.357000350952148 C 12.00024795532227 9.490499496459961 12.10949993133545 9.599748611450195 12.24299907684326 9.599748611450195 L 13.75724697113037 9.599748611450195 C 13.89074993133545 9.599748611450195 13.99999904632568 9.490499496459961 13.99999904632568 9.357000350952148 L 13.99999904632568 9.04274845123291 C 13.99999904632568 8.909250259399414 13.89074993133545 8.80000114440918 13.75724697113037 8.80000114440918 Z M 12.39999961853027 5.599999904632568 C 10.41024971008301 5.599999904632568 8.800000190734863 7.210250377655029 8.800000190734863 9.19999885559082 C 8.800000190734863 11.18975067138672 10.41024971008301 12.80000019073486 12.39999961853027 12.80000019073486 C 14.38974857330322 12.80000019073486 16 11.18975067138672 16 9.19999885559082 C 16 7.210250377655029 14.38974857330322 5.599999904632568 12.39999961853027 5.599999904632568 Z M 12.39999961853027 12.00000095367432 C 10.85599899291992 12.00000095367432 9.599997520446777 10.74400043487549 9.599997520446777 9.19999885559082 C 9.599997520446777 7.655999660491943 10.85599899291992 6.400000095367432 12.39999961853027 6.400000095367432 C 13.94399833679199 6.400000095367432 15.19999885559082 7.655999660491943 15.19999885559082 9.19999885559082 C 15.19999885559082 10.74400043487549 13.94399833679199 12.00000095367432 12.39999961853027 12.00000095367432 Z">
+			</path>
+		</svg>
+	</div>
+	<div id="car_purple_A9_Group_5">
+		<svg class="Rectangle_73_A9_Rectangle_6">
+			<rect id="Rectangle_73_A9_Rectangle_6" rx="8" ry="8" x="0" y="0" width="24.856" height="49.711">
+			</rect>
+		</svg>
+		<svg class="Rectangle_74_A9_Rectangle_7">
+			<rect id="Rectangle_74_A9_Rectangle_7" rx="8" ry="8" x="0" y="0" width="20.713" height="31.07">
+			</rect>
+		</svg>
+		<svg class="Rectangle_75_A9_Rectangle_8">
+			<rect id="Rectangle_75_A9_Rectangle_8" rx="6" ry="6" x="0" y="0" width="16.57" height="18.642">
+			</rect>
+		</svg>
+	</div>
+	<div id="car_purple_A9_Group_6">
+		<svg class="Rectangle_73_A9_Rectangle_9">
+			<rect id="Rectangle_73_A9_Rectangle_9" rx="8" ry="8" x="0" y="0" width="24.856" height="49.711">
+			</rect>
+		</svg>
+		<svg class="Rectangle_74_A9_Rectangle_10">
+			<rect id="Rectangle_74_A9_Rectangle_10" rx="8" ry="8" x="0" y="0" width="20.713" height="31.07">
+			</rect>
+		</svg>
+		<svg class="Rectangle_75_A9_Rectangle_11">
+			<rect id="Rectangle_75_A9_Rectangle_11" rx="6" ry="6" x="0" y="0" width="16.57" height="18.642">
+			</rect>
+		</svg>
+	</div>
+	<svg class="Path_686" viewBox="0 0 262.435 187.578">
+		<path id="Path_686" d="M 2 0 L 260.4354553222656 0 C 261.5400390625 0 262.4354553222656 0.8954304456710815 262.4354553222656 2 L 262.4354553222656 185.5776824951172 C 262.4354553222656 186.6822509765625 261.5400390625 187.5776824951172 260.4354553222656 187.5776824951172 L 2 187.5776824951172 C 0.8954304456710815 187.5776824951172 0 186.6822509765625 0 185.5776824951172 L 0 2 C 0 0.8954304456710815 0.8954304456710815 0 2 0 Z">
+		</path>
+	</svg>
+	<svg class="Path_1001" viewBox="0 0 262.435 187.578">
+		<path id="Path_1001" d="M 2 0 L 260.4354553222656 0 C 261.5400390625 0 262.4354553222656 0.8954304456710815 262.4354553222656 2 L 262.4354553222656 185.5776824951172 C 262.4354553222656 186.6822509765625 261.5400390625 187.5776824951172 260.4354553222656 187.5776824951172 L 2 187.5776824951172 C 0.8954304456710815 187.5776824951172 0 186.6822509765625 0 185.5776824951172 L 0 2 C 0 0.8954304456710815 0.8954304456710815 0 2 0 Z">
+		</path>
+	</svg>
+	<svg class="Ellipse_244">
+		<ellipse id="Ellipse_244" rx="9.58154296875" ry="9.58154296875" cx="9.58154296875" cy="9.58154296875">
+		</ellipse>
+	</svg>
+	<svg class="Ellipse_246">
+		<ellipse id="Ellipse_246" rx="9.58154296875" ry="9.58154296875" cx="9.58154296875" cy="9.58154296875">
+		</ellipse>
+	</svg>
+	<div id="business_time_light_A9_Group_7">
+		<svg class="business_time_light_A9_Path_5" viewBox="0 0 14.171 11.337">
+			<path id="business_time_light_A9_Path_5" d="M 1.062824249267578 9.211146354675293 C 0.8675304651260376 9.211146354675293 0.7085496783256531 9.052165031433105 0.7085496783256531 8.856871604919434 L 0.7085496783256531 5.668397426605225 L 4.251296997070313 5.668397426605225 L 4.251296997070313 6.554084777832031 C 4.251296997070313 6.84746789932251 4.489326000213623 7.085497379302979 4.782710075378418 7.085497379302979 L 6.554084300994873 7.085497379302979 C 6.847467422485352 7.085497379302979 7.08549690246582 6.84746789932251 7.08549690246582 6.554084777832031 L 7.08549690246582 5.668397426605225 L 7.976276397705078 5.668397426605225 C 8.19902515411377 5.398484230041504 8.459196090698242 5.161342144012451 8.746159553527832 4.959847450256348 L 0.7085496783256531 4.959847450256348 L 0.7085496783256531 3.188473224639893 C 0.7085496783256531 2.993179321289063 0.8675304651260376 2.834198713302612 1.062824249267578 2.834198713302612 L 10.27396869659424 2.834198713302612 C 10.46926307678223 2.834198713302612 10.62824440002441 2.993179321289063 10.62824440002441 3.188473224639893 L 10.62824440002441 4.269233226776123 C 10.74515438079834 4.258605480194092 10.86295032501221 4.251297473907471 10.98251914978027 4.251297473907471 C 11.10208606719971 4.251297473907471 11.21988487243652 4.258605480194092 11.33679485321045 4.269233226776123 L 11.33679485321045 3.188473224639893 C 11.33679485321045 2.601484060287476 10.86095809936523 2.125648736953735 10.27396869659424 2.125648736953735 L 7.794046401977539 2.125648736953735 L 7.794046401977539 0.5314121842384338 C 7.794046401977539 0.2378069758415222 7.556239128112793 0 7.262632846832275 0 L 4.074160099029541 0 C 3.780555248260498 0 3.54274845123291 0.2378069758415222 3.54274845123291 0.5314121842384338 L 3.54274845123291 2.125648736953735 L 1.062824249267578 2.125648736953735 C 0.4758353531360626 2.125648736953735 0 2.601484060287476 0 3.188473224639893 L 0 8.856871604919434 C 0 9.443860054016113 0.4758353531360626 9.919694900512695 1.062824249267578 9.919694900512695 L 7.514389991760254 9.919694900512695 C 7.398526668548584 9.693245887756348 7.305298805236816 9.455911636352539 7.236063003540039 9.211146354675293 L 1.062824249267578 9.211146354675293 Z M 4.959846973419189 5.668397426605225 L 6.376945972442627 5.668397426605225 L 6.376945972442627 6.376946449279785 L 4.959846973419189 6.376946449279785 L 4.959846973419189 5.668397426605225 Z M 4.251296997070313 0.7085496783256531 L 7.08549690246582 0.7085496783256531 L 7.08549690246582 2.125648736953735 L 4.251296997070313 2.125648736953735 L 4.251296997070313 0.7085496783256531 Z M 12.18461799621582 7.794046878814697 L 11.33679485321045 7.794046878814697 L 11.33679485321045 6.591947555541992 C 11.33679485321045 6.473709106445313 11.24003219604492 6.376946449279785 11.12179374694824 6.376946449279785 L 10.84346580505371 6.376946449279785 C 10.72522735595703 6.376946449279785 10.6284646987915 6.473709106445313 10.6284646987915 6.591947555541992 L 10.6284646987915 8.287374496459961 C 10.6284646987915 8.405612945556641 10.72522735595703 8.502373695373535 10.84346580505371 8.502373695373535 L 12.18461608886719 8.502373695373535 C 12.30285739898682 8.502373695373535 12.39961814880371 8.405612945556641 12.39961814880371 8.287374496459961 L 12.39961814880371 8.009045600891113 C 12.39961814880371 7.89080810546875 12.30285739898682 7.794046878814697 12.18461608886719 7.794046878814697 Z M 10.98251914978027 4.959847450256348 C 9.220223426818848 4.959847450256348 7.794046401977539 6.386025428771973 7.794046401977539 8.148320198059082 C 7.794046401977539 9.910617828369141 9.220223426818848 11.33679485321045 10.98251914978027 11.33679485321045 C 12.74481391906738 11.33679485321045 14.17099380493164 9.910617828369141 14.17099380493164 8.148320198059082 C 14.17099380493164 6.386025428771973 12.74481391906738 4.959847450256348 10.98251914978027 4.959847450256348 Z M 10.98251914978027 10.62824535369873 C 9.615017890930176 10.62824535369873 8.502593994140625 9.515822410583496 8.502593994140625 8.148320198059082 C 8.502593994140625 6.780819892883301 9.615017890930176 5.668397426605225 10.98251914978027 5.668397426605225 C 12.35001945495605 5.668397426605225 13.46244239807129 6.780819892883301 13.46244239807129 8.148320198059082 C 13.46244239807129 9.515822410583496 12.35001945495605 10.62824535369873 10.98251914978027 10.62824535369873 Z">
+			</path>
+		</svg>
+	</div>
+	<div id="business_time_light_A9_Group_8">
+		<svg class="business_time_light_A9_Path_6" viewBox="0 0 14.171 11.337">
+			<path id="business_time_light_A9_Path_6" d="M 1.062824249267578 9.211146354675293 C 0.8675304651260376 9.211146354675293 0.7085496783256531 9.052165031433105 0.7085496783256531 8.856871604919434 L 0.7085496783256531 5.668397426605225 L 4.251296997070313 5.668397426605225 L 4.251296997070313 6.554084777832031 C 4.251296997070313 6.84746789932251 4.489326000213623 7.085497379302979 4.782710075378418 7.085497379302979 L 6.554084300994873 7.085497379302979 C 6.847467422485352 7.085497379302979 7.08549690246582 6.84746789932251 7.08549690246582 6.554084777832031 L 7.08549690246582 5.668397426605225 L 7.976276397705078 5.668397426605225 C 8.19902515411377 5.398484230041504 8.459196090698242 5.161342144012451 8.746159553527832 4.959847450256348 L 0.7085496783256531 4.959847450256348 L 0.7085496783256531 3.188473224639893 C 0.7085496783256531 2.993179321289063 0.8675304651260376 2.834198713302612 1.062824249267578 2.834198713302612 L 10.27396869659424 2.834198713302612 C 10.46926307678223 2.834198713302612 10.62824440002441 2.993179321289063 10.62824440002441 3.188473224639893 L 10.62824440002441 4.269233226776123 C 10.74515438079834 4.258605480194092 10.86295032501221 4.251297473907471 10.98251914978027 4.251297473907471 C 11.10208606719971 4.251297473907471 11.21988487243652 4.258605480194092 11.33679485321045 4.269233226776123 L 11.33679485321045 3.188473224639893 C 11.33679485321045 2.601484060287476 10.86095809936523 2.125648736953735 10.27396869659424 2.125648736953735 L 7.794046401977539 2.125648736953735 L 7.794046401977539 0.5314121842384338 C 7.794046401977539 0.2378069758415222 7.556239128112793 0 7.262632846832275 0 L 4.074160099029541 0 C 3.780555248260498 0 3.54274845123291 0.2378069758415222 3.54274845123291 0.5314121842384338 L 3.54274845123291 2.125648736953735 L 1.062824249267578 2.125648736953735 C 0.4758353531360626 2.125648736953735 0 2.601484060287476 0 3.188473224639893 L 0 8.856871604919434 C 0 9.443860054016113 0.4758353531360626 9.919694900512695 1.062824249267578 9.919694900512695 L 7.514389991760254 9.919694900512695 C 7.398526668548584 9.693245887756348 7.305298805236816 9.455911636352539 7.236063003540039 9.211146354675293 L 1.062824249267578 9.211146354675293 Z M 4.959846973419189 5.668397426605225 L 6.376945972442627 5.668397426605225 L 6.376945972442627 6.376946449279785 L 4.959846973419189 6.376946449279785 L 4.959846973419189 5.668397426605225 Z M 4.251296997070313 0.7085496783256531 L 7.08549690246582 0.7085496783256531 L 7.08549690246582 2.125648736953735 L 4.251296997070313 2.125648736953735 L 4.251296997070313 0.7085496783256531 Z M 12.18461799621582 7.794046878814697 L 11.33679485321045 7.794046878814697 L 11.33679485321045 6.591947555541992 C 11.33679485321045 6.473709106445313 11.24003219604492 6.376946449279785 11.12179374694824 6.376946449279785 L 10.84346580505371 6.376946449279785 C 10.72522735595703 6.376946449279785 10.6284646987915 6.473709106445313 10.6284646987915 6.591947555541992 L 10.6284646987915 8.287374496459961 C 10.6284646987915 8.405612945556641 10.72522735595703 8.502373695373535 10.84346580505371 8.502373695373535 L 12.18461608886719 8.502373695373535 C 12.30285739898682 8.502373695373535 12.39961814880371 8.405612945556641 12.39961814880371 8.287374496459961 L 12.39961814880371 8.009045600891113 C 12.39961814880371 7.89080810546875 12.30285739898682 7.794046878814697 12.18461608886719 7.794046878814697 Z M 10.98251914978027 4.959847450256348 C 9.220223426818848 4.959847450256348 7.794046401977539 6.386025428771973 7.794046401977539 8.148320198059082 C 7.794046401977539 9.910617828369141 9.220223426818848 11.33679485321045 10.98251914978027 11.33679485321045 C 12.74481391906738 11.33679485321045 14.17099380493164 9.910617828369141 14.17099380493164 8.148320198059082 C 14.17099380493164 6.386025428771973 12.74481391906738 4.959847450256348 10.98251914978027 4.959847450256348 Z M 10.98251914978027 10.62824535369873 C 9.615017890930176 10.62824535369873 8.502593994140625 9.515822410583496 8.502593994140625 8.148320198059082 C 8.502593994140625 6.780819892883301 9.615017890930176 5.668397426605225 10.98251914978027 5.668397426605225 C 12.35001945495605 5.668397426605225 13.46244239807129 6.780819892883301 13.46244239807129 8.148320198059082 C 13.46244239807129 9.515822410583496 12.35001945495605 10.62824535369873 10.98251914978027 10.62824535369873 Z">
+			</path>
+		</svg>
+	</div>
+	<div id="DW_65423_12___">
+		<span>DW 65423 12...</span>
+	</div>
+	<div id="DW_65423_12____A9_Text_5">
+		<span>DW 65423 12...</span>
+	</div>
+	<div id="Robotnicza_40__53_608_Wroc_aw">
+		<span>Robotnicza 40, 53-608 Wrocław</span>
+	</div>
+	<div id="Robotnicza_40__53_608_Wroc_aw_A9_Text_7">
+		<span>Robotnicza 40, 53-608 Wrocław</span>
+	</div>
+	<svg class="Rectangle_1792">
+		<rect id="Rectangle_1792" rx="0" ry="0" x="0" y="0" width="153" height="83">
+		</rect>
+	</svg>
+	<svg class="Rectangle_1827">
+		<rect id="Rectangle_1827" rx="0" ry="0" x="0" y="0" width="153" height="83">
+		</rect>
+	</svg>
+	<div id="Buttons___Text___Enabled">
+		<svg class="Box_A9_Rectangle_14">
+			<rect id="Box_A9_Rectangle_14" rx="4" ry="4" x="0" y="0" width="93" height="36">
+			</rect>
+		</svg>
+		<div id="DETAILS">
+			<span>DETAILS</span>
+		</div>
+	</div>
+	<div id="Buttons___Text___Enabled_A9_Group_10">
+		<svg class="Box_A9_Rectangle_15">
+			<rect id="Box_A9_Rectangle_15" rx="4" ry="4" x="0" y="0" width="93" height="36">
+			</rect>
+		</svg>
+		<div id="DETAILS_A9_Text_9">
+			<span>DETAILS</span>
+		</div>
+	</div>
+	<div id="Buttons___Text___Enabled_A9_Group_11">
+		<svg class="Box_A9_Rectangle_16">
+			<rect id="Box_A9_Rectangle_16" rx="4" ry="4" x="0" y="0" width="93" height="36">
+			</rect>
+		</svg>
+		<div id="SETTINGS">
+			<span>SETTINGS</span>
+		</div>
+	</div>
+	<div id="Buttons___Text___Enabled_A9_Group_12">
+		<svg class="Box_A9_Rectangle_17">
+			<rect id="Box_A9_Rectangle_17" rx="4" ry="4" x="0" y="0" width="93" height="36">
+			</rect>
+		</svg>
+		<div id="SETTINGS_A9_Text_11">
+			<span>SETTINGS</span>
+		</div>
+	</div>
+	<svg class="Line_3">
+		<path id="Line_3" d="M 0 0 L 263 0">
+		</path>
+	</svg>
+	<svg class="Line_45">
+		<path id="Line_45" d="M 0 0 L 263 0">
+		</path>
+	</svg>
+	<svg class="Rectangle_1785">
+		<rect id="Rectangle_1785" rx="2" ry="2" x="0" y="0" width="63" height="18">
+		</rect>
+	</svg>
+	<svg class="Rectangle_1824">
+		<rect id="Rectangle_1824" rx="2" ry="2" x="0" y="0" width="63" height="18">
+		</rect>
+	</svg>
+	<svg class="Rectangle_1793">
+		<rect id="Rectangle_1793" rx="2" ry="2" x="0" y="0" width="63" height="14">
+		</rect>
+	</svg>
+	<svg class="Rectangle_1825">
+		<rect id="Rectangle_1825" rx="2" ry="2" x="0" y="0" width="63" height="14">
+		</rect>
+	</svg>
+	<svg class="Rectangle_1794">
+		<rect id="Rectangle_1794" rx="0" ry="0" x="0" y="0" width="46" height="12">
+		</rect>
+	</svg>
+	<svg class="Rectangle_1826">
+		<rect id="Rectangle_1826" rx="0" ry="0" x="0" y="0" width="46" height="12">
+		</rect>
+	</svg>
+	<div id="Enhance">
+		<div id="ID55_pkt">
+			<span>55 pkt</span>
+		</div>
+	</div>
+	<div id="Enhance_A9_Group_14">
+		<div id="ID55_pkt_A9_Text_13">
+			<span>55 pkt</span>
+		</div>
+	</div>
+	<svg class="Line_4">
+		<path id="Line_4" d="M 0 6.9056396484375 L 0 0">
+		</path>
+	</svg>
+	<svg class="Line_40">
+		<path id="Line_40" d="M 0 6.9056396484375 L 0 0">
+		</path>
+	</svg>
+	<svg class="Line_5">
+		<path id="Line_5" d="M 0 6.9056396484375 L 0 0">
+		</path>
+	</svg>
+	<svg class="Line_41">
+		<path id="Line_41" d="M 0 6.9056396484375 L 0 0">
+		</path>
+	</svg>
+	<svg class="Line_6">
+		<path id="Line_6" d="M 0 6.9056396484375 L 0 0">
+		</path>
+	</svg>
+	<svg class="Line_42">
+		<path id="Line_42" d="M 0 6.9056396484375 L 0 0">
+		</path>
+	</svg>
+	<svg class="Line_7">
+		<path id="Line_7" d="M 0 6.9056396484375 L 0 0">
+		</path>
+	</svg>
+	<svg class="Line_43">
+		<path id="Line_43" d="M 0 6.9056396484375 L 0 0">
+		</path>
+	</svg>
+	<svg class="Line_8">
+		<path id="Line_8" d="M 0 6.9056396484375 L 0 0">
+		</path>
+	</svg>
+	<svg class="Line_44">
+		<path id="Line_44" d="M 0 6.9056396484375 L 0 0">
+		</path>
+	</svg>
+	<svg class="gas_pump_light" viewBox="0 0 16.372 16.372">
+		<path id="gas_pump_light" d="M 16.07172966003418 3.837261199951172 L 13.07866477966309 0.8409997224807739 C 12.97953605651855 0.7418704628944397 12.81645202636719 0.7418704628944397 12.71732330322266 0.8409997224807739 L 12.35598182678223 1.202341794967651 C 12.25685214996338 1.301470875740051 12.25685214996338 1.464554667472839 12.35598182678223 1.563683867454529 L 13.30250549316406 2.513406038284302 L 13.30250549316406 5.116348266601563 C 13.30250549316406 5.963743209838867 13.99001502990723 6.651252746582031 14.83740997314453 6.651252746582031 L 15.34904479980469 6.651252746582031 L 15.34904479980469 12.22167778015137 C 15.34904479980469 12.7301139831543 15.00049304962158 13.20657348632813 14.49845218658447 13.28971385955811 C 13.85890865325928 13.39523887634277 13.30250549316406 12.90279102325439 13.30250549316406 12.27923583984375 L 13.30250549316406 10.74433135986328 C 13.30250549316406 9.330939292907715 12.15772342681885 8.1861572265625 10.74433135986328 8.1861572265625 L 10.23269653320313 8.1861572265625 L 10.23269653320313 2.046539306640625 C 10.23269653320313 0.9177449941635132 9.314950942993164 0 8.1861572265625 0 L 3.069808959960938 0 C 1.941014528274536 0 1.023269653320313 0.9177449941635132 1.023269653320313 2.046539306640625 L 1.023269653320313 15.34904479980469 L 0.2558174133300781 15.34904479980469 C 0.1151178330183029 15.34904479980469 0 15.46416187286377 0 15.60486221313477 L 0 16.11649703979492 C 0 16.2571964263916 0.1151178330183029 16.372314453125 0.2558174133300781 16.372314453125 L 11.00014877319336 16.372314453125 C 11.14084815979004 16.372314453125 11.25596618652344 16.2571964263916 11.25596618652344 16.11649703979492 L 11.25596618652344 15.60486221313477 C 11.25596618652344 15.46416187286377 11.14084815979004 15.34904479980469 11.00014877319336 15.34904479980469 L 10.23269653320313 15.34904479980469 L 10.23269653320313 9.209426879882813 L 10.74433135986328 9.209426879882813 C 11.59172630310059 9.209426879882813 12.27923583984375 9.896936416625977 12.27923583984375 10.74433135986328 L 12.27923583984375 12.16411781311035 C 12.27923583984375 13.18418884277344 12.97314071655273 14.13071441650391 13.9804220199585 14.29699420928955 C 15.2627067565918 14.50804424285889 16.372314453125 13.5199499130249 16.372314453125 12.27923488616943 L 16.372314453125 4.559945583343506 C 16.372314453125 4.288139820098877 16.26359176635742 4.029124736785889 16.07172966003418 3.837261438369751 Z M 15.34904479980469 5.627983093261719 L 14.83740997314453 5.627983093261719 C 14.55601119995117 5.627983093261719 14.32577514648438 5.397747039794922 14.32577514648438 5.116348266601563 L 14.32577514648438 3.536675691604614 L 15.34904479980469 4.559945583343506 L 15.34904479980469 5.627983093261719 Z M 9.209426879882813 15.34904479980469 L 2.046539306640625 15.34904479980469 L 2.046539306640625 7.162887573242188 L 9.209426879882813 7.162887573242188 L 9.209426879882813 15.34904479980469 Z M 9.209426879882813 6.139617919921875 L 2.046539306640625 6.139617919921875 L 2.046539306640625 2.046539306640625 C 2.046539306640625 1.483741044998169 2.507010459899902 1.023269653320313 3.069808959960938 1.023269653320313 L 8.1861572265625 1.023269653320313 C 8.748954772949219 1.023269653320313 9.209426879882813 1.483741044998169 9.209426879882813 2.046539306640625 L 9.209426879882813 6.139617919921875 Z">
+		</path>
+	</svg>
+	<svg class="gas_pump_light_A9_Path_8" viewBox="0 0 16.372 16.372">
+		<path id="gas_pump_light_A9_Path_8" d="M 16.07172966003418 3.837261199951172 L 13.07866477966309 0.8409997224807739 C 12.97953605651855 0.7418704628944397 12.81645202636719 0.7418704628944397 12.71732330322266 0.8409997224807739 L 12.35598182678223 1.202341794967651 C 12.25685214996338 1.301470875740051 12.25685214996338 1.464554667472839 12.35598182678223 1.563683867454529 L 13.30250549316406 2.513406038284302 L 13.30250549316406 5.116348266601563 C 13.30250549316406 5.963743209838867 13.99001502990723 6.651252746582031 14.83740997314453 6.651252746582031 L 15.34904479980469 6.651252746582031 L 15.34904479980469 12.22167778015137 C 15.34904479980469 12.7301139831543 15.00049304962158 13.20657348632813 14.49845218658447 13.28971385955811 C 13.85890865325928 13.39523887634277 13.30250549316406 12.90279102325439 13.30250549316406 12.27923583984375 L 13.30250549316406 10.74433135986328 C 13.30250549316406 9.330939292907715 12.15772342681885 8.1861572265625 10.74433135986328 8.1861572265625 L 10.23269653320313 8.1861572265625 L 10.23269653320313 2.046539306640625 C 10.23269653320313 0.9177449941635132 9.314950942993164 0 8.1861572265625 0 L 3.069808959960938 0 C 1.941014528274536 0 1.023269653320313 0.9177449941635132 1.023269653320313 2.046539306640625 L 1.023269653320313 15.34904479980469 L 0.2558174133300781 15.34904479980469 C 0.1151178330183029 15.34904479980469 0 15.46416187286377 0 15.60486221313477 L 0 16.11649703979492 C 0 16.2571964263916 0.1151178330183029 16.372314453125 0.2558174133300781 16.372314453125 L 11.00014877319336 16.372314453125 C 11.14084815979004 16.372314453125 11.25596618652344 16.2571964263916 11.25596618652344 16.11649703979492 L 11.25596618652344 15.60486221313477 C 11.25596618652344 15.46416187286377 11.14084815979004 15.34904479980469 11.00014877319336 15.34904479980469 L 10.23269653320313 15.34904479980469 L 10.23269653320313 9.209426879882813 L 10.74433135986328 9.209426879882813 C 11.59172630310059 9.209426879882813 12.27923583984375 9.896936416625977 12.27923583984375 10.74433135986328 L 12.27923583984375 12.16411781311035 C 12.27923583984375 13.18418884277344 12.97314071655273 14.13071441650391 13.9804220199585 14.29699420928955 C 15.2627067565918 14.50804424285889 16.372314453125 13.5199499130249 16.372314453125 12.27923488616943 L 16.372314453125 4.559945583343506 C 16.372314453125 4.288139820098877 16.26359176635742 4.029124736785889 16.07172966003418 3.837261438369751 Z M 15.34904479980469 5.627983093261719 L 14.83740997314453 5.627983093261719 C 14.55601119995117 5.627983093261719 14.32577514648438 5.397747039794922 14.32577514648438 5.116348266601563 L 14.32577514648438 3.536675691604614 L 15.34904479980469 4.559945583343506 L 15.34904479980469 5.627983093261719 Z M 9.209426879882813 15.34904479980469 L 2.046539306640625 15.34904479980469 L 2.046539306640625 7.162887573242188 L 9.209426879882813 7.162887573242188 L 9.209426879882813 15.34904479980469 Z M 9.209426879882813 6.139617919921875 L 2.046539306640625 6.139617919921875 L 2.046539306640625 2.046539306640625 C 2.046539306640625 1.483741044998169 2.507010459899902 1.023269653320313 3.069808959960938 1.023269653320313 L 8.1861572265625 1.023269653320313 C 8.748954772949219 1.023269653320313 9.209426879882813 1.483741044998169 9.209426879882813 2.046539306640625 L 9.209426879882813 6.139617919921875 Z">
+		</path>
+	</svg>
+	<svg class="leaf_light" viewBox="0.007 0 17.374 15.443">
+		<path id="leaf_light" d="M 16.48209381103516 0.2925812005996704 C 16.39461898803711 0.09652163088321686 16.22269248962402 0 16.05076217651367 0 C 15.89089870452881 0 15.72801780700684 0.0844564288854599 15.62847900390625 0.2563855946063995 C 14.69342422485352 1.882172107696533 13.01937770843506 2.895648956298828 11.10704326629639 2.895648956298828 L 8.694001197814941 2.895648956298828 C 5.496721744537354 2.895648956298828 2.902703285217285 5.489667892456055 2.902703285217285 8.686946868896484 C 2.902703285217285 9.317354202270508 3.005257368087769 9.920614242553711 3.192268133163452 10.48767948150635 C 0.8908299207687378 12.45732498168945 0.049282006919384 14.7617769241333 0.03420050442218781 14.80099010467529 C -0.05327222496271133 15.05134296417236 0.07944502681493759 15.32884311676025 0.3297980129718781 15.41631603240967 C 0.568085789680481 15.50077056884766 0.8546342253684998 15.38313579559326 0.9451234936714172 15.12071990966797 C 0.9571885466575623 15.08452129364014 1.666019320487976 13.15710544586182 3.587403059005737 11.41971778869629 C 4.564684867858887 13.23854541778564 6.483051776885986 14.47824573516846 8.694001197814941 14.47824573516846 C 8.902125358581543 14.47824573516846 9.107234001159668 14.4661808013916 9.309326171875 14.44506645202637 C 14.04793548583984 14.10120677947998 17.38095092773438 9.857272148132324 17.38095092773438 4.654152870178223 C 17.38095092773438 3.13996958732605 17.05518913269043 1.571493029594421 16.48209381103516 0.2925811409950256 Z M 9.206771850585938 13.48588275909424 C 9.028809547424316 13.50398063659668 8.856881141662598 13.51302909851074 8.694001197814941 13.51302909851074 C 6.784682273864746 13.51302909851074 5.146830081939697 12.39096546173096 4.365609169006348 10.78026103973389 C 5.92805290222168 9.622000694274902 8.10883903503418 8.686946868896484 11.10704326629639 8.686946868896484 C 11.37247657775879 8.686946868896484 11.58965015411377 8.469773292541504 11.58965015411377 8.204339027404785 C 11.58965015411377 7.938905239105225 11.37247657775879 7.721731185913086 11.10704326629639 7.721731185913086 C 8.006284713745117 7.721731185913086 5.707862854003906 8.656785011291504 4.02476692199707 9.845206260681152 C 3.931261301040649 9.471184730529785 3.867918968200684 9.088114738464355 3.867918968200684 8.686946868896484 C 3.867918968200684 6.026569366455078 6.033623218536377 3.860865592956543 8.694001197814941 3.860865592956543 L 11.10704326629639 3.860865592956543 C 13.01636123657227 3.860865592956543 14.75676727294922 3.004235982894897 15.92407703399658 1.532281041145325 C 16.24078941345215 2.506546497344971 16.41573524475098 3.604480266571045 16.41573524475098 4.654152870178223 C 16.41573524475098 9.468170166015625 13.39641380310059 13.18123626708984 9.206771850585938 13.48588180541992 Z">
+		</path>
+	</svg>
+	<svg class="leaf_light_A9_Path_10" viewBox="0.007 0 17.374 15.443">
+		<path id="leaf_light_A9_Path_10" d="M 16.48209381103516 0.2925812005996704 C 16.39461898803711 0.09652163088321686 16.22269248962402 0 16.05076217651367 0 C 15.89089870452881 0 15.72801780700684 0.0844564288854599 15.62847900390625 0.2563855946063995 C 14.69342422485352 1.882172107696533 13.01937770843506 2.895648956298828 11.10704326629639 2.895648956298828 L 8.694001197814941 2.895648956298828 C 5.496721744537354 2.895648956298828 2.902703285217285 5.489667892456055 2.902703285217285 8.686946868896484 C 2.902703285217285 9.317354202270508 3.005257368087769 9.920614242553711 3.192268133163452 10.48767948150635 C 0.8908299207687378 12.45732498168945 0.049282006919384 14.7617769241333 0.03420050442218781 14.80099010467529 C -0.05327222496271133 15.05134296417236 0.07944502681493759 15.32884311676025 0.3297980129718781 15.41631603240967 C 0.568085789680481 15.50077056884766 0.8546342253684998 15.38313579559326 0.9451234936714172 15.12071990966797 C 0.9571885466575623 15.08452129364014 1.666019320487976 13.15710544586182 3.587403059005737 11.41971778869629 C 4.564684867858887 13.23854541778564 6.483051776885986 14.47824573516846 8.694001197814941 14.47824573516846 C 8.902125358581543 14.47824573516846 9.107234001159668 14.4661808013916 9.309326171875 14.44506645202637 C 14.04793548583984 14.10120677947998 17.38095092773438 9.857272148132324 17.38095092773438 4.654152870178223 C 17.38095092773438 3.13996958732605 17.05518913269043 1.571493029594421 16.48209381103516 0.2925811409950256 Z M 9.206771850585938 13.48588275909424 C 9.028809547424316 13.50398063659668 8.856881141662598 13.51302909851074 8.694001197814941 13.51302909851074 C 6.784682273864746 13.51302909851074 5.146830081939697 12.39096546173096 4.365609169006348 10.78026103973389 C 5.92805290222168 9.622000694274902 8.10883903503418 8.686946868896484 11.10704326629639 8.686946868896484 C 11.37247657775879 8.686946868896484 11.58965015411377 8.469773292541504 11.58965015411377 8.204339027404785 C 11.58965015411377 7.938905239105225 11.37247657775879 7.721731185913086 11.10704326629639 7.721731185913086 C 8.006284713745117 7.721731185913086 5.707862854003906 8.656785011291504 4.02476692199707 9.845206260681152 C 3.931261301040649 9.471184730529785 3.867918968200684 9.088114738464355 3.867918968200684 8.686946868896484 C 3.867918968200684 6.026569366455078 6.033623218536377 3.860865592956543 8.694001197814941 3.860865592956543 L 11.10704326629639 3.860865592956543 C 13.01636123657227 3.860865592956543 14.75676727294922 3.004235982894897 15.92407703399658 1.532281041145325 C 16.24078941345215 2.506546497344971 16.41573524475098 3.604480266571045 16.41573524475098 4.654152870178223 C 16.41573524475098 9.468170166015625 13.39641380310059 13.18123626708984 9.206771850585938 13.48588180541992 Z">
+		</path>
+	</svg>
+	<div id="____Text___Body_2___Selected__">
+		<div id="____Text___Body_2___Selected___A9_Text_14">
+			<span>Model: Porsche Cayman<br/>Driver: Jarosław boss<br/>License: DW65532<br/>Group: Dyżurni</span>
+		</div>
+	</div>
+	<div id="____Text___Body_2___Selected___A9_Group_16">
+		<div id="____Text___Body_2___Selected___A9_Text_15">
+			<span>Model: Porsche Cayman<br/>Driver: Jarosław boss<br/>License: DW65532<br/>Group: Dyżurni</span>
+		</div>
+	</div>
+	<svg class="business_time_light_A9_Path_11" viewBox="0 0 21.538 17.231">
+		<path id="business_time_light_A9_Path_11" d="M 1.615373134613037 13.99990177154541 C 1.318548560142517 13.99990177154541 1.076915502548218 13.75826835632324 1.076915502548218 13.4614429473877 L 1.076915502548218 8.615324020385742 L 6.461492538452148 8.615324020385742 L 6.461492538452148 9.961469650268555 C 6.461492538452148 10.40737724304199 6.823268890380859 10.76915550231934 7.269179821014404 10.76915550231934 L 9.961469650268555 10.76915550231934 C 10.40737724304199 10.76915550231934 10.76915550231934 10.40737724304199 10.76915550231934 9.961469650268555 L 10.76915550231934 8.615324020385742 L 12.1230411529541 8.615324020385742 C 12.461594581604 8.205085754394531 12.85702419281006 7.844656944274902 13.29317569732666 7.538408279418945 L 1.076915502548218 7.538408279418945 L 1.076915502548218 4.846118927001953 C 1.076915502548218 4.549294471740723 1.318548560142517 4.307662010192871 1.615373134613037 4.307662010192871 L 15.61527442932129 4.307662010192871 C 15.91209888458252 4.307662010192871 16.15373229980469 4.549294471740723 16.15373229980469 4.846118927001953 L 16.15373229980469 6.488752365112305 C 16.33142280578613 6.472599506378174 16.51045989990234 6.461492538452148 16.69219017028809 6.461492538452148 C 16.87392044067383 6.461492538452148 17.05295944213867 6.472599506378174 17.23064804077148 6.488752365112305 L 17.23064804077148 4.846118927001953 C 17.23064804077148 3.953961849212646 16.50743293762207 3.230746269226074 15.61527442932129 3.230746269226074 L 11.84607028961182 3.230746269226074 L 11.84607028961182 0.8076865673065186 C 11.84607028961182 0.3614397346973419 11.48463153839111 0 11.03838348388672 0 L 6.192263603210449 0 C 5.746017932891846 0 5.384577751159668 0.3614397346973419 5.384577751159668 0.8076865673065186 L 5.384577751159668 3.230746269226074 L 1.615373134613037 3.230746269226074 C 0.7232160568237305 3.230746269226074 0 3.953961849212646 0 4.846118927001953 L 0 13.4614429473877 C 0 14.35360240936279 0.7232160568237305 15.07681655883789 1.615373134613037 15.07681655883789 L 11.42102527618408 15.07681655883789 C 11.24492645263672 14.73263835906982 11.10322952270508 14.37191867828369 10.9980001449585 13.99990177154541 L 1.615373134613037 13.99990177154541 Z M 7.538408279418945 8.615324020385742 L 9.692237854003906 8.615324020385742 L 9.692237854003906 9.692237854003906 L 7.538408279418945 9.692237854003906 L 7.538408279418945 8.615324020385742 Z M 6.461492538452148 1.076915502548218 L 10.76915550231934 1.076915502548218 L 10.76915550231934 3.230746269226074 L 6.461492538452148 3.230746269226074 L 6.461492538452148 1.076915502548218 Z M 18.51924514770508 11.84607028961182 L 17.23064804077148 11.84607028961182 L 17.23064804077148 10.01901626586914 C 17.23064804077148 9.839306831359863 17.08358001708984 9.692237854003906 16.90387153625488 9.692237854003906 L 16.4808464050293 9.692237854003906 C 16.3011360168457 9.692237854003906 16.15406799316406 9.839306831359863 16.15406799316406 10.01901626586914 L 16.15406799316406 12.59587287902832 C 16.15406799316406 12.77558135986328 16.3011360168457 12.92264938354492 16.4808464050293 12.92264938354492 L 18.51924324035645 12.92264938354492 C 18.69895553588867 12.92264938354492 18.84602165222168 12.77558135986328 18.84602165222168 12.59587287902832 L 18.84602165222168 12.1728458404541 C 18.84602165222168 11.99313735961914 18.69895553588867 11.84607028961182 18.51924324035645 11.84607028961182 Z M 16.69219017028809 7.538408279418945 C 14.01369953155518 7.538408279418945 11.84607028961182 9.706037521362305 11.84607028961182 12.3845272064209 C 11.84607028961182 15.06301784515381 14.01369953155518 17.23064804077148 16.69219017028809 17.23064804077148 C 19.37067794799805 17.23064804077148 21.53831100463867 15.06301784515381 21.53831100463867 12.3845272064209 C 21.53831100463867 9.706037521362305 19.37067794799805 7.538408279418945 16.69219017028809 7.538408279418945 Z M 16.69219017028809 16.15373229980469 C 14.61374187469482 16.15373229980469 12.9229850769043 14.46297454833984 12.9229850769043 12.3845272064209 C 12.9229850769043 10.30608081817627 14.61374187469482 8.615324020385742 16.69219017028809 8.615324020385742 C 18.77063941955566 8.615324020385742 20.46139335632324 10.30608081817627 20.46139335632324 12.3845272064209 C 20.46139335632324 14.46297454833984 18.77063941955566 16.15373229980469 16.69219017028809 16.15373229980469 Z">
+		</path>
+	</svg>
+	<svg class="business_time_light_A9_Path_12" viewBox="0 0 21.538 17.231">
+		<path id="business_time_light_A9_Path_12" d="M 1.615373134613037 13.99990177154541 C 1.318548560142517 13.99990177154541 1.076915502548218 13.75826835632324 1.076915502548218 13.4614429473877 L 1.076915502548218 8.615324020385742 L 6.461492538452148 8.615324020385742 L 6.461492538452148 9.961469650268555 C 6.461492538452148 10.40737724304199 6.823268890380859 10.76915550231934 7.269179821014404 10.76915550231934 L 9.961469650268555 10.76915550231934 C 10.40737724304199 10.76915550231934 10.76915550231934 10.40737724304199 10.76915550231934 9.961469650268555 L 10.76915550231934 8.615324020385742 L 12.1230411529541 8.615324020385742 C 12.461594581604 8.205085754394531 12.85702419281006 7.844656944274902 13.29317569732666 7.538408279418945 L 1.076915502548218 7.538408279418945 L 1.076915502548218 4.846118927001953 C 1.076915502548218 4.549294471740723 1.318548560142517 4.307662010192871 1.615373134613037 4.307662010192871 L 15.61527442932129 4.307662010192871 C 15.91209888458252 4.307662010192871 16.15373229980469 4.549294471740723 16.15373229980469 4.846118927001953 L 16.15373229980469 6.488752365112305 C 16.33142280578613 6.472599506378174 16.51045989990234 6.461492538452148 16.69219017028809 6.461492538452148 C 16.87392044067383 6.461492538452148 17.05295944213867 6.472599506378174 17.23064804077148 6.488752365112305 L 17.23064804077148 4.846118927001953 C 17.23064804077148 3.953961849212646 16.50743293762207 3.230746269226074 15.61527442932129 3.230746269226074 L 11.84607028961182 3.230746269226074 L 11.84607028961182 0.8076865673065186 C 11.84607028961182 0.3614397346973419 11.48463153839111 0 11.03838348388672 0 L 6.192263603210449 0 C 5.746017932891846 0 5.384577751159668 0.3614397346973419 5.384577751159668 0.8076865673065186 L 5.384577751159668 3.230746269226074 L 1.615373134613037 3.230746269226074 C 0.7232160568237305 3.230746269226074 0 3.953961849212646 0 4.846118927001953 L 0 13.4614429473877 C 0 14.35360240936279 0.7232160568237305 15.07681655883789 1.615373134613037 15.07681655883789 L 11.42102527618408 15.07681655883789 C 11.24492645263672 14.73263835906982 11.10322952270508 14.37191867828369 10.9980001449585 13.99990177154541 L 1.615373134613037 13.99990177154541 Z M 7.538408279418945 8.615324020385742 L 9.692237854003906 8.615324020385742 L 9.692237854003906 9.692237854003906 L 7.538408279418945 9.692237854003906 L 7.538408279418945 8.615324020385742 Z M 6.461492538452148 1.076915502548218 L 10.76915550231934 1.076915502548218 L 10.76915550231934 3.230746269226074 L 6.461492538452148 3.230746269226074 L 6.461492538452148 1.076915502548218 Z M 18.51924514770508 11.84607028961182 L 17.23064804077148 11.84607028961182 L 17.23064804077148 10.01901626586914 C 17.23064804077148 9.839306831359863 17.08358001708984 9.692237854003906 16.90387153625488 9.692237854003906 L 16.4808464050293 9.692237854003906 C 16.3011360168457 9.692237854003906 16.15406799316406 9.839306831359863 16.15406799316406 10.01901626586914 L 16.15406799316406 12.59587287902832 C 16.15406799316406 12.77558135986328 16.3011360168457 12.92264938354492 16.4808464050293 12.92264938354492 L 18.51924324035645 12.92264938354492 C 18.69895553588867 12.92264938354492 18.84602165222168 12.77558135986328 18.84602165222168 12.59587287902832 L 18.84602165222168 12.1728458404541 C 18.84602165222168 11.99313735961914 18.69895553588867 11.84607028961182 18.51924324035645 11.84607028961182 Z M 16.69219017028809 7.538408279418945 C 14.01369953155518 7.538408279418945 11.84607028961182 9.706037521362305 11.84607028961182 12.3845272064209 C 11.84607028961182 15.06301784515381 14.01369953155518 17.23064804077148 16.69219017028809 17.23064804077148 C 19.37067794799805 17.23064804077148 21.53831100463867 15.06301784515381 21.53831100463867 12.3845272064209 C 21.53831100463867 9.706037521362305 19.37067794799805 7.538408279418945 16.69219017028809 7.538408279418945 Z M 16.69219017028809 16.15373229980469 C 14.61374187469482 16.15373229980469 12.9229850769043 14.46297454833984 12.9229850769043 12.3845272064209 C 12.9229850769043 10.30608081817627 14.61374187469482 8.615324020385742 16.69219017028809 8.615324020385742 C 18.77063941955566 8.615324020385742 20.46139335632324 10.30608081817627 20.46139335632324 12.3845272064209 C 20.46139335632324 14.46297454833984 18.77063941955566 16.15373229980469 16.69219017028809 16.15373229980469 Z">
+		</path>
+	</svg>
+	<div id="business_time_light_A9_Group_17">
+		<svg class="business_time_light_A9_Path_13" viewBox="0 0 21.538 17.231">
+			<path id="business_time_light_A9_Path_13" d="M 1.615373134613037 13.99990177154541 C 1.318548560142517 13.99990177154541 1.076915502548218 13.75826835632324 1.076915502548218 13.4614429473877 L 1.076915502548218 8.615324020385742 L 6.461492538452148 8.615324020385742 L 6.461492538452148 9.961469650268555 C 6.461492538452148 10.40737724304199 6.823268890380859 10.76915550231934 7.269179821014404 10.76915550231934 L 9.961469650268555 10.76915550231934 C 10.40737724304199 10.76915550231934 10.76915550231934 10.40737724304199 10.76915550231934 9.961469650268555 L 10.76915550231934 8.615324020385742 L 12.1230411529541 8.615324020385742 C 12.461594581604 8.205085754394531 12.85702419281006 7.844656944274902 13.29317569732666 7.538408279418945 L 1.076915502548218 7.538408279418945 L 1.076915502548218 4.846118927001953 C 1.076915502548218 4.549294471740723 1.318548560142517 4.307662010192871 1.615373134613037 4.307662010192871 L 15.61527442932129 4.307662010192871 C 15.91209888458252 4.307662010192871 16.15373229980469 4.549294471740723 16.15373229980469 4.846118927001953 L 16.15373229980469 6.488752365112305 C 16.33142280578613 6.472599506378174 16.51045989990234 6.461492538452148 16.69219017028809 6.461492538452148 C 16.87392044067383 6.461492538452148 17.05295944213867 6.472599506378174 17.23064804077148 6.488752365112305 L 17.23064804077148 4.846118927001953 C 17.23064804077148 3.953961849212646 16.50743293762207 3.230746269226074 15.61527442932129 3.230746269226074 L 11.84607028961182 3.230746269226074 L 11.84607028961182 0.8076865673065186 C 11.84607028961182 0.3614397346973419 11.48463153839111 0 11.03838348388672 0 L 6.192263603210449 0 C 5.746017932891846 0 5.384577751159668 0.3614397346973419 5.384577751159668 0.8076865673065186 L 5.384577751159668 3.230746269226074 L 1.615373134613037 3.230746269226074 C 0.7232160568237305 3.230746269226074 0 3.953961849212646 0 4.846118927001953 L 0 13.4614429473877 C 0 14.35360240936279 0.7232160568237305 15.07681655883789 1.615373134613037 15.07681655883789 L 11.42102527618408 15.07681655883789 C 11.24492645263672 14.73263835906982 11.10322952270508 14.37191867828369 10.9980001449585 13.99990177154541 L 1.615373134613037 13.99990177154541 Z M 7.538408279418945 8.615324020385742 L 9.692237854003906 8.615324020385742 L 9.692237854003906 9.692237854003906 L 7.538408279418945 9.692237854003906 L 7.538408279418945 8.615324020385742 Z M 6.461492538452148 1.076915502548218 L 10.76915550231934 1.076915502548218 L 10.76915550231934 3.230746269226074 L 6.461492538452148 3.230746269226074 L 6.461492538452148 1.076915502548218 Z M 18.51924514770508 11.84607028961182 L 17.23064804077148 11.84607028961182 L 17.23064804077148 10.01901626586914 C 17.23064804077148 9.839306831359863 17.08358001708984 9.692237854003906 16.90387153625488 9.692237854003906 L 16.4808464050293 9.692237854003906 C 16.3011360168457 9.692237854003906 16.15406799316406 9.839306831359863 16.15406799316406 10.01901626586914 L 16.15406799316406 12.59587287902832 C 16.15406799316406 12.77558135986328 16.3011360168457 12.92264938354492 16.4808464050293 12.92264938354492 L 18.51924324035645 12.92264938354492 C 18.69895553588867 12.92264938354492 18.84602165222168 12.77558135986328 18.84602165222168 12.59587287902832 L 18.84602165222168 12.1728458404541 C 18.84602165222168 11.99313735961914 18.69895553588867 11.84607028961182 18.51924324035645 11.84607028961182 Z M 16.69219017028809 7.538408279418945 C 14.01369953155518 7.538408279418945 11.84607028961182 9.706037521362305 11.84607028961182 12.3845272064209 C 11.84607028961182 15.06301784515381 14.01369953155518 17.23064804077148 16.69219017028809 17.23064804077148 C 19.37067794799805 17.23064804077148 21.53831100463867 15.06301784515381 21.53831100463867 12.3845272064209 C 21.53831100463867 9.706037521362305 19.37067794799805 7.538408279418945 16.69219017028809 7.538408279418945 Z M 16.69219017028809 16.15373229980469 C 14.61374187469482 16.15373229980469 12.9229850769043 14.46297454833984 12.9229850769043 12.3845272064209 C 12.9229850769043 10.30608081817627 14.61374187469482 8.615324020385742 16.69219017028809 8.615324020385742 C 18.77063941955566 8.615324020385742 20.46139335632324 10.30608081817627 20.46139335632324 12.3845272064209 C 20.46139335632324 14.46297454833984 18.77063941955566 16.15373229980469 16.69219017028809 16.15373229980469 Z">
+			</path>
+		</svg>
+	</div>
+	<div id="business_time_light_A9_Group_18">
+		<svg class="business_time_light_A9_Path_14" viewBox="0 0 21.538 17.231">
+			<path id="business_time_light_A9_Path_14" d="M 1.615373134613037 13.99990177154541 C 1.318548560142517 13.99990177154541 1.076915502548218 13.75826835632324 1.076915502548218 13.4614429473877 L 1.076915502548218 8.615324020385742 L 6.461492538452148 8.615324020385742 L 6.461492538452148 9.961469650268555 C 6.461492538452148 10.40737724304199 6.823268890380859 10.76915550231934 7.269179821014404 10.76915550231934 L 9.961469650268555 10.76915550231934 C 10.40737724304199 10.76915550231934 10.76915550231934 10.40737724304199 10.76915550231934 9.961469650268555 L 10.76915550231934 8.615324020385742 L 12.1230411529541 8.615324020385742 C 12.461594581604 8.205085754394531 12.85702419281006 7.844656944274902 13.29317569732666 7.538408279418945 L 1.076915502548218 7.538408279418945 L 1.076915502548218 4.846118927001953 C 1.076915502548218 4.549294471740723 1.318548560142517 4.307662010192871 1.615373134613037 4.307662010192871 L 15.61527442932129 4.307662010192871 C 15.91209888458252 4.307662010192871 16.15373229980469 4.549294471740723 16.15373229980469 4.846118927001953 L 16.15373229980469 6.488752365112305 C 16.33142280578613 6.472599506378174 16.51045989990234 6.461492538452148 16.69219017028809 6.461492538452148 C 16.87392044067383 6.461492538452148 17.05295944213867 6.472599506378174 17.23064804077148 6.488752365112305 L 17.23064804077148 4.846118927001953 C 17.23064804077148 3.953961849212646 16.50743293762207 3.230746269226074 15.61527442932129 3.230746269226074 L 11.84607028961182 3.230746269226074 L 11.84607028961182 0.8076865673065186 C 11.84607028961182 0.3614397346973419 11.48463153839111 0 11.03838348388672 0 L 6.192263603210449 0 C 5.746017932891846 0 5.384577751159668 0.3614397346973419 5.384577751159668 0.8076865673065186 L 5.384577751159668 3.230746269226074 L 1.615373134613037 3.230746269226074 C 0.7232160568237305 3.230746269226074 0 3.953961849212646 0 4.846118927001953 L 0 13.4614429473877 C 0 14.35360240936279 0.7232160568237305 15.07681655883789 1.615373134613037 15.07681655883789 L 11.42102527618408 15.07681655883789 C 11.24492645263672 14.73263835906982 11.10322952270508 14.37191867828369 10.9980001449585 13.99990177154541 L 1.615373134613037 13.99990177154541 Z M 7.538408279418945 8.615324020385742 L 9.692237854003906 8.615324020385742 L 9.692237854003906 9.692237854003906 L 7.538408279418945 9.692237854003906 L 7.538408279418945 8.615324020385742 Z M 6.461492538452148 1.076915502548218 L 10.76915550231934 1.076915502548218 L 10.76915550231934 3.230746269226074 L 6.461492538452148 3.230746269226074 L 6.461492538452148 1.076915502548218 Z M 18.51924514770508 11.84607028961182 L 17.23064804077148 11.84607028961182 L 17.23064804077148 10.01901626586914 C 17.23064804077148 9.839306831359863 17.08358001708984 9.692237854003906 16.90387153625488 9.692237854003906 L 16.4808464050293 9.692237854003906 C 16.3011360168457 9.692237854003906 16.15406799316406 9.839306831359863 16.15406799316406 10.01901626586914 L 16.15406799316406 12.59587287902832 C 16.15406799316406 12.77558135986328 16.3011360168457 12.92264938354492 16.4808464050293 12.92264938354492 L 18.51924324035645 12.92264938354492 C 18.69895553588867 12.92264938354492 18.84602165222168 12.77558135986328 18.84602165222168 12.59587287902832 L 18.84602165222168 12.1728458404541 C 18.84602165222168 11.99313735961914 18.69895553588867 11.84607028961182 18.51924324035645 11.84607028961182 Z M 16.69219017028809 7.538408279418945 C 14.01369953155518 7.538408279418945 11.84607028961182 9.706037521362305 11.84607028961182 12.3845272064209 C 11.84607028961182 15.06301784515381 14.01369953155518 17.23064804077148 16.69219017028809 17.23064804077148 C 19.37067794799805 17.23064804077148 21.53831100463867 15.06301784515381 21.53831100463867 12.3845272064209 C 21.53831100463867 9.706037521362305 19.37067794799805 7.538408279418945 16.69219017028809 7.538408279418945 Z M 16.69219017028809 16.15373229980469 C 14.61374187469482 16.15373229980469 12.9229850769043 14.46297454833984 12.9229850769043 12.3845272064209 C 12.9229850769043 10.30608081817627 14.61374187469482 8.615324020385742 16.69219017028809 8.615324020385742 C 18.77063941955566 8.615324020385742 20.46139335632324 10.30608081817627 20.46139335632324 12.3845272064209 C 20.46139335632324 14.46297454833984 18.77063941955566 16.15373229980469 16.69219017028809 16.15373229980469 Z">
+			</path>
+		</svg>
+	</div>
+	<div id="business_time_light_A9_Group_19">
+		<svg class="business_time_light_A9_Path_15" viewBox="0 0 21.538 17.231">
+			<path id="business_time_light_A9_Path_15" d="M 1.615373134613037 13.99990177154541 C 1.318548560142517 13.99990177154541 1.076915502548218 13.75826835632324 1.076915502548218 13.4614429473877 L 1.076915502548218 8.615324020385742 L 6.461492538452148 8.615324020385742 L 6.461492538452148 9.961469650268555 C 6.461492538452148 10.40737724304199 6.823268890380859 10.76915550231934 7.269179821014404 10.76915550231934 L 9.961469650268555 10.76915550231934 C 10.40737724304199 10.76915550231934 10.76915550231934 10.40737724304199 10.76915550231934 9.961469650268555 L 10.76915550231934 8.615324020385742 L 12.1230411529541 8.615324020385742 C 12.461594581604 8.205085754394531 12.85702419281006 7.844656944274902 13.29317569732666 7.538408279418945 L 1.076915502548218 7.538408279418945 L 1.076915502548218 4.846118927001953 C 1.076915502548218 4.549294471740723 1.318548560142517 4.307662010192871 1.615373134613037 4.307662010192871 L 15.61527442932129 4.307662010192871 C 15.91209888458252 4.307662010192871 16.15373229980469 4.549294471740723 16.15373229980469 4.846118927001953 L 16.15373229980469 6.488752365112305 C 16.33142280578613 6.472599506378174 16.51045989990234 6.461492538452148 16.69219017028809 6.461492538452148 C 16.87392044067383 6.461492538452148 17.05295944213867 6.472599506378174 17.23064804077148 6.488752365112305 L 17.23064804077148 4.846118927001953 C 17.23064804077148 3.953961849212646 16.50743293762207 3.230746269226074 15.61527442932129 3.230746269226074 L 11.84607028961182 3.230746269226074 L 11.84607028961182 0.8076865673065186 C 11.84607028961182 0.3614397346973419 11.48463153839111 0 11.03838348388672 0 L 6.192263603210449 0 C 5.746017932891846 0 5.384577751159668 0.3614397346973419 5.384577751159668 0.8076865673065186 L 5.384577751159668 3.230746269226074 L 1.615373134613037 3.230746269226074 C 0.7232160568237305 3.230746269226074 0 3.953961849212646 0 4.846118927001953 L 0 13.4614429473877 C 0 14.35360240936279 0.7232160568237305 15.07681655883789 1.615373134613037 15.07681655883789 L 11.42102527618408 15.07681655883789 C 11.24492645263672 14.73263835906982 11.10322952270508 14.37191867828369 10.9980001449585 13.99990177154541 L 1.615373134613037 13.99990177154541 Z M 7.538408279418945 8.615324020385742 L 9.692237854003906 8.615324020385742 L 9.692237854003906 9.692237854003906 L 7.538408279418945 9.692237854003906 L 7.538408279418945 8.615324020385742 Z M 6.461492538452148 1.076915502548218 L 10.76915550231934 1.076915502548218 L 10.76915550231934 3.230746269226074 L 6.461492538452148 3.230746269226074 L 6.461492538452148 1.076915502548218 Z M 18.51924514770508 11.84607028961182 L 17.23064804077148 11.84607028961182 L 17.23064804077148 10.01901626586914 C 17.23064804077148 9.839306831359863 17.08358001708984 9.692237854003906 16.90387153625488 9.692237854003906 L 16.4808464050293 9.692237854003906 C 16.3011360168457 9.692237854003906 16.15406799316406 9.839306831359863 16.15406799316406 10.01901626586914 L 16.15406799316406 12.59587287902832 C 16.15406799316406 12.77558135986328 16.3011360168457 12.92264938354492 16.4808464050293 12.92264938354492 L 18.51924324035645 12.92264938354492 C 18.69895553588867 12.92264938354492 18.84602165222168 12.77558135986328 18.84602165222168 12.59587287902832 L 18.84602165222168 12.1728458404541 C 18.84602165222168 11.99313735961914 18.69895553588867 11.84607028961182 18.51924324035645 11.84607028961182 Z M 16.69219017028809 7.538408279418945 C 14.01369953155518 7.538408279418945 11.84607028961182 9.706037521362305 11.84607028961182 12.3845272064209 C 11.84607028961182 15.06301784515381 14.01369953155518 17.23064804077148 16.69219017028809 17.23064804077148 C 19.37067794799805 17.23064804077148 21.53831100463867 15.06301784515381 21.53831100463867 12.3845272064209 C 21.53831100463867 9.706037521362305 19.37067794799805 7.538408279418945 16.69219017028809 7.538408279418945 Z M 16.69219017028809 16.15373229980469 C 14.61374187469482 16.15373229980469 12.9229850769043 14.46297454833984 12.9229850769043 12.3845272064209 C 12.9229850769043 10.30608081817627 14.61374187469482 8.615324020385742 16.69219017028809 8.615324020385742 C 18.77063941955566 8.615324020385742 20.46139335632324 10.30608081817627 20.46139335632324 12.3845272064209 C 20.46139335632324 14.46297454833984 18.77063941955566 16.15373229980469 16.69219017028809 16.15373229980469 Z">
+			</path>
+		</svg>
+	</div>
+	<div id="business_time_light_A9_Group_20">
+		<svg class="business_time_light_A9_Path_16" viewBox="0 0 21.538 17.231">
+			<path id="business_time_light_A9_Path_16" d="M 1.615373134613037 13.99990177154541 C 1.318548560142517 13.99990177154541 1.076915502548218 13.75826835632324 1.076915502548218 13.4614429473877 L 1.076915502548218 8.615324020385742 L 6.461492538452148 8.615324020385742 L 6.461492538452148 9.961469650268555 C 6.461492538452148 10.40737724304199 6.823268890380859 10.76915550231934 7.269179821014404 10.76915550231934 L 9.961469650268555 10.76915550231934 C 10.40737724304199 10.76915550231934 10.76915550231934 10.40737724304199 10.76915550231934 9.961469650268555 L 10.76915550231934 8.615324020385742 L 12.1230411529541 8.615324020385742 C 12.461594581604 8.205085754394531 12.85702419281006 7.844656944274902 13.29317569732666 7.538408279418945 L 1.076915502548218 7.538408279418945 L 1.076915502548218 4.846118927001953 C 1.076915502548218 4.549294471740723 1.318548560142517 4.307662010192871 1.615373134613037 4.307662010192871 L 15.61527442932129 4.307662010192871 C 15.91209888458252 4.307662010192871 16.15373229980469 4.549294471740723 16.15373229980469 4.846118927001953 L 16.15373229980469 6.488752365112305 C 16.33142280578613 6.472599506378174 16.51045989990234 6.461492538452148 16.69219017028809 6.461492538452148 C 16.87392044067383 6.461492538452148 17.05295944213867 6.472599506378174 17.23064804077148 6.488752365112305 L 17.23064804077148 4.846118927001953 C 17.23064804077148 3.953961849212646 16.50743293762207 3.230746269226074 15.61527442932129 3.230746269226074 L 11.84607028961182 3.230746269226074 L 11.84607028961182 0.8076865673065186 C 11.84607028961182 0.3614397346973419 11.48463153839111 0 11.03838348388672 0 L 6.192263603210449 0 C 5.746017932891846 0 5.384577751159668 0.3614397346973419 5.384577751159668 0.8076865673065186 L 5.384577751159668 3.230746269226074 L 1.615373134613037 3.230746269226074 C 0.7232160568237305 3.230746269226074 0 3.953961849212646 0 4.846118927001953 L 0 13.4614429473877 C 0 14.35360240936279 0.7232160568237305 15.07681655883789 1.615373134613037 15.07681655883789 L 11.42102527618408 15.07681655883789 C 11.24492645263672 14.73263835906982 11.10322952270508 14.37191867828369 10.9980001449585 13.99990177154541 L 1.615373134613037 13.99990177154541 Z M 7.538408279418945 8.615324020385742 L 9.692237854003906 8.615324020385742 L 9.692237854003906 9.692237854003906 L 7.538408279418945 9.692237854003906 L 7.538408279418945 8.615324020385742 Z M 6.461492538452148 1.076915502548218 L 10.76915550231934 1.076915502548218 L 10.76915550231934 3.230746269226074 L 6.461492538452148 3.230746269226074 L 6.461492538452148 1.076915502548218 Z M 18.51924514770508 11.84607028961182 L 17.23064804077148 11.84607028961182 L 17.23064804077148 10.01901626586914 C 17.23064804077148 9.839306831359863 17.08358001708984 9.692237854003906 16.90387153625488 9.692237854003906 L 16.4808464050293 9.692237854003906 C 16.3011360168457 9.692237854003906 16.15406799316406 9.839306831359863 16.15406799316406 10.01901626586914 L 16.15406799316406 12.59587287902832 C 16.15406799316406 12.77558135986328 16.3011360168457 12.92264938354492 16.4808464050293 12.92264938354492 L 18.51924324035645 12.92264938354492 C 18.69895553588867 12.92264938354492 18.84602165222168 12.77558135986328 18.84602165222168 12.59587287902832 L 18.84602165222168 12.1728458404541 C 18.84602165222168 11.99313735961914 18.69895553588867 11.84607028961182 18.51924324035645 11.84607028961182 Z M 16.69219017028809 7.538408279418945 C 14.01369953155518 7.538408279418945 11.84607028961182 9.706037521362305 11.84607028961182 12.3845272064209 C 11.84607028961182 15.06301784515381 14.01369953155518 17.23064804077148 16.69219017028809 17.23064804077148 C 19.37067794799805 17.23064804077148 21.53831100463867 15.06301784515381 21.53831100463867 12.3845272064209 C 21.53831100463867 9.706037521362305 19.37067794799805 7.538408279418945 16.69219017028809 7.538408279418945 Z M 16.69219017028809 16.15373229980469 C 14.61374187469482 16.15373229980469 12.9229850769043 14.46297454833984 12.9229850769043 12.3845272064209 C 12.9229850769043 10.30608081817627 14.61374187469482 8.615324020385742 16.69219017028809 8.615324020385742 C 18.77063941955566 8.615324020385742 20.46139335632324 10.30608081817627 20.46139335632324 12.3845272064209 C 20.46139335632324 14.46297454833984 18.77063941955566 16.15373229980469 16.69219017028809 16.15373229980469 Z">
+			</path>
+		</svg>
+	</div>
+	<svg class="Rectangle_1795">
+		<rect id="Rectangle_1795" rx="0" ry="0" x="0" y="0" width="2" height="46">
+		</rect>
+	</svg>
+	<svg class="Rectangle_1828">
+		<rect id="Rectangle_1828" rx="0" ry="0" x="0" y="0" width="2" height="46">
+		</rect>
+	</svg>
+	<svg class="Rectangle_1829">
+		<rect id="Rectangle_1829" rx="2" ry="2" x="0" y="0" width="317.828" height="24.138">
+		</rect>
+	</svg>
+	<div id="Robotnicza_40__53_608__Wroc_aw">
+		<span>Robotnicza 40, 53-608, Wrocław, Dolnyśląsk, Polska</span>
+	</div>
+	<div id="____Artboard_Content___Header_A9_Group_21">
+		<svg class="Box_A9_Rectangle_30">
+			<rect id="Box_A9_Rectangle_30" rx="0" ry="0" x="0" y="0" width="2855" height="240">
+			</rect>
+		</svg>
+		<div id="Car_label_A9_Text_17">
+			<span>Car label</span>
+		</div>
+		<svg class="Divider_A9_Path_18" viewBox="-5 -1606 2855 1">
+			<path id="Divider_A9_Path_18" d="M -5 -1605 L 2849.999755859375 -1605 L 2849.999755859375 -1606 L -5 -1606 L -5 -1605 Z">
+			</path>
+		</svg>
+	</div>
+	<svg class="Rectangle_1801">
+		<rect id="Rectangle_1801" rx="0" ry="0" x="0" y="0" width="536" height="1029">
+		</rect>
+	</svg>
+	<svg class="Rectangle_1830">
+		<rect id="Rectangle_1830" rx="0" ry="0" x="0" y="0" width="737" height="279.457">
+		</rect>
+	</svg>
+	<div id="____Artboard_Content___Header_A9_Group_22">
+		<svg class="Box_A9_Rectangle_30">
+			<rect id="Box_A9_Rectangle_30" rx="0" ry="0" x="0" y="0" width="2855" height="240">
+			</rect>
+		</svg>
+		<svg class="Divider_A9_Path_18" viewBox="-5 -1606 2855 1">
+			<path id="Divider_A9_Path_18" d="M -5 -1605 L 2849.999755859375 -1605 L 2849.999755859375 -1606 L -5 -1606 L -5 -1605 Z">
+			</path>
+		</svg>
+	</div>
+	<div id="Specification_label">
+		<span>Specification label</span>
+	</div>
+	<div id="DETAILS_LABEL">
+		<span>DETAILS LABEL</span>
+	</div>
+	<div id="LABEL">
+		<span>LABEL</span>
+	</div>
+	<div id="LABEL_A9_Text_21">
+		<span>LABEL</span>
+	</div>
+	<div id="DETAILS_LABEL___hint__">
+		<span>DETAILS LABEL - hint  </span>
+	</div>
+	<div id="Elevation">
+		<span>Elevation</span>
+	</div>
+	<div id="Typography">
+		<span>Typography</span>
+	</div>
+	<div id="Shadow___04dp">
+		<svg class="Shadow___04dp_A9_Path_19" viewBox="0 0 129.38 45.13">
+			<path id="Shadow___04dp_A9_Path_19" d="M 1.043386101722717 0 L 128.3364868164063 0 C 128.9127349853516 0 129.3798828125 0.1629453748464584 129.3798828125 0.3639487028121948 L 129.3798828125 44.76568984985352 C 129.3798828125 44.96669387817383 128.9127349853516 45.129638671875 128.3364868164063 45.129638671875 L 15.55724048614502 45.129638671875 L 1.043386101722717 45.129638671875 C 0.4671398401260376 45.129638671875 0 44.96669387817383 0 44.76568984985352 L 0 0.3639487028121948 C 0 0.1629453748464584 0.4671398401260376 0 1.043386101722717 0 Z">
+			</path>
+		</svg>
+	</div>
+	<div id="ID4dp">
+		<span>4dp</span>
+	</div>
+	<div id="ID6dp">
+		<span>6dp</span>
+	</div>
+	<svg class="Rectangle_1831">
+		<rect id="Rectangle_1831" rx="2" ry="2" x="0" y="0" width="317.828" height="24.138">
+		</rect>
+	</svg>
+	<div id="Robotnicza_40__53_608__Wroc_aw_A9_Text_27">
+		<span>Robotnicza 40, 53-608, Wrocław, Dolnyśląsk, Polska</span>
+	</div>
+	<div id="Roboto_12_BOLD___80_">
+		<span>Roboto 12 BOLD - 80%</span>
+	</div>
+	<div id="Roboto_12_regular___100_">
+		<span>Roboto 12 regular - 100%</span>
+	</div>
+	<svg class="Rectangle_1832">
+		<rect id="Rectangle_1832" rx="0" ry="0" x="0" y="0" width="24" height="76">
+		</rect>
+	</svg>
+	<div id="ID24_px">
+		<span>24<br/>px</span>
+	</div>
+	<svg class="Rectangle_1833">
+		<rect id="Rectangle_1833" rx="0" ry="0" x="0" y="0" width="24" height="76">
+		</rect>
+	</svg>
+	<div id="ID24_px_A9_Text_31">
+		<span>24<br/>px</span>
+	</div>
+	<svg class="Rectangle_1834">
+		<rect id="Rectangle_1834" rx="0" ry="0" x="0" y="0" width="24" height="76">
+		</rect>
+	</svg>
+	<div id="ID24_px_A9_Text_32">
+		<span>24<br/>px</span>
+	</div>
+	<div id="Shadow___03dp_A9_Group_24">
+		<svg class="Shadow___03dp_A9_Rectangle_35">
+			<rect id="Shadow___03dp_A9_Rectangle_35" rx="2" ry="2" x="0" y="0" width="96.405" height="30.265">
+			</rect>
+		</svg>
+	</div>
+	<div id="ID31px">
+		<span>31px</span>
+	</div>
+	<div id="ID0_3px_border__000000_16_">
+		<span>0,3px border<br/>#000000 16%</span>
+	</div>
+	<div id="business_trip_active">
+		<span>business trip active</span>
+	</div>
+	<div id="private_trip_active">
+		<span>private trip active</span>
+	</div>
+	<div id="dynamic_width">
+		<span>dynamic width</span>
+	</div>
+	<svg class="Ellipse_247">
+		<ellipse id="Ellipse_247" rx="10" ry="10" cx="10" cy="10">
+		</ellipse>
+	</svg>
+	<div id="business_time_light_A9_Group_25">
+		<svg class="business_time_light_A9_Path_20" viewBox="0 0 16 12.8">
+			<path id="business_time_light_A9_Path_20" d="M 1.199999690055847 10.40000057220459 C 0.9794999957084656 10.40000057220459 0.800000011920929 10.22049999237061 0.800000011920929 10.00000095367432 L 0.800000011920929 6.400000095367432 L 4.799998760223389 6.400000095367432 L 4.799998760223389 7.40000057220459 C 4.799998760223389 7.731249809265137 5.06874942779541 8.000000953674316 5.399999618530273 8.000000953674316 L 7.400000095367432 8.000000953674316 C 7.731249332427979 8.000000953674316 8 7.731249809265137 8 7.40000057220459 L 8 6.400000095367432 L 9.005749702453613 6.400000095367432 C 9.257247924804688 6.095250129699707 9.550998687744141 5.827500820159912 9.875 5.599999904632568 L 0.800000011920929 5.599999904632568 L 0.800000011920929 3.599999666213989 C 0.800000011920929 3.379499912261963 0.9794999957084656 3.200000047683716 1.199999690055847 3.200000047683716 L 11.59999847412109 3.200000047683716 C 11.8204984664917 3.200000047683716 11.99999904632568 3.379499912261963 11.99999904632568 3.599999666213989 L 11.99999904632568 4.820250034332275 C 12.13199901580811 4.808250904083252 12.26499843597412 4.799999237060547 12.39999961853027 4.799999237060547 C 12.53499794006348 4.799999237060547 12.66800117492676 4.808250904083252 12.80000019073486 4.820250034332275 L 12.80000019073486 3.599999666213989 C 12.80000019073486 2.937249660491943 12.26274871826172 2.399999618530273 11.59999847412109 2.399999618530273 L 8.800000190734863 2.399999618530273 L 8.800000190734863 0.5999999046325684 C 8.800000190734863 0.2685000002384186 8.531499862670898 0 8.19999885559082 0 L 4.59999942779541 0 C 4.268499851226807 0 4 0.2685000002384186 4 0.5999999046325684 L 4 2.399999618530273 L 1.199999690055847 2.399999618530273 C 0.5372499823570251 2.399999618530273 0 2.937249660491943 0 3.599999666213989 L 0 10.00000095367432 C 0 10.66275024414063 0.5372499823570251 11.19999980926514 1.199999690055847 11.19999980926514 L 8.484249114990234 11.19999980926514 C 8.353431701660156 10.94432353973389 8.248171806335449 10.67635726928711 8.169999122619629 10.40000057220459 L 1.199999690055847 10.40000057220459 Z M 5.59999942779541 6.400000095367432 L 7.19999885559082 6.400000095367432 L 7.19999885559082 7.199999332427979 L 5.59999942779541 7.199999332427979 L 5.59999942779541 6.400000095367432 Z M 4.799998760223389 0.800000011920929 L 8 0.800000011920929 L 8 2.399999618530273 L 4.799998760223389 2.399999618530273 L 4.799998760223389 0.800000011920929 Z M 13.75724983215332 8.80000114440918 L 12.80000019073486 8.80000114440918 L 12.80000019073486 7.442749977111816 C 12.80000019073486 7.309250831604004 12.690749168396 7.199999332427979 12.55725002288818 7.199999332427979 L 12.24299907684326 7.199999332427979 C 12.10949993133545 7.199999332427979 12.00024795532227 7.309250831604004 12.00024795532227 7.442749977111816 L 12.00024795532227 9.357000350952148 C 12.00024795532227 9.490499496459961 12.10949993133545 9.599748611450195 12.24299907684326 9.599748611450195 L 13.75724697113037 9.599748611450195 C 13.89074993133545 9.599748611450195 13.99999904632568 9.490499496459961 13.99999904632568 9.357000350952148 L 13.99999904632568 9.04274845123291 C 13.99999904632568 8.909250259399414 13.89074993133545 8.80000114440918 13.75724697113037 8.80000114440918 Z M 12.39999961853027 5.599999904632568 C 10.41024971008301 5.599999904632568 8.800000190734863 7.210250377655029 8.800000190734863 9.19999885559082 C 8.800000190734863 11.18975067138672 10.41024971008301 12.80000019073486 12.39999961853027 12.80000019073486 C 14.38974857330322 12.80000019073486 16 11.18975067138672 16 9.19999885559082 C 16 7.210250377655029 14.38974857330322 5.599999904632568 12.39999961853027 5.599999904632568 Z M 12.39999961853027 12.00000095367432 C 10.85599899291992 12.00000095367432 9.599997520446777 10.74400043487549 9.599997520446777 9.19999885559082 C 9.599997520446777 7.655999660491943 10.85599899291992 6.400000095367432 12.39999961853027 6.400000095367432 C 13.94399833679199 6.400000095367432 15.19999885559082 7.655999660491943 15.19999885559082 9.19999885559082 C 15.19999885559082 10.74400043487549 13.94399833679199 12.00000095367432 12.39999961853027 12.00000095367432 Z">
+			</path>
+		</svg>
+	</div>
+	<div id="Group_343">
+		<svg class="Ellipse_248">
+			<ellipse id="Ellipse_248" rx="10" ry="10" cx="10" cy="10">
+			</ellipse>
+		</svg>
+		<div id="business_time_light_A9_Group_27">
+			<svg class="business_time_light_A9_Path_21" viewBox="0 0 16 12.8">
+				<path id="business_time_light_A9_Path_21" d="M 1.199999690055847 10.40000057220459 C 0.9794999957084656 10.40000057220459 0.800000011920929 10.22049999237061 0.800000011920929 10.00000095367432 L 0.800000011920929 6.400000095367432 L 4.799998760223389 6.400000095367432 L 4.799998760223389 7.40000057220459 C 4.799998760223389 7.731249809265137 5.06874942779541 8.000000953674316 5.399999618530273 8.000000953674316 L 7.400000095367432 8.000000953674316 C 7.731249332427979 8.000000953674316 8 7.731249809265137 8 7.40000057220459 L 8 6.400000095367432 L 9.005749702453613 6.400000095367432 C 9.257247924804688 6.095250129699707 9.550998687744141 5.827500820159912 9.875 5.599999904632568 L 0.800000011920929 5.599999904632568 L 0.800000011920929 3.599999666213989 C 0.800000011920929 3.379499912261963 0.9794999957084656 3.200000047683716 1.199999690055847 3.200000047683716 L 11.59999847412109 3.200000047683716 C 11.8204984664917 3.200000047683716 11.99999904632568 3.379499912261963 11.99999904632568 3.599999666213989 L 11.99999904632568 4.820250034332275 C 12.13199901580811 4.808250904083252 12.26499843597412 4.799999237060547 12.39999961853027 4.799999237060547 C 12.53499794006348 4.799999237060547 12.66800117492676 4.808250904083252 12.80000019073486 4.820250034332275 L 12.80000019073486 3.599999666213989 C 12.80000019073486 2.937249660491943 12.26274871826172 2.399999618530273 11.59999847412109 2.399999618530273 L 8.800000190734863 2.399999618530273 L 8.800000190734863 0.5999999046325684 C 8.800000190734863 0.2685000002384186 8.531499862670898 0 8.19999885559082 0 L 4.59999942779541 0 C 4.268499851226807 0 4 0.2685000002384186 4 0.5999999046325684 L 4 2.399999618530273 L 1.199999690055847 2.399999618530273 C 0.5372499823570251 2.399999618530273 0 2.937249660491943 0 3.599999666213989 L 0 10.00000095367432 C 0 10.66275024414063 0.5372499823570251 11.19999980926514 1.199999690055847 11.19999980926514 L 8.484249114990234 11.19999980926514 C 8.353431701660156 10.94432353973389 8.248171806335449 10.67635726928711 8.169999122619629 10.40000057220459 L 1.199999690055847 10.40000057220459 Z M 5.59999942779541 6.400000095367432 L 7.19999885559082 6.400000095367432 L 7.19999885559082 7.199999332427979 L 5.59999942779541 7.199999332427979 L 5.59999942779541 6.400000095367432 Z M 4.799998760223389 0.800000011920929 L 8 0.800000011920929 L 8 2.399999618530273 L 4.799998760223389 2.399999618530273 L 4.799998760223389 0.800000011920929 Z M 13.75724983215332 8.80000114440918 L 12.80000019073486 8.80000114440918 L 12.80000019073486 7.442749977111816 C 12.80000019073486 7.309250831604004 12.690749168396 7.199999332427979 12.55725002288818 7.199999332427979 L 12.24299907684326 7.199999332427979 C 12.10949993133545 7.199999332427979 12.00024795532227 7.309250831604004 12.00024795532227 7.442749977111816 L 12.00024795532227 9.357000350952148 C 12.00024795532227 9.490499496459961 12.10949993133545 9.599748611450195 12.24299907684326 9.599748611450195 L 13.75724697113037 9.599748611450195 C 13.89074993133545 9.599748611450195 13.99999904632568 9.490499496459961 13.99999904632568 9.357000350952148 L 13.99999904632568 9.04274845123291 C 13.99999904632568 8.909250259399414 13.89074993133545 8.80000114440918 13.75724697113037 8.80000114440918 Z M 12.39999961853027 5.599999904632568 C 10.41024971008301 5.599999904632568 8.800000190734863 7.210250377655029 8.800000190734863 9.19999885559082 C 8.800000190734863 11.18975067138672 10.41024971008301 12.80000019073486 12.39999961853027 12.80000019073486 C 14.38974857330322 12.80000019073486 16 11.18975067138672 16 9.19999885559082 C 16 7.210250377655029 14.38974857330322 5.599999904632568 12.39999961853027 5.599999904632568 Z M 12.39999961853027 12.00000095367432 C 10.85599899291992 12.00000095367432 9.599997520446777 10.74400043487549 9.599997520446777 9.19999885559082 C 9.599997520446777 7.655999660491943 10.85599899291992 6.400000095367432 12.39999961853027 6.400000095367432 C 13.94399833679199 6.400000095367432 15.19999885559082 7.655999660491943 15.19999885559082 9.19999885559082 C 15.19999885559082 10.74400043487549 13.94399833679199 12.00000095367432 12.39999961853027 12.00000095367432 Z">
+				</path>
+			</svg>
+		</div>
+	</div>
+	<div id="Group_344">
+		<svg class="Ellipse_250">
+			<ellipse id="Ellipse_250" rx="10" ry="10" cx="10" cy="10">
+			</ellipse>
+		</svg>
+		<svg class="coffee_light" viewBox="-0.001 64 16 10.667">
+			<path id="coffee_light" d="M 14.38477230072021 74.66656494140625 L 0.7237913012504578 74.66656494140625 C 0.04324227944016457 74.66656494140625 -0.1956443041563034 73.77767944335938 0.1682410687208176 73.77767944335938 L 14.94032096862793 73.77767944335938 C 15.30420589447021 73.77767944335938 15.0653190612793 74.66656494140625 14.3847713470459 74.66656494140625 Z M 15.99864482879639 66.64164733886719 C 16.01253318786621 68.12496185302734 14.81254482269287 69.33327484130859 13.33200550079346 69.33327484130859 L 12.44312381744385 69.33327484130859 L 12.44312381744385 70.22216796875 C 12.44312381744385 71.69436645507813 11.24869060516357 72.88880920410156 9.776481628417969 72.88880920410156 L 4.44320011138916 72.88880920410156 C 2.970991611480713 72.88880920410156 1.776559233665466 71.69436645507813 1.776559233665466 70.22216796875 L 1.776559233665466 64.33333587646484 C 1.776559233665466 64.15000152587891 1.926557779312134 64 2.109889268875122 64 L 13.29867076873779 64 C 14.76532363891602 64 15.98475551605225 65.17221832275391 15.99864482879639 66.64164733886719 Z M 11.55424308776855 64.88888549804688 L 2.665439367294312 64.88888549804688 L 2.665439367294312 70.22216796875 C 2.665439367294312 71.20271301269531 3.462653636932373 71.99992370605469 4.44320011138916 71.99992370605469 L 9.776481628417969 71.99992370605469 C 10.75702857971191 71.99992370605469 11.55424308776855 71.20271301269531 11.55424308776855 70.22216796875 L 11.55424308776855 64.88888549804688 Z M 15.10976600646973 66.66664123535156 C 15.10976600646973 65.68609619140625 14.31254863739014 64.88888549804688 13.33200550079346 64.88888549804688 L 12.44312381744385 64.88888549804688 L 12.44312381744385 68.44440460205078 L 13.33200550079346 68.44440460205078 C 14.31254863739014 68.44440460205078 15.10976600646973 67.64718627929688 15.10976600646973 66.66664123535156 Z">
+			</path>
+		</svg>
+	</div>
+	<div id="Group_345">
+		<svg class="Ellipse_249">
+			<ellipse id="Ellipse_249" rx="10" ry="10" cx="10" cy="10">
+			</ellipse>
+		</svg>
+		<svg class="coffee_light_A9_Path_23" viewBox="-0.001 64 16 10.667">
+			<path id="coffee_light_A9_Path_23" d="M 14.38477230072021 74.66656494140625 L 0.7237913012504578 74.66656494140625 C 0.04324227944016457 74.66656494140625 -0.1956443041563034 73.77767944335938 0.1682410687208176 73.77767944335938 L 14.94032096862793 73.77767944335938 C 15.30420589447021 73.77767944335938 15.0653190612793 74.66656494140625 14.3847713470459 74.66656494140625 Z M 15.99864482879639 66.64164733886719 C 16.01253318786621 68.12496185302734 14.81254482269287 69.33327484130859 13.33200550079346 69.33327484130859 L 12.44312381744385 69.33327484130859 L 12.44312381744385 70.22216796875 C 12.44312381744385 71.69436645507813 11.24869060516357 72.88880920410156 9.776481628417969 72.88880920410156 L 4.44320011138916 72.88880920410156 C 2.970991611480713 72.88880920410156 1.776559233665466 71.69436645507813 1.776559233665466 70.22216796875 L 1.776559233665466 64.33333587646484 C 1.776559233665466 64.15000152587891 1.926557779312134 64 2.109889268875122 64 L 13.29867076873779 64 C 14.76532363891602 64 15.98475551605225 65.17221832275391 15.99864482879639 66.64164733886719 Z M 11.55424308776855 64.88888549804688 L 2.665439367294312 64.88888549804688 L 2.665439367294312 70.22216796875 C 2.665439367294312 71.20271301269531 3.462653636932373 71.99992370605469 4.44320011138916 71.99992370605469 L 9.776481628417969 71.99992370605469 C 10.75702857971191 71.99992370605469 11.55424308776855 71.20271301269531 11.55424308776855 70.22216796875 L 11.55424308776855 64.88888549804688 Z M 15.10976600646973 66.66664123535156 C 15.10976600646973 65.68609619140625 14.31254863739014 64.88888549804688 13.33200550079346 64.88888549804688 L 12.44312381744385 64.88888549804688 L 12.44312381744385 68.44440460205078 L 13.33200550079346 68.44440460205078 C 14.31254863739014 68.44440460205078 15.10976600646973 67.64718627929688 15.10976600646973 66.66664123535156 Z">
+			</path>
+		</svg>
+	</div>
+	<div id="business_trip_inactive">
+		<span>business trip inactive</span>
+	</div>
+	<div id="private_trip_inactive">
+		<span>private trip inactive</span>
+	</div>
+	<div id="details_label">
+		<span>details label</span>
+	</div>
+	<div id="Elevation_A9_Text_41">
+		<span>Elevation</span>
+	</div>
+	<div id="Typography_A9_Text_42">
+		<span>Typography</span>
+	</div>
+	<div id="Buttons">
+		<span>Buttons</span>
+	</div>
+	<div id="Shadow___04dp_A9_Group_30">
+		<svg class="Shadow___04dp_A9_Path_24" viewBox="0 0 129.38 45.13">
+			<path id="Shadow___04dp_A9_Path_24" d="M 1.043386101722717 0 L 128.3364868164063 0 C 128.9127349853516 0 129.3798828125 0.1629453748464584 129.3798828125 0.3639487028121948 L 129.3798828125 44.76568984985352 C 129.3798828125 44.96669387817383 128.9127349853516 45.129638671875 128.3364868164063 45.129638671875 L 15.55724048614502 45.129638671875 L 1.043386101722717 45.129638671875 C 0.4671398401260376 45.129638671875 0 44.96669387817383 0 44.76568984985352 L 0 0.3639487028121948 C 0 0.1629453748464584 0.4671398401260376 0 1.043386101722717 0 Z">
+			</path>
+		</svg>
+	</div>
+	<div id="ID4dp_A9_Text_44">
+		<span>4dp</span>
+	</div>
+	<div id="ID4dp_A9_Text_45">
+		<span>4dp</span>
+	</div>
+	<div id="Roboto_20_medium___80_">
+		<span>Roboto 20 medium - 80%</span>
+	</div>
+	<div id="Roboto_12_regular___100__A9_Text_47">
+		<span>Roboto 12 regular - 100%</span>
+	</div>
+	<div id="ID31px_A9_Text_48">
+		<span>31px</span>
+	</div>
+	<div id="ID263">
+		<span>263</span>
+	</div>
+	<svg class="Path_1002" viewBox="0 0 262.435 187.578">
+		<path id="Path_1002" d="M 2 0 L 260.4354553222656 0 C 261.5400390625 0 262.4354553222656 0.8954304456710815 262.4354553222656 2 L 262.4354553222656 185.5776824951172 C 262.4354553222656 186.6822509765625 261.5400390625 187.5776824951172 260.4354553222656 187.5776824951172 L 2 187.5776824951172 C 0.8954304456710815 187.5776824951172 0 186.6822509765625 0 185.5776824951172 L 0 2 C 0 0.8954304456710815 0.8954304456710815 0 2 0 Z">
+		</path>
+	</svg>
+	<div id="Group_71">
+		<div id="Buttons___Text___Pressed">
+			<svg class="Rectangle_378">
+				<rect id="Rectangle_378" rx="4" ry="4" x="0" y="0" width="93" height="36">
+				</rect>
+			</svg>
+			<div id="Press">
+			<svg style="width:inherit;height:inherit;overflow:visible;">
+				<rect fill="url(#Press_A9_Group_40_pattern)" width="100%" height="100%"></rect>
+					<pattern elementId="Press_A9_Group_40" id="Press_A9_Group_40_pattern" x="0" y="0" width="100%" height="100%">
+						<image x="0" y="0" width="100%" height="100%" href="Press_A9_Group_40_pattern.png" xlink:href="Press_A9_Group_40_pattern.png"></image>
+					</pattern>
+					</svg>
+				</div>
+			<div id="BUTTON">
+				<span>BUTTON</span>
+			</div>
+			<svg class="Rectangle_379">
+				<rect id="Rectangle_379" rx="4" ry="4" x="0" y="0" width="93" height="36">
+				</rect>
+			</svg>
+		</div>
+		<div id="Buttons___Text___Focused">
+			<svg class="Rectangle_377_A9_Rectangle_39">
+				<rect id="Rectangle_377_A9_Rectangle_39" rx="4" ry="4" x="0" y="0" width="93" height="36">
+				</rect>
+			</svg>
+			<div id="BUTTON_A9_Text_51">
+				<span>BUTTON</span>
+			</div>
+		</div>
+		<div id="Buttons___Text___Hover">
+			<svg class="Path_1003" viewBox="0 0 93 36">
+				<path id="Path_1003" d="M 4 0 L 89 0 C 91.20913696289063 0 93 1.790860891342163 93 4 L 93 32 C 93 34.20914077758789 91.20913696289063 36 89 36 L 4 36 C 1.790860891342163 36 0 34.20914077758789 0 32 L 0 4 C 0 1.790860891342163 1.790860891342163 0 4 0 Z">
+				</path>
+			</svg>
+			<div id="BUTTON_A9_Text_52">
+				<span>BUTTON</span>
+			</div>
+			<div id="____CURSOR_TYPE___Hand">
+				<svg class="Path_973" viewBox="0 -21 14.085 20.498">
+					<path id="Path_973" d="M 13.64550018310547 -3.063400030136108 C 13.50949954986572 -3.198400020599365 13.34749984741211 -3.30839991569519 13.16849994659424 -3.384399890899658 C 12.98950004577637 -3.460400104522705 12.79150009155273 -3.502399921417236 12.58450031280518 -3.502399921417236 L 12.52250003814697 -3.502399921417236 L 12.52250003814697 -4.169400215148926 L 12.52250003814697 -4.280399799346924 L 13.27750015258789 -5.344399929046631 C 13.7524995803833 -6.014400005340576 14.00349998474121 -6.803400039672852 14.00349998474121 -7.627399921417236 L 14.00349998474121 -12.50240039825439 C 14.00349998474121 -12.60140037536621 13.99650001525879 -12.67539978027344 13.99450016021729 -12.76840019226074 C 13.99250030517578 -12.89039993286133 13.98849964141846 -13.0044002532959 13.98349952697754 -13.11839962005615 C 13.88449954986572 -15.45839977264404 13.20950031280518 -15.92339992523193 11.8745002746582 -15.99139976501465 C 11.5935001373291 -16.54439926147461 10.9355001449585 -17.16740036010742 9.735500335693359 -17.06240081787109 C 9.502499580383301 -17.40239906311035 9.031499862670898 -17.86039924621582 8.287500381469727 -17.96940040588379 C 8.225500106811523 -17.99740028381348 8.157500267028809 -18.01440048217773 8.084500312805176 -18.01440048217773 L 8.077500343322754 -18.01440048217773 L 8.077500343322754 -19.00239944458008 C 8.077500343322754 -20.10140037536621 7.252500057220459 -20.9783992767334 6.177499771118164 -21.00040054321289 C 5.059500217437744 -20.9773998260498 4.113500118255615 -20.06240081787109 4.113500118255615 -19.00239944458008 L 4.113500118255615 -13.24139976501465 L 3.441499948501587 -14.05840015411377 C 3.046499967575073 -14.46039962768555 2.529500007629395 -14.68140029907227 1.987499952316284 -14.68140029907227 L 1.986500024795532 -14.68140029907227 C 1.445500016212463 -14.68140029907227 0.9284999966621399 -14.46039962768555 0.531499981880188 -14.05840015411377 C -0.176499992609024 -13.34140014648438 -0.1675000041723251 -12.15639972686768 0.4995000064373016 -11.47840023040771 L 1.828500032424927 -9.565400123596191 C 2.396500110626221 -8.74940013885498 2.852499961853027 -7.858399868011475 3.180500030517578 -6.929399967193604 C 3.333499908447266 -6.462399959564209 4.089499950408936 -4.340400218963623 5.346499919891357 -3.871400117874146 L 5.347499847412109 -3.478399991989136 C 5.226500034332275 -3.459399938583374 5.109499931335449 -3.430399894714355 5.000500202178955 -3.384399890899658 C 4.731500148773193 -3.270400047302246 4.502500057220459 -3.080399990081787 4.340499877929688 -2.841399908065796 C 4.178500175476074 -2.601399898529053 4.084499835968018 -2.313400030136108 4.084499835968018 -2.002399921417236 C 4.084499835968018 -1.691400051116943 4.178500175476074 -1.40339994430542 4.340499877929688 -1.163400053977966 C 4.502500057220459 -0.9243999719619751 4.731500148773193 -0.7343999743461609 5.000500202178955 -0.6204000115394592 C 5.180500030517578 -0.5443999767303467 5.377500057220459 -0.5023999810218811 5.584499835968018 -0.5023999810218811 L 12.58450031280518 -0.5023999810218811 C 12.79150009155273 -0.5023999810218811 12.98950004577637 -0.5443999767303467 13.16849994659424 -0.6204000115394592 C 13.34749984741211 -0.696399986743927 13.50949954986572 -0.8064000010490417 13.64550018310547 -0.9413999915122986 C 13.91650009155273 -1.21340000629425 14.08450031280518 -1.58840000629425 14.08450031280518 -2.002399921417236 C 14.08450031280518 -2.416399955749512 13.91650009155273 -2.791399955749512 13.64550018310547 -3.063400030136108 Z">
+					</path>
+				</svg>
+				<svg class="Path_975" viewBox="1.004 -20 12.08 18.498">
+					<path id="Path_975" d="M 11.52159976959229 -4.439899921417236 L 11.52159976959229 -4.168900012969971 L 11.52159976959229 -3.502899885177612 L 6.34660005569458 -3.502899885177612 L 6.345600128173828 -4.279900074005127 C 6.344600200653076 -4.555900096893311 6.12060022354126 -4.778900146484375 5.845600128173828 -4.778900146484375 C 5.226600170135498 -4.778900146484375 4.456600189208984 -6.247900009155273 4.127600193023682 -7.251900196075439 C 3.765599966049194 -8.275899887084961 3.267600059509277 -9.246899604797363 2.648600101470947 -10.13589954376221 L 1.268599987030029 -12.11190032958984 C 0.9265999794006348 -12.46490001678467 0.9146000146865845 -13.02289962768555 1.242599964141846 -13.35589981079102 C 1.450600028038025 -13.56589984893799 1.714599967002869 -13.68089962005615 1.986600041389465 -13.68089962005615 L 1.987599968910217 -13.68089962005615 C 2.259599924087524 -13.68089962005615 2.523600101470947 -13.56589984893799 2.699599981307983 -13.38990020751953 L 4.226600170135498 -11.52789974212646 C 4.360599994659424 -11.36590003967285 4.585599899291992 -11.30290031433105 4.781599998474121 -11.37489986419678 C 4.980599880218506 -11.44589996337891 5.11359977722168 -11.6338996887207 5.11359977722168 -11.84589958190918 L 5.11359977722168 -19.00289916992188 C 5.11359977722168 -19.51289939880371 5.630599975585938 -19.98789978027344 6.177599906921387 -19.99990081787109 C 6.690599918365479 -19.98889923095703 7.077600002288818 -19.56089973449707 7.077600002288818 -19.00289916992188 L 7.077600002288818 -16.96089935302734 C 7.077600002288818 -16.94890022277832 7.083600044250488 -16.93889999389648 7.08459997177124 -16.92690086364746 L 7.08459997177124 -13.50290012359619 C 7.08459997177124 -13.2258996963501 7.307600021362305 -13.00290012359619 7.58459997177124 -13.00290012359619 C 7.860599994659424 -13.00290012359619 8.084600448608398 -13.2258996963501 8.084600448608398 -13.50290012359619 L 8.084600448608398 -17.00289916992188 C 8.598600387573242 -16.95789909362793 8.87559986114502 -16.5718994140625 8.969599723815918 -16.40589904785156 L 8.969599723815918 -13.50290012359619 C 8.969599723815918 -13.2258996963501 9.192600250244141 -13.00290012359619 9.469599723815918 -13.00290012359619 C 9.745599746704102 -13.00290012359619 9.969599723815918 -13.2258996963501 9.969599723815918 -13.50290012359619 L 9.969599723815918 -16.07089996337891 C 10.73960018157959 -16.08090019226074 10.96959972381592 -15.60389995574951 11.02760028839111 -15.42790031433105 L 11.02760028839111 -13.50290012359619 C 11.02760028839111 -13.2258996963501 11.25160026550293 -13.00290012359619 11.52760028839111 -13.00290012359619 C 11.80459976196289 -13.00290012359619 12.02760028839111 -13.2258996963501 12.02760028839111 -13.50290012359619 L 12.02760028839111 -14.98390007019043 C 12.78260040283203 -14.91989994049072 13.00360012054443 -14.57789993286133 13.00360012054443 -12.50290012359619 L 13.00360012054443 -7.626900196075439 C 13.00360012054443 -7.011899948120117 12.81560039520264 -6.422900199890137 12.4616003036499 -5.923900127410889 L 11.61359977722168 -4.729899883270264 C 11.55459976196289 -4.644899845123291 11.52159976959229 -4.543900012969971 11.52159976959229 -4.439899921417236 Z M 12.58450031280518 -2.502399921417236 C 12.86050033569336 -2.502399921417236 13.08450031280518 -2.27839994430542 13.08450031280518 -2.002399921417236 C 13.08450031280518 -1.726400017738342 12.86050033569336 -1.502400040626526 12.58450031280518 -1.502400040626526 L 5.584499835968018 -1.502400040626526 C 5.308499813079834 -1.502400040626526 5.084499835968018 -1.726400017738342 5.084499835968018 -2.002399921417236 C 5.084499835968018 -2.27839994430542 5.308499813079834 -2.502399921417236 5.584499835968018 -2.502399921417236 L 5.848499774932861 -2.502399921417236 L 12.0004997253418 -2.502399921417236 L 12.58450031280518 -2.502399921417236 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div id="Buttons___Text___Disabled">
+			<svg class="Rectangle_377_A9_Rectangle_40">
+				<rect id="Rectangle_377_A9_Rectangle_40" rx="4" ry="4" x="0" y="0" width="93" height="36">
+				</rect>
+			</svg>
+			<div id="BUTTON_A9_Text_53">
+				<span>BUTTON</span>
+			</div>
+		</div>
+		<div id="Buttons___Text___Enabled_A9_SymbolInstance_1">
+			<svg class="Box_A9_Rectangle_41">
+				<rect id="Box_A9_Rectangle_41" rx="4" ry="4" x="0" y="0" width="93" height="36">
+				</rect>
+			</svg>
+			<div id="BUTTON_A9_Text_54">
+				<span>BUTTON</span>
+			</div>
+		</div>
+	</div>
+	<div id="Icons">
+		<span>Icons</span>
+	</div>
+	<svg class="Rectangle_1798">
+		<rect id="Rectangle_1798" rx="0" ry="0" x="0" y="0" width="81.079" height="81.079">
+		</rect>
+	</svg>
+	<svg class="Rectangle_1799">
+		<rect id="Rectangle_1799" rx="0" ry="0" x="0" y="0" width="40.539" height="40.539">
+		</rect>
+	</svg>
+	<svg class="globe_europe_light" viewBox="0 8 40.539 40.539">
+		<path id="globe_europe_light" d="M 15.03880023956299 17.08866882324219 C 15.03880023956299 16.51653861999512 14.57292556762695 16.05066108703613 14.00079536437988 16.05066108703613 L 13.99262237548828 16.05066108703613 C 13.71473026275635 16.05066108703613 13.45318603515625 16.15691375732422 13.26520252227783 16.35306930541992 L 10.93582248687744 18.68245124816895 C 10.73966503143311 18.87861251831055 10.63341331481934 19.14015579223633 10.63341331481934 19.40987014770508 L 10.63341331481934 19.41804695129395 C 10.63341331481934 19.99017143249512 11.09928798675537 20.45605087280273 11.67141532897949 20.45605087280273 L 13.14260292053223 20.45605087280273 C 13.42049407958984 20.45605087280273 13.68203926086426 20.34979629516602 13.87002182006836 20.15364074707031 L 14.72821712493896 19.29544639587402 C 14.92437362670898 19.09929084777832 15.03062629699707 18.83773994445801 15.03062629699707 18.56802558898926 L 15.03062629699707 17.08866882324219 L 15.03880023956299 17.08866882324219 Z M 20.26968765258789 8 C 9.072319984436035 8 0 17.07232093811035 0 28.26968955993652 C 0 39.46704864501953 9.072319984436035 48.53937530517578 20.26968765258789 48.53937530517578 C 31.46705436706543 48.53937530517578 40.53937530517578 39.46704864501953 40.53937530517578 28.26968955993652 C 40.53937530517578 17.07232093811035 31.46705436706543 8 20.26968765258789 8 Z M 24.19285202026367 45.46622467041016 L 24.19285202026367 42.65462493896484 C 24.19285202026367 40.48871612548828 22.43559837341309 38.73146057128906 20.26968765258789 38.73146057128906 L 18.61869049072266 38.73146057128906 C 18.29992866516113 38.73146057128906 17.5479907989502 38.47809600830078 17.29462051391602 38.29010009765625 L 15.48015689849854 36.9251708984375 C 15.20226860046387 36.72084045410156 15.03880023956299 36.38573455810547 15.03880023956299 36.04244995117188 L 15.03880023956299 34.08905029296875 C 15.03880023956299 33.70490264892578 15.24313163757324 33.34528350830078 15.57006359100342 33.14095306396484 L 19.07639503479004 31.0404224395752 C 19.24803161621094 30.93416786193848 19.44418907165527 30.88512992858887 19.64034843444824 30.88512992858887 L 22.19040679931641 30.88512992858887 C 22.45195198059082 30.88512992858887 22.70532035827637 30.98320960998535 22.90965270996094 31.14667701721191 L 27.17609786987305 34.80829620361328 L 29.64442253112793 34.80829620361328 L 31.05838966369629 36.22226715087891 C 31.83485221862793 36.99872589111328 32.86468887329102 37.42373657226563 33.95990753173828 37.42373657226563 L 35.3330078125 37.42373657226563 C 32.88920593261719 41.43680572509766 28.90065383911133 44.39553070068359 24.19285202026367 45.46622467041016 Z M 36.65707778930664 34.80829620361328 L 33.96807098388672 34.80829620361328 C 33.57575607299805 34.80829620361328 33.19161224365234 34.65300750732422 32.91371917724609 34.37511444091797 L 31.49974822998047 32.96114349365234 C 31.00935554504395 32.47074127197266 30.34732055664063 32.19285583496094 29.65259170532227 32.19285583496094 L 28.15688705444336 32.19285583496094 L 24.62603569030762 29.16057777404785 C 23.9558277130127 28.58027458190918 23.09763717651367 28.26968955993652 22.20674896240234 28.26968955993652 L 19.65669441223145 28.26968955993652 C 18.98648643493652 28.26968955993652 18.32445335388184 28.44949913024902 17.7441520690918 28.80095100402832 L 14.23782157897949 30.90147972106934 C 13.11808490753174 31.57168388366699 12.4315299987793 32.78133392333984 12.4315299987793 34.08905029296875 L 12.4315299987793 36.04245758056641 C 12.4315299987793 37.21122741699219 12.97913837432861 38.31462860107422 13.91906356811523 39.01752471923828 L 15.73352718353271 40.38246154785156 C 16.43642807006836 40.91371917724609 17.74415016174316 41.34690093994141 18.62686157226563 41.34690093994141 L 20.27786064147949 41.34690093994141 C 20.99710464477539 41.34690093994141 21.58558082580566 41.93537902832031 21.58558082580566 42.65462493896484 L 21.58558082580566 45.85855102539063 C 21.15239906311035 45.8912353515625 20.71921348571777 45.92392730712891 20.27786064147949 45.92392730712891 C 10.54350566864014 45.92392730712891 2.623614549636841 38.00404357910156 2.623614549636841 28.26968955993652 C 2.623614549636841 18.55168533325195 10.5108118057251 10.64813995361328 20.22064781188965 10.61544609069824 L 18.96196556091309 11.52267456054688 C 18.12829208374023 12.15201568603516 17.65424346923828 13.09194183349609 17.65424346923828 14.08907890319824 L 17.65424346923828 15.98527145385742 C 17.65424346923828 16.50836563110352 17.90761566162109 17.37473106384277 18.13646507263184 17.80791091918945 C 18.07107925415039 17.97955513000488 16.41190719604492 19.03390121459961 16.1258430480957 19.31996726989746 C 15.42294120788574 20.02286911010742 15.03879833221436 20.95461845397949 15.03879833221436 21.9435863494873 L 15.03879833221436 23.28399848937988 C 15.03879833221436 25.32731628417969 16.70614433288574 26.99466514587402 18.74946022033691 26.99466514587402 L 20.81729316711426 26.99466514587402 C 21.71635437011719 26.99466514587402 22.55002784729004 26.67590522766113 23.20388793945313 26.12829208374023 C 23.52264404296875 26.24271583557129 23.87409400939941 26.29993629455566 24.23371887207031 26.29993629455566 L 25.32893562316895 26.29993629455566 C 27.42129135131836 26.29993629455566 27.96072578430176 24.64893531799316 28.27948188781738 24.54268264770508 C 28.69631958007813 25.28645133972168 29.38287162780762 25.86674880981445 30.2002010345459 26.13646507263184 C 29.84874725341797 27.29707145690918 30.12663841247559 28.61296272277832 31.02570152282715 29.53654670715332 L 32.51322937011719 31.09763145446777 C 33.22430801391602 31.8250560760498 34.19692611694336 32.23371887207031 35.18589019775391 32.23371887207031 L 37.44988632202148 32.23371887207031 C 37.25373077392578 33.11642456054688 36.9840087890625 33.97461700439453 36.65707778930664 34.80829620361328 Z M 35.20223236083984 29.61010551452637 C 34.90799713134766 29.61010551452637 34.62193298339844 29.48750495910645 34.41760635375977 29.28317451477051 L 32.90554809570313 27.69756126403809 C 32.59319305419922 27.3787784576416 32.59683990478516 26.86759757995605 32.91371917724609 26.55330467224121 C 33.94355392456055 25.52346992492676 33.77191543579102 25.85040473937988 33.77191543579102 25.09846305847168 C 33.77191543579102 24.89413452148438 33.690185546875 24.69797325134277 33.54306411743164 24.55085372924805 L 32.89737701416016 23.90516662597656 C 32.75026321411133 23.7580509185791 32.55410003662109 23.67631721496582 32.34976959228516 23.67631721496582 L 31.25455093383789 23.67631721496582 C 30.5598258972168 23.67631721496582 30.2247200012207 22.83447074890137 30.70694160461426 22.35224914550781 L 31.35262870788574 21.7555980682373 C 31.49974822998047 21.60847854614258 31.6959056854248 21.52674865722656 31.90024185180664 21.52674865722656 L 32.57862091064453 21.52674865722656 C 33.00362777709961 21.52674865722656 33.35507965087891 21.18346977233887 33.35507965087891 20.75028991699219 L 33.35507965087891 19.9166145324707 C 33.35507965087891 19.49160766601563 33.01179885864258 19.14015579223633 32.57862091064453 19.14015579223633 L 30.27375793457031 19.14015579223633 C 29.6689395904541 19.14015579223633 29.17853927612305 19.63055038452148 29.17853927612305 20.23537063598633 L 29.17853927612305 20.69307327270508 C 29.17853927612305 21.1671257019043 28.87613105773926 21.58396148681641 28.42659568786621 21.73108100891113 L 26.26068305969238 22.45033073425293 C 25.90923690795898 22.56475257873535 25.88471412658691 22.85898780822754 25.88471412658691 23.12053108215332 C 25.88471412658691 23.42294692993164 25.63951683044434 23.66814422607422 25.33710479736328 23.66814422607422 L 24.24188995361328 23.66814422607422 C 23.93947982788086 23.66814422607422 23.69428062438965 23.42294692993164 23.69428062438965 23.12053108215332 C 23.69428062438965 22.43398284912109 22.67262268066406 22.41763687133789 22.44377326965332 22.87533569335938 C 21.70817947387695 23.88882064819336 21.50384521484375 24.36286926269531 20.81729316711426 24.36286926269531 L 18.74946022033691 24.36286926269531 C 18.14463806152344 24.36286926269531 17.65424156188965 23.87247657775879 17.65424156188965 23.26765060424805 L 17.65424156188965 21.92724227905273 C 17.65424156188965 21.63300323486328 17.7686653137207 21.35511016845703 17.97300148010254 21.15077972412109 C 19.5667839050293 20.00652122497559 20.39228630065918 19.7122859954834 20.39228630065918 18.57620239257813 C 20.39228630065918 18.33917617797852 20.53940391540527 18.12667465209961 20.76825523376465 18.05311393737793 L 23.51446914672852 17.1377067565918 C 23.62889289855957 17.09684181213379 23.73514747619629 17.03962898254395 23.8168830871582 16.94972229003906 L 25.65586471557617 15.1107349395752 C 26.06452751159668 14.70207405090332 25.94193077087402 13.89291954040527 25.10825157165527 13.89291954040527 L 23.68610954284668 13.89291954040527 L 22.59089279174805 15.43766593933105 L 22.59089279174805 15.98527145385742 C 22.59089279174805 16.28768539428711 22.3456916809082 16.53288459777832 22.04328346252441 16.53288459777832 L 20.81729316711426 16.53288459777832 C 20.51488304138184 16.53288459777832 20.26968765258789 16.28768539428711 20.26968765258789 15.98527145385742 L 20.26968765258789 14.08907890319824 C 20.26968765258789 13.91743850708008 20.35141754150391 13.75397491455078 20.49036407470703 13.6477222442627 L 24.08659934997559 11.04045295715332 C 31.99014282226563 12.79770278930664 37.92393112182617 19.85122871398926 37.92393112182617 28.26968955993652 C 37.92393112182617 28.71921730041504 37.89123916625977 29.16874504089355 37.85855102539063 29.61010551452637 L 35.20223236083984 29.61010551452637 Z">
+		</path>
+	</svg>
+	<div id="ID16">
+		<span>16</span>
+	</div>
+	<div id="ID16_A9_Text_57">
+		<span>16</span>
+	</div>
+	<div id="ID32">
+		<span>32</span>
+	</div>
+	<div id="ID32_A9_Text_59">
+		<span>32</span>
+	</div>
+	<svg class="business_time_light_A9_Path_31" viewBox="0 0 21.538 17.231">
+		<path id="business_time_light_A9_Path_31" d="M 1.615373134613037 13.99990177154541 C 1.318548560142517 13.99990177154541 1.076915502548218 13.75826835632324 1.076915502548218 13.4614429473877 L 1.076915502548218 8.615324020385742 L 6.461492538452148 8.615324020385742 L 6.461492538452148 9.961469650268555 C 6.461492538452148 10.40737724304199 6.823268890380859 10.76915550231934 7.269179821014404 10.76915550231934 L 9.961469650268555 10.76915550231934 C 10.40737724304199 10.76915550231934 10.76915550231934 10.40737724304199 10.76915550231934 9.961469650268555 L 10.76915550231934 8.615324020385742 L 12.1230411529541 8.615324020385742 C 12.461594581604 8.205085754394531 12.85702419281006 7.844656944274902 13.29317569732666 7.538408279418945 L 1.076915502548218 7.538408279418945 L 1.076915502548218 4.846118927001953 C 1.076915502548218 4.549294471740723 1.318548560142517 4.307662010192871 1.615373134613037 4.307662010192871 L 15.61527442932129 4.307662010192871 C 15.91209888458252 4.307662010192871 16.15373229980469 4.549294471740723 16.15373229980469 4.846118927001953 L 16.15373229980469 6.488752365112305 C 16.33142280578613 6.472599506378174 16.51045989990234 6.461492538452148 16.69219017028809 6.461492538452148 C 16.87392044067383 6.461492538452148 17.05295944213867 6.472599506378174 17.23064804077148 6.488752365112305 L 17.23064804077148 4.846118927001953 C 17.23064804077148 3.953961849212646 16.50743293762207 3.230746269226074 15.61527442932129 3.230746269226074 L 11.84607028961182 3.230746269226074 L 11.84607028961182 0.8076865673065186 C 11.84607028961182 0.3614397346973419 11.48463153839111 0 11.03838348388672 0 L 6.192263603210449 0 C 5.746017932891846 0 5.384577751159668 0.3614397346973419 5.384577751159668 0.8076865673065186 L 5.384577751159668 3.230746269226074 L 1.615373134613037 3.230746269226074 C 0.7232160568237305 3.230746269226074 0 3.953961849212646 0 4.846118927001953 L 0 13.4614429473877 C 0 14.35360240936279 0.7232160568237305 15.07681655883789 1.615373134613037 15.07681655883789 L 11.42102527618408 15.07681655883789 C 11.24492645263672 14.73263835906982 11.10322952270508 14.37191867828369 10.9980001449585 13.99990177154541 L 1.615373134613037 13.99990177154541 Z M 7.538408279418945 8.615324020385742 L 9.692237854003906 8.615324020385742 L 9.692237854003906 9.692237854003906 L 7.538408279418945 9.692237854003906 L 7.538408279418945 8.615324020385742 Z M 6.461492538452148 1.076915502548218 L 10.76915550231934 1.076915502548218 L 10.76915550231934 3.230746269226074 L 6.461492538452148 3.230746269226074 L 6.461492538452148 1.076915502548218 Z M 18.51924514770508 11.84607028961182 L 17.23064804077148 11.84607028961182 L 17.23064804077148 10.01901626586914 C 17.23064804077148 9.839306831359863 17.08358001708984 9.692237854003906 16.90387153625488 9.692237854003906 L 16.4808464050293 9.692237854003906 C 16.3011360168457 9.692237854003906 16.15406799316406 9.839306831359863 16.15406799316406 10.01901626586914 L 16.15406799316406 12.59587287902832 C 16.15406799316406 12.77558135986328 16.3011360168457 12.92264938354492 16.4808464050293 12.92264938354492 L 18.51924324035645 12.92264938354492 C 18.69895553588867 12.92264938354492 18.84602165222168 12.77558135986328 18.84602165222168 12.59587287902832 L 18.84602165222168 12.1728458404541 C 18.84602165222168 11.99313735961914 18.69895553588867 11.84607028961182 18.51924324035645 11.84607028961182 Z M 16.69219017028809 7.538408279418945 C 14.01369953155518 7.538408279418945 11.84607028961182 9.706037521362305 11.84607028961182 12.3845272064209 C 11.84607028961182 15.06301784515381 14.01369953155518 17.23064804077148 16.69219017028809 17.23064804077148 C 19.37067794799805 17.23064804077148 21.53831100463867 15.06301784515381 21.53831100463867 12.3845272064209 C 21.53831100463867 9.706037521362305 19.37067794799805 7.538408279418945 16.69219017028809 7.538408279418945 Z M 16.69219017028809 16.15373229980469 C 14.61374187469482 16.15373229980469 12.9229850769043 14.46297454833984 12.9229850769043 12.3845272064209 C 12.9229850769043 10.30608081817627 14.61374187469482 8.615324020385742 16.69219017028809 8.615324020385742 C 18.77063941955566 8.615324020385742 20.46139335632324 10.30608081817627 20.46139335632324 12.3845272064209 C 20.46139335632324 14.46297454833984 18.77063941955566 16.15373229980469 16.69219017028809 16.15373229980469 Z">
+		</path>
+	</svg>
+	<div id="business_time_light_A9_Group_38">
+		<svg class="business_time_light_A9_Path_32" viewBox="0 0 21.538 17.231">
+			<path id="business_time_light_A9_Path_32" d="M 1.615373134613037 13.99990177154541 C 1.318548560142517 13.99990177154541 1.076915502548218 13.75826835632324 1.076915502548218 13.4614429473877 L 1.076915502548218 8.615324020385742 L 6.461492538452148 8.615324020385742 L 6.461492538452148 9.961469650268555 C 6.461492538452148 10.40737724304199 6.823268890380859 10.76915550231934 7.269179821014404 10.76915550231934 L 9.961469650268555 10.76915550231934 C 10.40737724304199 10.76915550231934 10.76915550231934 10.40737724304199 10.76915550231934 9.961469650268555 L 10.76915550231934 8.615324020385742 L 12.1230411529541 8.615324020385742 C 12.461594581604 8.205085754394531 12.85702419281006 7.844656944274902 13.29317569732666 7.538408279418945 L 1.076915502548218 7.538408279418945 L 1.076915502548218 4.846118927001953 C 1.076915502548218 4.549294471740723 1.318548560142517 4.307662010192871 1.615373134613037 4.307662010192871 L 15.61527442932129 4.307662010192871 C 15.91209888458252 4.307662010192871 16.15373229980469 4.549294471740723 16.15373229980469 4.846118927001953 L 16.15373229980469 6.488752365112305 C 16.33142280578613 6.472599506378174 16.51045989990234 6.461492538452148 16.69219017028809 6.461492538452148 C 16.87392044067383 6.461492538452148 17.05295944213867 6.472599506378174 17.23064804077148 6.488752365112305 L 17.23064804077148 4.846118927001953 C 17.23064804077148 3.953961849212646 16.50743293762207 3.230746269226074 15.61527442932129 3.230746269226074 L 11.84607028961182 3.230746269226074 L 11.84607028961182 0.8076865673065186 C 11.84607028961182 0.3614397346973419 11.48463153839111 0 11.03838348388672 0 L 6.192263603210449 0 C 5.746017932891846 0 5.384577751159668 0.3614397346973419 5.384577751159668 0.8076865673065186 L 5.384577751159668 3.230746269226074 L 1.615373134613037 3.230746269226074 C 0.7232160568237305 3.230746269226074 0 3.953961849212646 0 4.846118927001953 L 0 13.4614429473877 C 0 14.35360240936279 0.7232160568237305 15.07681655883789 1.615373134613037 15.07681655883789 L 11.42102527618408 15.07681655883789 C 11.24492645263672 14.73263835906982 11.10322952270508 14.37191867828369 10.9980001449585 13.99990177154541 L 1.615373134613037 13.99990177154541 Z M 7.538408279418945 8.615324020385742 L 9.692237854003906 8.615324020385742 L 9.692237854003906 9.692237854003906 L 7.538408279418945 9.692237854003906 L 7.538408279418945 8.615324020385742 Z M 6.461492538452148 1.076915502548218 L 10.76915550231934 1.076915502548218 L 10.76915550231934 3.230746269226074 L 6.461492538452148 3.230746269226074 L 6.461492538452148 1.076915502548218 Z M 18.51924514770508 11.84607028961182 L 17.23064804077148 11.84607028961182 L 17.23064804077148 10.01901626586914 C 17.23064804077148 9.839306831359863 17.08358001708984 9.692237854003906 16.90387153625488 9.692237854003906 L 16.4808464050293 9.692237854003906 C 16.3011360168457 9.692237854003906 16.15406799316406 9.839306831359863 16.15406799316406 10.01901626586914 L 16.15406799316406 12.59587287902832 C 16.15406799316406 12.77558135986328 16.3011360168457 12.92264938354492 16.4808464050293 12.92264938354492 L 18.51924324035645 12.92264938354492 C 18.69895553588867 12.92264938354492 18.84602165222168 12.77558135986328 18.84602165222168 12.59587287902832 L 18.84602165222168 12.1728458404541 C 18.84602165222168 11.99313735961914 18.69895553588867 11.84607028961182 18.51924324035645 11.84607028961182 Z M 16.69219017028809 7.538408279418945 C 14.01369953155518 7.538408279418945 11.84607028961182 9.706037521362305 11.84607028961182 12.3845272064209 C 11.84607028961182 15.06301784515381 14.01369953155518 17.23064804077148 16.69219017028809 17.23064804077148 C 19.37067794799805 17.23064804077148 21.53831100463867 15.06301784515381 21.53831100463867 12.3845272064209 C 21.53831100463867 9.706037521362305 19.37067794799805 7.538408279418945 16.69219017028809 7.538408279418945 Z M 16.69219017028809 16.15373229980469 C 14.61374187469482 16.15373229980469 12.9229850769043 14.46297454833984 12.9229850769043 12.3845272064209 C 12.9229850769043 10.30608081817627 14.61374187469482 8.615324020385742 16.69219017028809 8.615324020385742 C 18.77063941955566 8.615324020385742 20.46139335632324 10.30608081817627 20.46139335632324 12.3845272064209 C 20.46139335632324 14.46297454833984 18.77063941955566 16.15373229980469 16.69219017028809 16.15373229980469 Z">
+			</path>
+		</svg>
+	</div>
+	<div id="business_time_light_A9_Group_39">
+		<svg class="business_time_light_A9_Path_33" viewBox="0 0 21.538 17.231">
+			<path id="business_time_light_A9_Path_33" d="M 1.615373134613037 13.99990177154541 C 1.318548560142517 13.99990177154541 1.076915502548218 13.75826835632324 1.076915502548218 13.4614429473877 L 1.076915502548218 8.615324020385742 L 6.461492538452148 8.615324020385742 L 6.461492538452148 9.961469650268555 C 6.461492538452148 10.40737724304199 6.823268890380859 10.76915550231934 7.269179821014404 10.76915550231934 L 9.961469650268555 10.76915550231934 C 10.40737724304199 10.76915550231934 10.76915550231934 10.40737724304199 10.76915550231934 9.961469650268555 L 10.76915550231934 8.615324020385742 L 12.1230411529541 8.615324020385742 C 12.461594581604 8.205085754394531 12.85702419281006 7.844656944274902 13.29317569732666 7.538408279418945 L 1.076915502548218 7.538408279418945 L 1.076915502548218 4.846118927001953 C 1.076915502548218 4.549294471740723 1.318548560142517 4.307662010192871 1.615373134613037 4.307662010192871 L 15.61527442932129 4.307662010192871 C 15.91209888458252 4.307662010192871 16.15373229980469 4.549294471740723 16.15373229980469 4.846118927001953 L 16.15373229980469 6.488752365112305 C 16.33142280578613 6.472599506378174 16.51045989990234 6.461492538452148 16.69219017028809 6.461492538452148 C 16.87392044067383 6.461492538452148 17.05295944213867 6.472599506378174 17.23064804077148 6.488752365112305 L 17.23064804077148 4.846118927001953 C 17.23064804077148 3.953961849212646 16.50743293762207 3.230746269226074 15.61527442932129 3.230746269226074 L 11.84607028961182 3.230746269226074 L 11.84607028961182 0.8076865673065186 C 11.84607028961182 0.3614397346973419 11.48463153839111 0 11.03838348388672 0 L 6.192263603210449 0 C 5.746017932891846 0 5.384577751159668 0.3614397346973419 5.384577751159668 0.8076865673065186 L 5.384577751159668 3.230746269226074 L 1.615373134613037 3.230746269226074 C 0.7232160568237305 3.230746269226074 0 3.953961849212646 0 4.846118927001953 L 0 13.4614429473877 C 0 14.35360240936279 0.7232160568237305 15.07681655883789 1.615373134613037 15.07681655883789 L 11.42102527618408 15.07681655883789 C 11.24492645263672 14.73263835906982 11.10322952270508 14.37191867828369 10.9980001449585 13.99990177154541 L 1.615373134613037 13.99990177154541 Z M 7.538408279418945 8.615324020385742 L 9.692237854003906 8.615324020385742 L 9.692237854003906 9.692237854003906 L 7.538408279418945 9.692237854003906 L 7.538408279418945 8.615324020385742 Z M 6.461492538452148 1.076915502548218 L 10.76915550231934 1.076915502548218 L 10.76915550231934 3.230746269226074 L 6.461492538452148 3.230746269226074 L 6.461492538452148 1.076915502548218 Z M 18.51924514770508 11.84607028961182 L 17.23064804077148 11.84607028961182 L 17.23064804077148 10.01901626586914 C 17.23064804077148 9.839306831359863 17.08358001708984 9.692237854003906 16.90387153625488 9.692237854003906 L 16.4808464050293 9.692237854003906 C 16.3011360168457 9.692237854003906 16.15406799316406 9.839306831359863 16.15406799316406 10.01901626586914 L 16.15406799316406 12.59587287902832 C 16.15406799316406 12.77558135986328 16.3011360168457 12.92264938354492 16.4808464050293 12.92264938354492 L 18.51924324035645 12.92264938354492 C 18.69895553588867 12.92264938354492 18.84602165222168 12.77558135986328 18.84602165222168 12.59587287902832 L 18.84602165222168 12.1728458404541 C 18.84602165222168 11.99313735961914 18.69895553588867 11.84607028961182 18.51924324035645 11.84607028961182 Z M 16.69219017028809 7.538408279418945 C 14.01369953155518 7.538408279418945 11.84607028961182 9.706037521362305 11.84607028961182 12.3845272064209 C 11.84607028961182 15.06301784515381 14.01369953155518 17.23064804077148 16.69219017028809 17.23064804077148 C 19.37067794799805 17.23064804077148 21.53831100463867 15.06301784515381 21.53831100463867 12.3845272064209 C 21.53831100463867 9.706037521362305 19.37067794799805 7.538408279418945 16.69219017028809 7.538408279418945 Z M 16.69219017028809 16.15373229980469 C 14.61374187469482 16.15373229980469 12.9229850769043 14.46297454833984 12.9229850769043 12.3845272064209 C 12.9229850769043 10.30608081817627 14.61374187469482 8.615324020385742 16.69219017028809 8.615324020385742 C 18.77063941955566 8.615324020385742 20.46139335632324 10.30608081817627 20.46139335632324 12.3845272064209 C 20.46139335632324 14.46297454833984 18.77063941955566 16.15373229980469 16.69219017028809 16.15373229980469 Z">
+			</path>
+		</svg>
+	</div>
+	<div id="Sensor_active">
+		<span>Sensor active</span>
+	</div>
+	<div id="Sensor_issue">
+		<span>Sensor issue</span>
+	</div>
+	<div id="Sensor_unavailable">
+		<span>Sensor unavailable</span>
+	</div>
+	<svg class="Rectangle_1865">
+		<rect id="Rectangle_1865" rx="2" ry="2" x="0" y="0" width="67" height="18">
+		</rect>
+	</svg>
+	<div id="ID144_km_h_A9_Text_63">
+		<span>144 km/h</span>
+	</div>
+	<svg class="Rectangle_1865_A9_Rectangle_45">
+		<rect id="Rectangle_1865_A9_Rectangle_45" rx="2" ry="2" x="0" y="0" width="67" height="18">
+		</rect>
+	</svg>
+	<div id="ID144_km_h_A9_Text_64">
+		<span>144 km/h</span>
+	</div>
+</div>
+</body>
+</html>

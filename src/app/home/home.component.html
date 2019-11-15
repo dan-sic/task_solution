@@ -1,0 +1,42 @@
+<div class="row">
+
+  <div class="top-sidebar">
+    <app-sidebar class="home-sidebar"></app-sidebar>
+  </div>
+
+  <div class="map col col-12 ">
+    <div class="home-map">
+      <mgl-map
+        [style]="style"
+        [zoom]="zoom"
+        [maxZoom]="17"
+        [center]="center"
+        [cursorStyle]="cursorStyle"
+        [fitBoundsOptions]="{
+      padding: {top: 50, left: 350, bottom:50, right: 50}
+    }"
+        (load)="map = $event"
+        (render)="render()">
+
+        <mgl-image
+          id="greencar"
+          url="../../assets/icons/car-green.png"
+          (loaded)="greenImageLoaded = true"
+        >
+        </mgl-image>
+
+        <mgl-image
+          id="redcar"
+          url="../../assets/icons/car-red.png"
+          (loaded)="greenImageLoaded = true"
+        >
+        </mgl-image>
+
+        <mgl-control
+          mglNavigation
+        ></mgl-control>
+
+      </mgl-map>
+    </div>
+  </div>
+</div>

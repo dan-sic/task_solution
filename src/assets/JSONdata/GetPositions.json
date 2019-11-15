@@ -1,0 +1,92 @@
+[
+    {
+        "unitId": 1,
+        "make": "Renault",
+        "model": "Master",
+        "date": "2019-10-10T08:31:33",
+        "position": {
+            "longitude": 21.244203612374029,
+            "latitude": 49.686223903546733
+        },
+        "private": true,
+        "ignition": true,
+        "speed": 0.0,
+        "positionError": false,
+        "direction": 8.0,
+        "rpm": 0.0,
+        "engine": false,
+        "iconSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"54.855\" height=\"79.711\" viewBox=\"0 0 54.855 79.711\">\n  <defs>\n    <filter id=\"Rectangle_1953\" x=\"0\" y=\"0\" width=\"54.855\" height=\"79.711\" filterUnits=\"userSpaceOnUse\">\n      <feOffset dy=\"6\" input=\"SourceAlpha\"/>\n      <feGaussianBlur stdDeviation=\"5\" result=\"blur\"/>\n      <feFlood flood-opacity=\"0.251\"/>\n      <feComposite operator=\"in\" in2=\"blur\"/>\n      <feComposite in=\"SourceGraphic\"/>\n    </filter>\n  </defs>\n  <g id=\"Component\" transform=\"translate(15 9)\">\n    <g id=\"Group_382\" data-name=\"Group 382\" transform=\"translate(0.001 0)\">\n      <g transform=\"matrix(1, 0, 0, 1, -15, -9)\" filter=\"url(#Rectangle_1953)\">\n        <rect id=\"Rectangle_1953-2\" data-name=\"Rectangle 1953\" width=\"24.856\" height=\"49.711\" rx=\"8\" transform=\"translate(15 9)\" fill=\"#bc5151\"/>\n      </g>\n    </g>\n    <rect id=\"Rectangle_1954\" data-name=\"Rectangle 1954\" width=\"20.713\" height=\"31.07\" rx=\"8\" transform=\"translate(2.071 12.428)\" fill=\"rgba(0,0,0,0.48)\"/>\n    <rect id=\"Rectangle_1955\" data-name=\"Rectangle 1955\" width=\"16.57\" height=\"18.642\" rx=\"6\" transform=\"translate(4.142 21.749)\" fill=\"#cf7272\"/>\n  </g>\n</svg>\n"
+    },
+    {
+        "unitId": 2,
+        "make": "Bugatti",
+        "model": "Veyron",
+        "date": "2019-10-09T05:16:10",
+        "position": {
+            "longitude": 21.118319055205834,
+            "latitude": 52.295508080040207
+        },
+        "private": true,
+        "ignition": true,
+        "speed": 0.0,
+        "positionError": false,
+        "direction": 322.0,
+        "rpm": 0.0,
+        "engine": false,
+        "iconSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"54.855\" height=\"79.711\" viewBox=\"0 0 54.855 79.711\">\n  <defs>\n    <filter id=\"Rectangle_73\" x=\"0\" y=\"0\" width=\"54.855\" height=\"79.711\" filterUnits=\"userSpaceOnUse\">\n      <feOffset dy=\"6\" input=\"SourceAlpha\"/>\n      <feGaussianBlur stdDeviation=\"5\" result=\"blur\"/>\n      <feFlood flood-opacity=\"0.251\"/>\n      <feComposite operator=\"in\" in2=\"blur\"/>\n      <feComposite in=\"SourceGraphic\"/>\n    </filter>\n  </defs>\n  <g id=\"car_purple\" data-name=\"car/purple\" transform=\"translate(15 9)\">\n    <g transform=\"matrix(1, 0, 0, 1, -15, -9)\" filter=\"url(#Rectangle_73)\">\n      <rect id=\"Rectangle_73-2\" data-name=\"Rectangle 73\" width=\"24.856\" height=\"49.711\" rx=\"8\" transform=\"translate(15 9)\" fill=\"#5db572\"/>\n    </g>\n    <rect id=\"Rectangle_74\" data-name=\"Rectangle 74\" width=\"20.713\" height=\"31.07\" rx=\"8\" transform=\"translate(2.071 12.428)\" fill=\"rgba(0,0,0,0.48)\"/>\n    <rect id=\"Rectangle_75\" data-name=\"Rectangle 75\" width=\"16.57\" height=\"18.642\" rx=\"6\" transform=\"translate(4.143 21.749)\" fill=\"#80cf93\"/>\n  </g>\n</svg>\n"
+    },
+    {
+        "unitId": 3,
+        "make": "Pagani",
+        "model": "Zonda",
+        "date": "2019-10-10T09:19:46",
+        "position": {
+            "longitude": 21.274381299443572,
+            "latitude": 52.101573325544337
+        },
+        "private": true,
+        "ignition": true,
+        "speed": 0.0,
+        "positionError": true,
+        "direction": 0.0,
+        "rpm": 0.0,
+        "engine": false,
+        "iconSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"54.855\" height=\"79.711\" viewBox=\"0 0 54.855 79.711\">\n  <defs>\n    <filter id=\"Rectangle_73\" x=\"0\" y=\"0\" width=\"54.855\" height=\"79.711\" filterUnits=\"userSpaceOnUse\">\n      <feOffset dy=\"6\" input=\"SourceAlpha\"/>\n      <feGaussianBlur stdDeviation=\"5\" result=\"blur\"/>\n      <feFlood flood-opacity=\"0.251\"/>\n      <feComposite operator=\"in\" in2=\"blur\"/>\n      <feComposite in=\"SourceGraphic\"/>\n    </filter>\n  </defs>\n  <g id=\"car_purple\" data-name=\"car/purple\" transform=\"translate(15 9)\">\n    <g transform=\"matrix(1, 0, 0, 1, -15, -9)\" filter=\"url(#Rectangle_73)\">\n      <rect id=\"Rectangle_73-2\" data-name=\"Rectangle 73\" width=\"24.856\" height=\"49.711\" rx=\"8\" transform=\"translate(15 9)\" fill=\"#5db572\"/>\n    </g>\n    <rect id=\"Rectangle_74\" data-name=\"Rectangle 74\" width=\"20.713\" height=\"31.07\" rx=\"8\" transform=\"translate(2.071 12.428)\" fill=\"rgba(0,0,0,0.48)\"/>\n    <rect id=\"Rectangle_75\" data-name=\"Rectangle 75\" width=\"16.57\" height=\"18.642\" rx=\"6\" transform=\"translate(4.143 21.749)\" fill=\"#80cf93\"/>\n  </g>\n</svg>\n"
+    },
+    {
+        "unitId": 4,
+        "make": "Fiat",
+        "model": "126p",
+        "date": "2019-10-10T05:55:26",
+        "position": {
+            "longitude": 18.325453471574495,
+            "latitude": 50.086171362859858
+        },
+        "private": true,
+        "ignition": true,
+        "speed": 0.0,
+        "positionError": false,
+        "direction": 238.0,
+        "rpm": 0.0,
+        "engine": false,
+        "iconSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"54.855\" height=\"79.711\" viewBox=\"0 0 54.855 79.711\">\n  <defs>\n    <filter id=\"Rectangle_73\" x=\"0\" y=\"0\" width=\"54.855\" height=\"79.711\" filterUnits=\"userSpaceOnUse\">\n      <feOffset dy=\"6\" input=\"SourceAlpha\"/>\n      <feGaussianBlur stdDeviation=\"5\" result=\"blur\"/>\n      <feFlood flood-opacity=\"0.251\"/>\n      <feComposite operator=\"in\" in2=\"blur\"/>\n      <feComposite in=\"SourceGraphic\"/>\n    </filter>\n  </defs>\n  <g id=\"car_purple\" data-name=\"car/purple\" transform=\"translate(15 9)\">\n    <g transform=\"matrix(1, 0, 0, 1, -15, -9)\" filter=\"url(#Rectangle_73)\">\n      <rect id=\"Rectangle_73-2\" data-name=\"Rectangle 73\" width=\"24.856\" height=\"49.711\" rx=\"8\" transform=\"translate(15 9)\" fill=\"#5db572\"/>\n    </g>\n    <rect id=\"Rectangle_74\" data-name=\"Rectangle 74\" width=\"20.713\" height=\"31.07\" rx=\"8\" transform=\"translate(2.071 12.428)\" fill=\"rgba(0,0,0,0.48)\"/>\n    <rect id=\"Rectangle_75\" data-name=\"Rectangle 75\" width=\"16.57\" height=\"18.642\" rx=\"6\" transform=\"translate(4.143 21.749)\" fill=\"#80cf93\"/>\n  </g>\n</svg>\n"
+    },
+    {
+        "unitId": 5,
+        "make": "VW",
+        "model": "Passat",
+        "date": "2019-10-10T04:40:07",
+        "position": {
+            "longitude": 21.02907514903626,
+            "latitude": 52.257612651470261
+        },
+        "private": true,
+        "ignition": true,
+        "speed": 0.0,
+        "positionError": false,
+        "direction": 250.0,
+        "rpm": 0.0,
+        "engine": false,
+        "iconSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"54.855\" height=\"79.711\" viewBox=\"0 0 54.855 79.711\">\n  <defs>\n    <filter id=\"Rectangle_73\" x=\"0\" y=\"0\" width=\"54.855\" height=\"79.711\" filterUnits=\"userSpaceOnUse\">\n      <feOffset dy=\"6\" input=\"SourceAlpha\"/>\n      <feGaussianBlur stdDeviation=\"5\" result=\"blur\"/>\n      <feFlood flood-opacity=\"0.251\"/>\n      <feComposite operator=\"in\" in2=\"blur\"/>\n      <feComposite in=\"SourceGraphic\"/>\n    </filter>\n  </defs>\n  <g id=\"car_purple\" data-name=\"car/purple\" transform=\"translate(15 9)\">\n    <g transform=\"matrix(1, 0, 0, 1, -15, -9)\" filter=\"url(#Rectangle_73)\">\n      <rect id=\"Rectangle_73-2\" data-name=\"Rectangle 73\" width=\"24.856\" height=\"49.711\" rx=\"8\" transform=\"translate(15 9)\" fill=\"#5db572\"/>\n    </g>\n    <rect id=\"Rectangle_74\" data-name=\"Rectangle 74\" width=\"20.713\" height=\"31.07\" rx=\"8\" transform=\"translate(2.071 12.428)\" fill=\"rgba(0,0,0,0.48)\"/>\n    <rect id=\"Rectangle_75\" data-name=\"Rectangle 75\" width=\"16.57\" height=\"18.642\" rx=\"6\" transform=\"translate(4.143 21.749)\" fill=\"#80cf93\"/>\n  </g>\n</svg>\n"
+    }
+]

@@ -1,0 +1,71 @@
+@import "../../../styles/variables";
+
+.sidebar {
+  /*position: fixed;
+  top: 0;
+  bottom: 0;
+  !*left: 0;*!
+  z-index: 100;
+  padding: 62px 0 0;*/
+  padding: 12px 0px;
+  height: 100%;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.list-group {
+  height: calc(100% - 270px);
+}
+
+.sbu {
+  padding: 0px 0px;
+  h2 {
+    float: left;
+    margin: 0px 0px 24px 0px;
+    padding: 0px;
+    font-size: 24px;
+    font-weight: normal;
+    color: #000000;
+  }
+}
+
+input {
+  background-color: rgba(0, 0, 0, 0.07);
+  color: rgba(0, 0, 0, 0.6);
+  border: none;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+
+.mini {
+  float: right;
+  width: 18px;
+  height: 18px;
+  font-size: 18px;
+  text-align: center;
+  padding: 2px;
+  color: $menu-font-color;
+  cursor: pointer;
+}
+
+.sbu-mini {
+  width: 140px;
+  height: 20px;
+  font-size: 13px;
+  cursor: pointer;
+
+  .icon {
+    font-size: 15px;
+    margin-right: 10px;
+  }
+}
+
+.view-buttons {
+  margin-bottom: 10px;
+  button {
+    margin-right: 10px;
+  }
+}

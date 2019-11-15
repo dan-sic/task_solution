@@ -1,0 +1,10 @@
+[role="main"] {
+  padding-top: 62px;
+}
+
+.content-panel {
+  width: calc(100% - 110px);
+  margin-left: 90px;
+}
+
+

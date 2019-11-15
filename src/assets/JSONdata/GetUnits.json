@@ -1,0 +1,74 @@
+{
+   "status": "Success",
+   "data": {
+      "items": [
+         {
+            "unitId": 1,
+            "unitTag": [
+               {
+                  "tag": "name",
+                  "value": "REJ12345"
+               },
+               {
+                  "tag": "serial",
+                  "value": "VIN12345669834345"
+               }
+            ]
+         },
+         {
+            "unitId": 2,
+            "unitTag": [
+               {
+                  "tag": "name",
+                  "value": "REJ0234"
+               },
+               {
+                  "tag": "serial",
+                  "value": "VINRGEERG34T43"
+               }
+            ]
+         },
+         {
+            "unitId": 3,
+            "unitTag": [
+               {
+                  "tag": "name",
+                  "value": "REJ00988"
+               },
+               {
+                  "tag": "serial",
+                  "value": "VIN43RGE34T34"
+               }
+            ]
+         },
+         {
+            "unitId": 4,
+            "unitTag": [
+               {
+                  "tag": "name",
+                  "value": "REJ3345"
+               },
+               {
+                  "tag": "serial",
+                  "value": "VINSGF443443T"
+               }
+            ]
+         },
+         {
+            "unitId": 5,
+            "unitTag": [
+               {
+                  "tag": "name",
+                  "value": "REJ55445"
+               },
+               {
+                  "tag": "serial",
+                  "value": "VIN365774"
+               }
+            ]
+         }
+      ],
+      "totalFiltredRecords": 5
+   },
+   "token": null
+}
