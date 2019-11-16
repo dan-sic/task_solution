@@ -17,6 +17,9 @@
         (load)="map = $event"
         (render)="render()"
       >
+        <!-- <mgl-popup [closeOnClick]="false" (load)="popup = $event">
+          <h1>Hello world !</h1>
+        </mgl-popup> -->
         <mgl-geojson-source
           *ngIf="unitFeatureCollection && greenImageLoaded"
           id="unitPositions"
@@ -31,6 +34,13 @@
         >
         </mgl-geojson-source>
 
+        <mgl-geojson-source
+          *ngIf="unitRouteCollection"
+          id="routes"
+          [data]="unitRouteCollection"
+        >
+        </mgl-geojson-source>
+
         <mgl-layer
           *ngIf="unitTailFeatureCollection"
           id="tail"
@@ -41,6 +51,20 @@
             'line-width': 4,
             'line-color': ['get', 'color']
           }"
+        ></mgl-layer>
+
+        <mgl-layer
+          *ngIf="unitRouteCollection"
+          id="routes"
+          type="line"
+          source="routes"
+          [layout]="{ 'line-join': 'round', 'line-cap': 'round' }"
+          [paint]="{
+            'line-width': 5,
+            'line-color': ['get', 'color']
+          }"
+          (mouseEnter)="openRoutePopup($event)"
+          (mouseLeave)="closeRoutePopup()"
         ></mgl-layer>
 
         <mgl-layer

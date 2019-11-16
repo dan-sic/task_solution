@@ -1,4 +1,4 @@
-interface GeoPosition {
+export interface GeoPosition {
   longitude: number;
   latitude: number;
 }
