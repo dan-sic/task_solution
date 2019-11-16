@@ -4,6 +4,7 @@ import { UnitPositionModel } from "../models/UnitPositionModels";
 import { Observable } from "rxjs";
 import { map, tap } from "rxjs/operators";
 import { PositionService } from "./position.service";
+import { UnitRouteModel } from "../models/UnitRoutesModels";
 
 type longitude = number;
 type latitude = number;
@@ -23,6 +24,7 @@ export class MapServiceCustom {
   private _tailCoordinates: { [key: number]: coordinates[] } = {};
   private readonly UNIT_TAIL_LENGTH = 4;
   private readonly TAIL_COLOR = "#80cf93";
+  private readonly ROUTE_COLOR = "#F7455D";
 
   constructor(
     private readonly apiJSONService: ApiJSONService,
@@ -88,6 +90,41 @@ export class MapServiceCustom {
         return this.generateUnitTailFeatureCollection();
       })
     );
+  }
+
+  getUnitRoutesFeatureCollection(): Observable<
+    GeoJSON.FeatureCollection<GeoJSON.LineString>
+  > {
+    return this.apiJSONService.getUnitRoutes().pipe(
+      map((routes: UnitRouteModel[]) => {
+        return this.generateUnitRoutesFeature(routes);
+      })
+    );
+  }
+
+  private generateUnitRoutesFeature(
+    routes: UnitRouteModel[]
+  ): GeoJSON.FeatureCollection<GeoJSON.LineString> {
+    const routeFeatures = routes.map(route => {
+      return {
+        type: "Feature",
+        geometry: {
+          type: "LineString",
+          coordinates: route.points.map(point => [
+            point.longitude,
+            point.latitude
+          ])
+        },
+        properties: {
+          color: this.ROUTE_COLOR
+        }
+      };
+    });
+
+    return {
+      type: "FeatureCollection",
+      features: <GeoJSON.Feature<GeoJSON.LineString>[]>routeFeatures
+    };
   }
 
   private updateUnitTailCoords(units: UnitPositionModel[]): void {
