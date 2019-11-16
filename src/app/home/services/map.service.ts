@@ -2,9 +2,10 @@ import { Injectable } from "@angular/core";
 import { ApiJSONService } from "src/app/core/api/api-json.service";
 import { UnitPositionModel } from "../models/UnitPositionModels";
 import { Observable } from "rxjs";
-import { map, tap } from "rxjs/operators";
+import { map, tap, withLatestFrom } from "rxjs/operators";
 import { PositionService } from "./position.service";
 import { UnitRouteModel } from "../models/UnitRoutesModels";
+import { UnitModel } from "src/app/units/components/unit-list/UnitModel";
 
 type longitude = number;
 type latitude = number;
@@ -96,16 +97,22 @@ export class MapServiceCustom {
     GeoJSON.FeatureCollection<GeoJSON.LineString>
   > {
     return this.apiJSONService.getUnitRoutes().pipe(
-      map((routes: UnitRouteModel[]) => {
-        return this.generateUnitRoutesFeature(routes);
+      withLatestFrom(this.apiJSONService.getUnits()),
+      map(([routes, units]) => {
+        return this.generateUnitRoutesFeature(routes, units);
       })
     );
   }
 
   private generateUnitRoutesFeature(
-    routes: UnitRouteModel[]
+    routes: UnitRouteModel[],
+    units: UnitModel[]
   ): GeoJSON.FeatureCollection<GeoJSON.LineString> {
     const routeFeatures = routes.map(route => {
+      const objectOfUnits = this.convertToObjectOfUnits(units);
+      const unitName = objectOfUnits[route.unitId].unitTag[0].value;
+      const unitSerial = objectOfUnits[route.unitId].unitTag[1].value;
+
       return {
         type: "Feature",
         geometry: {
@@ -116,7 +123,10 @@ export class MapServiceCustom {
           ])
         },
         properties: {
-          color: this.ROUTE_COLOR
+          color: this.ROUTE_COLOR,
+          unitId: route.unitId,
+          unitName,
+          unitSerial
         }
       };
     });
@@ -217,9 +227,9 @@ export class MapServiceCustom {
     });
   }
 
-  private convertToObjectOfUnits(
-    units: UnitPositionModel[]
-  ): { [key: number]: UnitPositionModel } {
+  private convertToObjectOfUnits<T extends { unitId: number }>(
+    units: T[]
+  ): { [key: number]: T } {
     return units.reduce((obj, unit) => {
       obj[unit.unitId] = unit;
       return obj;
