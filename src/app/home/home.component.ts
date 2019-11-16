@@ -28,6 +28,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   private _unitTailSubscription: Subscription;
 
   unitFeatureCollection: GeoJSON.FeatureCollection<GeoJSON.Point>;
+  unitRouteCollection: GeoJSON.FeatureCollection<GeoJSON.LineString>;
   unitTailFeatureCollection: GeoJSON.FeatureCollection<GeoJSON.LineString>;
 
   constructor(
@@ -54,6 +55,13 @@ export class HomeComponent implements OnInit, OnDestroy {
       .pipe(take(1))
       .subscribe(unitFeatureCollection => {
         this.unitFeatureCollection = unitFeatureCollection;
+      });
+
+    this.mapService
+      .getUnitRoutesFeatureCollection()
+      .pipe(take(1))
+      .subscribe(unitRouteCollection => {
+        this.unitRouteCollection = unitRouteCollection;
       });
 
     this.positionService.subscribe();

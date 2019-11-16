@@ -31,6 +31,13 @@
         >
         </mgl-geojson-source>
 
+        <mgl-geojson-source
+          *ngIf="unitRouteCollection"
+          id="routes"
+          [data]="unitRouteCollection"
+        >
+        </mgl-geojson-source>
+
         <mgl-layer
           *ngIf="unitTailFeatureCollection"
           id="tail"
@@ -39,6 +46,18 @@
           [layout]="{ 'line-join': 'round', 'line-cap': 'round' }"
           [paint]="{
             'line-width': 4,
+            'line-color': ['get', 'color']
+          }"
+        ></mgl-layer>
+
+        <mgl-layer
+          *ngIf="unitRouteCollection"
+          id="routes"
+          type="line"
+          source="routes"
+          [layout]="{ 'line-join': 'round', 'line-cap': 'round' }"
+          [paint]="{
+            'line-width': 5,
             'line-color': ['get', 'color']
           }"
         ></mgl-layer>
