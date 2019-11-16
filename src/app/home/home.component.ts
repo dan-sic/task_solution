@@ -6,6 +6,7 @@ import { MapServiceCustom } from "./services/map.service";
 import { take } from "rxjs/operators";
 import { PositionService } from "./services/position.service";
 import { Subscription } from "rxjs";
+import { UnitRouteMapBoundaries } from "./models/UnitRoutesModels";
 
 @Component({
   selector: "app-home",
@@ -31,6 +32,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   unitFeatureCollection: GeoJSON.FeatureCollection<GeoJSON.Point>;
   unitRouteCollection: GeoJSON.FeatureCollection<GeoJSON.LineString>;
   unitTailFeatureCollection: GeoJSON.FeatureCollection<GeoJSON.LineString>;
+  unitRouteMapBoundaries: UnitRouteMapBoundaries;
 
   constructor(
     private readonly mapService: MapServiceCustom,
@@ -65,6 +67,13 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.unitRouteCollection = unitRouteCollection;
       });
 
+    this.mapService
+      .getUnitRoutesMapBoundaries()
+      .pipe(take(1))
+      .subscribe(unitRouteMapBoundaries => {
+        this.unitRouteMapBoundaries = unitRouteMapBoundaries;
+      });
+
     this.positionService.subscribe();
     this.positionService.invoke();
     this.subscribeToUnitPositionUpdates();
@@ -86,10 +95,14 @@ export class HomeComponent implements OnInit, OnDestroy {
       const _this = this;
       this.bounds = new LngLatBounds();
 
-      // todo: należy ustalić pozycje graniczne wszystkich pojazdów i odpowiednio dostosować granice mapy
+      for (let routeId in this.unitRouteMapBoundaries) {
+        this.bounds.extend(this.unitRouteMapBoundaries[routeId]);
+      }
 
       window.dispatchEvent(new Event("resize"));
-      // this.map.fitBounds(this.bounds, {padding: {top: 20, left: 370, bottom: 20, right: 20}});
+      this.map.fitBounds(this.bounds, {
+        padding: { top: 40, left: 370, bottom: 20, right: 20 }
+      });
     }
   }
 
