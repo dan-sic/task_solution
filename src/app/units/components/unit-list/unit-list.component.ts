@@ -3,6 +3,7 @@ import { Observable } from "rxjs";
 import { UnitModel } from "./UnitModel";
 import { UnitService } from "../../services/unit.service";
 import { TranslatePipe } from "../../../core/translate/translate.pipe";
+import { MapRoutesService } from "src/app/home/services/map-routes.service";
 
 @Component({
   selector: "app-unit-list",
@@ -13,7 +14,10 @@ import { TranslatePipe } from "../../../core/translate/translate.pipe";
 export class UnitListComponent implements OnInit {
   unitsToDisplay$: Observable<UnitModel[]>;
 
-  constructor(private unitService: UnitService) {}
+  constructor(
+    private unitService: UnitService,
+    private mapRoutesService: MapRoutesService
+  ) {}
 
   ngOnInit() {
     this.unitsToDisplay$ = this.unitService.unitsToDisplay$;
@@ -21,5 +25,9 @@ export class UnitListComponent implements OnInit {
 
   trackByFn(index, unit: UnitModel) {
     return unit.unitId;
+  }
+
+  onUnitCardSelect(unitId: number) {
+    this.mapRoutesService.selectUnitRoute(unitId);
   }
 }
