@@ -4,8 +4,13 @@ import { UnitPositionModel } from "../models/UnitPositionModels";
 import { Observable } from "rxjs";
 import { map, tap, withLatestFrom } from "rxjs/operators";
 import { PositionService } from "./position.service";
-import { UnitRouteModel } from "../models/UnitRoutesModels";
+import {
+  UnitRouteModel,
+  UnitRouteModelCoords,
+  UnitRouteMapBoundaries
+} from "../models/UnitRoutesModels";
 import { UnitModel } from "src/app/units/components/unit-list/UnitModel";
+import { LngLatBounds, LngLatLike } from "mapbox-gl";
 
 type longitude = number;
 type latitude = number;
@@ -87,6 +92,15 @@ export class MapServiceCustom {
     );
   }
 
+  getUnitRoutesMapBoundaries(): Observable<UnitRouteMapBoundaries> {
+    return this.apiJSONService
+      .getUnitRoutes()
+      .pipe(
+        map(this.convertGeoPositionToLngLatLike),
+        map(this.generateMapBoundaries)
+      );
+  }
+
   getUnitRoutesFeatureCollection(): Observable<
     GeoJSON.FeatureCollection<GeoJSON.LineString>
   > {
@@ -96,6 +110,19 @@ export class MapServiceCustom {
         return this.generateUnitRoutesFeature(routes, units);
       })
     );
+  }
+
+  private convertGeoPositionToLngLatLike(
+    routes: UnitRouteModel[]
+  ): UnitRouteModelCoords[] {
+    return routes.map(route => {
+      return {
+        ...route,
+        points: route.points.map(
+          point => [point.longitude, point.latitude] as LngLatLike
+        )
+      };
+    });
   }
 
   private generateUnitRoutesFeature(
@@ -111,10 +138,9 @@ export class MapServiceCustom {
         type: "Feature",
         geometry: {
           type: "LineString",
-          coordinates: route.points.map(point => [
-            point.longitude,
-            point.latitude
-          ])
+          coordinates: route.points.map(
+            point => [point.longitude, point.latitude] as LngLatLike
+          )
         },
         properties: {
           color: this.ROUTE_COLOR,
@@ -200,6 +226,23 @@ export class MapServiceCustom {
         }
       })
     };
+  }
+
+  private generateMapBoundaries(routes: UnitRouteModelCoords[]) {
+    const routesMapBoundaries: UnitRouteMapBoundaries = {};
+
+    routes.forEach(route => {
+      const initialCoords = route.points[0];
+
+      routesMapBoundaries[route.unitId] = route.points.reduce(
+        (bounds, coord) => {
+          return bounds.extend(<any>coord);
+        },
+        new LngLatBounds(initialCoords, initialCoords)
+      );
+    });
+
+    return routesMapBoundaries;
   }
 
   private convertToObjectOfUnits<T extends { unitId: number }>(
