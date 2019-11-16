@@ -65,17 +65,11 @@ export class MapServiceCustom {
   getUnitFeaturesUpdate(): Observable<
     GeoJSON.FeatureCollection<GeoJSON.Point>
   > {
-    let unitIds: number[] = [];
-
     return this.positionService.signalRHubHubPositions$.pipe(
-      tap(units => {
-        this.keepReferenceToCurrentUnitIds(units, unitIds);
-      }),
       map(this.convertToObjectOfUnits),
       map(unitPositionObject => {
         this._latestUnitFeatureCollection = this.generateUnitFeatureCollection(
-          unitPositionObject,
-          unitIds
+          unitPositionObject
         );
         return this._latestUnitFeatureCollection;
       })
@@ -191,23 +185,13 @@ export class MapServiceCustom {
     };
   }
 
-  private generateUnitFeatureCollection(
-    unitPositionObject: { [key: number]: UnitPositionModel },
-    unitIds: number[]
-  ): GeoJSON.FeatureCollection<GeoJSON.Point> {
-    console.log("LatestUnitFeatureCOllection");
-    console.log(this._latestUnitFeatureCollection);
-    console.log("UnitPositionObject:");
-    console.log(unitPositionObject);
+  private generateUnitFeatureCollection(unitPositionObject: {
+    [key: number]: UnitPositionModel;
+  }): GeoJSON.FeatureCollection<GeoJSON.Point> {
     return {
       type: "FeatureCollection",
       features: this._latestUnitFeatureCollection.features.map(feature => {
-        console.log();
-        const isUnitPresentInSignalRPayload = unitIds.includes(
-          feature.properties.id
-        );
-
-        if (isUnitPresentInSignalRPayload) {
+        if (unitPositionObject[feature.properties.id]) {
           const currentUnitPositionObject =
             unitPositionObject[feature.properties.id];
           return this.createUnitFeature(currentUnitPositionObject);
@@ -216,15 +200,6 @@ export class MapServiceCustom {
         }
       })
     };
-  }
-
-  private keepReferenceToCurrentUnitIds(
-    units: UnitPositionModel[],
-    unitIds: number[]
-  ) {
-    units.forEach(unit => {
-      unitIds.push(unit.unitId);
-    });
   }
 
   private convertToObjectOfUnits<T extends { unitId: number }>(
