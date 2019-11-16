@@ -17,6 +17,9 @@
         (load)="map = $event"
         (render)="render()"
       >
+        <!-- <mgl-popup [closeOnClick]="false" (load)="popup = $event">
+          <h1>Hello world !</h1>
+        </mgl-popup> -->
         <mgl-geojson-source
           *ngIf="unitFeatureCollection && greenImageLoaded"
           id="unitPositions"
@@ -60,6 +63,8 @@
             'line-width': 5,
             'line-color': ['get', 'color']
           }"
+          (mouseEnter)="openRoutePopup($event)"
+          (mouseLeave)="closeRoutePopup()"
         ></mgl-layer>
 
         <mgl-layer

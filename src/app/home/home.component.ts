@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from "@angular/core";
 import { mapStyle } from "../shared/map-style";
-import { LngLatBounds, Map, MapMouseEvent } from "mapbox-gl";
+import { LngLatBounds, Map, Popup } from "mapbox-gl";
 import { Utils } from "../shared/utils";
 import { MapServiceCustom } from "./services/map.service";
 import { take } from "rxjs/operators";
@@ -14,6 +14,7 @@ import { Subscription } from "rxjs";
 })
 export class HomeComponent implements OnInit, OnDestroy {
   public map: Map;
+  public popup: Popup;
   public center: number[] = [21.02001668629524, 52.2881799498405];
   public zoom: number[] = [6];
   public style;
@@ -69,6 +70,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.subscribeToUnitPositionUpdates();
     this.subscribeToUnitTailUpdates();
 
+    this.generateRoutePopup();
     this.onResize();
     this.render();
   }
@@ -105,6 +107,23 @@ export class HomeComponent implements OnInit, OnDestroy {
     }, 250)();
   }
 
+  // Type any used intentionally, as type MapMouseEvent does not have 'features' property
+  openRoutePopup(event: any) {
+    const popupInnerHTML = `<p>Trasa pojazdu:</p>
+      <hr>
+      <p>Nazwa: ${event.features[0].properties.unitName}</p>
+      <p>Seria: ${event.features[0].properties.unitSerial}</p>`;
+
+    this.popup
+      .setLngLat(event.lngLat)
+      .setHTML(popupInnerHTML)
+      .addTo(this.map);
+  }
+
+  closeRoutePopup() {
+    this.popup.remove();
+  }
+
   private subscribeToUnitPositionUpdates() {
     this._unitPositionSubscription = this.mapService
       .getUnitFeaturesUpdate()
@@ -119,5 +138,12 @@ export class HomeComponent implements OnInit, OnDestroy {
       .subscribe(unitTailFeatureCollection => {
         this.unitTailFeatureCollection = unitTailFeatureCollection;
       });
+  }
+
+  private generateRoutePopup() {
+    this.popup = new Popup({
+      closeButton: false,
+      className: "route-popup"
+    });
   }
 }
