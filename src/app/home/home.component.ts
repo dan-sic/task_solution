@@ -7,6 +7,7 @@ import { take } from "rxjs/operators";
 import { PositionService } from "./services/position.service";
 import { Subscription } from "rxjs";
 import { UnitRouteMapBoundaries } from "./models/UnitRoutesModels";
+import { MapRoutesService } from "./services/map-routes.service";
 
 @Component({
   selector: "app-home",
@@ -26,8 +27,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   public selectedUnitPopup: GeoJSON.Feature<GeoJSON.Point>;
   private bounds: LngLatBounds;
   private utils: Utils;
+
   private _unitPositionSubscription: Subscription;
   private _unitTailSubscription: Subscription;
+  private _unitRouteSelectSub: Subscription;
 
   unitFeatureCollection: GeoJSON.FeatureCollection<GeoJSON.Point>;
   unitRouteCollection: GeoJSON.FeatureCollection<GeoJSON.LineString>;
@@ -36,7 +39,8 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   constructor(
     private readonly mapService: MapServiceCustom,
-    private readonly positionService: PositionService
+    private readonly positionService: PositionService,
+    private readonly mapRoutesService: MapRoutesService
   ) {
     this.style = mapStyle;
     this.utils = new Utils();
@@ -74,10 +78,11 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.unitRouteMapBoundaries = unitRouteMapBoundaries;
       });
 
-    this.positionService.subscribe();
-    this.positionService.invoke();
-    this.subscribeToUnitPositionUpdates();
-    this.subscribeToUnitTailUpdates();
+    // this.positionService.subscribe();
+    // this.positionService.invoke();
+    // this.subscribeToUnitPositionUpdates();
+    // this.subscribeToUnitTailUpdates();
+    this.subscribeToUnitRouteSelect();
 
     this.generateRoutePopup();
     this.onResize();
@@ -87,6 +92,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this._unitPositionSubscription.unsubscribe();
     this._unitTailSubscription.unsubscribe();
+    this._unitRouteSelectSub.unsubscribe();
     this.positionService.close();
   }
 
@@ -153,10 +159,26 @@ export class HomeComponent implements OnInit, OnDestroy {
       });
   }
 
+  private subscribeToUnitRouteSelect() {
+    this._unitRouteSelectSub = this.mapRoutesService.selectedUnitRoute$.subscribe(
+      unitId => {
+        this.fitMapBoundsToSelectedRoute(unitId);
+      }
+    );
+  }
+
   private generateRoutePopup() {
     this.popup = new Popup({
       closeButton: false,
       className: "route-popup"
+    });
+  }
+
+  private fitMapBoundsToSelectedRoute(routeId: number) {
+    this.bounds = this.unitRouteMapBoundaries[routeId];
+
+    this.map.fitBounds(this.bounds, {
+      padding: { top: 50, left: 340, bottom: 40, right: 20 }
     });
   }
 }
