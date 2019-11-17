@@ -2,13 +2,14 @@ import { Component, OnInit, OnDestroy } from "@angular/core";
 import { mapStyle } from "../shared/map-style";
 import { LngLatBounds, Map, Popup } from "mapbox-gl";
 import { Utils } from "../shared/utils";
-import { MapServiceCustom } from "./services/map.service";
+import { MapUnitsService } from "./services/map-units.service";
 import { take } from "rxjs/operators";
 import { PositionService } from "./services/position.service";
 import { Subscription, Subject } from "rxjs";
 import { UnitRouteMapBoundaries } from "./models/UnitRoutesModels";
 import { MapRoutesService } from "./services/map-routes.service";
 import { UnitService } from "../units/services/unit.service";
+import { MapTailsService } from "./services/map-tails.service";
 
 @Component({
   selector: "app-home",
@@ -20,7 +21,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   public popup: Popup;
   public center: number[] = [21.02001668629524, 52.2881799498405];
   public zoom: number[] = [6];
-  public latestZoom: number;
   public style;
   public cursorStyle: string;
   public greenImageLoaded = false;
@@ -46,9 +46,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   unitRouteMapBoundaries: UnitRouteMapBoundaries;
 
   constructor(
-    private readonly mapService: MapServiceCustom,
+    private readonly mapUnitsService: MapUnitsService,
     private readonly positionService: PositionService,
     private readonly mapRoutesService: MapRoutesService,
+    private readonly mapTailsService: MapTailsService,
     private readonly unitService: UnitService
   ) {
     this.style = mapStyle;
@@ -66,35 +67,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.mapService
-      .getInitialUnitFeatureCollection()
-      .pipe(take(1))
-      .subscribe(
-        unitFeatureCollection => {
-          this.unitFeatureCollection = unitFeatureCollection;
-        },
-        err => this.handleConnectionError()
-      );
-
-    this.mapService
-      .getUnitRoutesFeatureCollection()
-      .pipe(take(1))
-      .subscribe(
-        unitRouteCollection => {
-          this.unitRouteCollection = unitRouteCollection;
-        },
-        err => this.handleConnectionError()
-      );
-
-    this.mapService
-      .getUnitRoutesMapBoundaries()
-      .pipe(take(1))
-      .subscribe(
-        unitRouteMapBoundaries => {
-          this.unitRouteMapBoundaries = unitRouteMapBoundaries;
-        },
-        err => this.handleConnectionError()
-      );
+    this.getInitialUnitFeatureCollection();
+    this.getUnitRoutesFeatureCollection();
+    this.getUnitRoutesMapBoundaries();
 
     this.positionService.subscribe();
     this.positionService.invoke();
@@ -170,8 +145,44 @@ export class HomeComponent implements OnInit, OnDestroy {
     this._zoomSubject.next(this.map.getZoom());
   }
 
+  private getInitialUnitFeatureCollection() {
+    this.mapUnitsService
+      .getInitialUnitFeatureCollection()
+      .pipe(take(1))
+      .subscribe(
+        unitFeatureCollection => {
+          this.unitFeatureCollection = unitFeatureCollection;
+        },
+        err => this.handleConnectionError()
+      );
+  }
+
+  private getUnitRoutesFeatureCollection() {
+    this.mapRoutesService
+      .getUnitRoutesFeatureCollection()
+      .pipe(take(1))
+      .subscribe(
+        unitRouteCollection => {
+          this.unitRouteCollection = unitRouteCollection;
+        },
+        err => this.handleConnectionError()
+      );
+  }
+
+  private getUnitRoutesMapBoundaries() {
+    this.mapRoutesService
+      .getUnitRoutesMapBoundaries()
+      .pipe(take(1))
+      .subscribe(
+        unitRouteMapBoundaries => {
+          this.unitRouteMapBoundaries = unitRouteMapBoundaries;
+        },
+        err => this.handleConnectionError()
+      );
+  }
+
   private subscribeToUnitPositionUpdates() {
-    this._unitPositionSubscription = this.mapService
+    this._unitPositionSubscription = this.mapUnitsService
       .getUnitFeaturesUpdate()
       .subscribe(
         unitFeatureCollection => {
@@ -182,7 +193,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   private subscribeToUnitTailUpdates() {
-    this._unitTailSubscription = this.mapService
+    this._unitTailSubscription = this.mapTailsService
       .getUnitTailFeaturesUpdate()
       .subscribe(
         unitTailFeatureCollection => {
@@ -241,6 +252,16 @@ export class HomeComponent implements OnInit, OnDestroy {
   private hideOtherRoutesAndUnits(routeId: number) {
     const filter = ["match", ["get", "unitId"], routeId, true, false];
 
+    this.setLayerFilters(filter);
+  }
+
+  private showOtherRoutesAndUnits() {
+    if (!this.hideOtherRoutesOnSelectedRouteZoom) {
+      const filter = ["has", "unitId"];
+    }
+  }
+
+  private setLayerFilters(filter: any[]) {
     this.map.setFilter("routes", filter);
 
     if (this.map.getLayer("unitPositions")) {
@@ -249,22 +270,6 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     if (this.map.getLayer("tail")) {
       this.map.setFilter("tail", filter);
-    }
-  }
-
-  private showOtherRoutesAndUnits() {
-    if (!this.hideOtherRoutesOnSelectedRouteZoom) {
-      const filter = ["has", "unitId"];
-
-      this.map.setFilter("routes", filter);
-
-      if (this.map.getLayer("unitPositions")) {
-        this.map.setFilter("unitPositions", filter);
-      }
-
-      if (this.map.getLayer("tail")) {
-        this.map.setFilter("tail", filter);
-      }
     }
   }
 
