@@ -61,7 +61,7 @@ export class MapServiceCustom {
         coordinates: [unit.position.longitude, unit.position.latitude]
       },
       properties: {
-        id: unit.unitId,
+        unitId: unit.unitId,
         direction: unit.direction
       }
     };
