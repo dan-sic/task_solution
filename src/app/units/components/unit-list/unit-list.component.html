@@ -1,8 +1,9 @@
 <ul class="list-group">
+  <div *ngIf="error">Wystąpił problem. Spróbuj ponownie później.</div>
   <div
     (click)="onUnitCardSelect(unit.unitId)"
     class="card unit-card"
-    *ngFor="let unit of unitsToDisplay$ | async; trackBy: trackByFn"
+    *ngFor="let unit of unitsToDisplay; trackBy: trackByFn"
     (mouseenter)="onMouseOverCard(unit.unitId)"
     (mouseleave)="onMouseOutCard()"
   >

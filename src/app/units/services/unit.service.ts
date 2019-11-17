@@ -9,7 +9,7 @@ import { SearchService } from "src/app/core/sidebar/service/search.service";
   providedIn: "root"
 })
 export class UnitService implements OnDestroy {
-  private _allUnits: UnitModel[];
+  private _allUnits: UnitModel[] = [];
   private _unitsToDisplay: Subject<UnitModel[]> = new Subject();
   private _searchTextInputSubscription: Subscription;
 
@@ -24,10 +24,13 @@ export class UnitService implements OnDestroy {
     this.apiService
       .getUnits()
       .pipe(take(1))
-      .subscribe(units => {
-        this._allUnits = units;
-        this._unitsToDisplay.next(this._allUnits);
-      });
+      .subscribe(
+        units => {
+          this._allUnits = units;
+          this._unitsToDisplay.next(this._allUnits);
+        },
+        err => this._unitsToDisplay.next(null)
+      );
 
     this.listenToSearchTextInput();
   }
