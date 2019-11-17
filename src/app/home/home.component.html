@@ -16,6 +16,7 @@
         }"
         (load)="map = $event"
         (render)="render()"
+        (zoomEnd)="setLatestZoom()"
       >
         <!-- <mgl-popup [closeOnClick]="false" (load)="popup = $event">
           <h1>Hello world !</h1>

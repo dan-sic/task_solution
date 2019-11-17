@@ -5,8 +5,9 @@ import { Utils } from "../shared/utils";
 import { MapServiceCustom } from "./services/map.service";
 import { take } from "rxjs/operators";
 import { PositionService } from "./services/position.service";
-import { Subscription } from "rxjs";
+import { Subscription, Subject } from "rxjs";
 import { UnitRouteMapBoundaries } from "./models/UnitRoutesModels";
+import { MapRoutesService } from "./services/map-routes.service";
 
 @Component({
   selector: "app-home",
@@ -18,6 +19,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   public popup: Popup;
   public center: number[] = [21.02001668629524, 52.2881799498405];
   public zoom: number[] = [6];
+  public latestZoom: number;
   public style;
   public cursorStyle: string;
   public greenImageLoaded = false;
@@ -26,8 +28,15 @@ export class HomeComponent implements OnInit, OnDestroy {
   public selectedUnitPopup: GeoJSON.Feature<GeoJSON.Point>;
   private bounds: LngLatBounds;
   private utils: Utils;
+  private hideOtherRoutesOnSelectedRouteZoom = false;
+
   private _unitPositionSubscription: Subscription;
   private _unitTailSubscription: Subscription;
+  private _unitRouteSelectSub: Subscription;
+  private _zoomSub: Subscription;
+  private _unitRouteHoverSub: Subscription;
+
+  private _zoomSubject = new Subject<number>();
 
   unitFeatureCollection: GeoJSON.FeatureCollection<GeoJSON.Point>;
   unitRouteCollection: GeoJSON.FeatureCollection<GeoJSON.LineString>;
@@ -36,7 +45,8 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   constructor(
     private readonly mapService: MapServiceCustom,
-    private readonly positionService: PositionService
+    private readonly positionService: PositionService,
+    private readonly mapRoutesService: MapRoutesService
   ) {
     this.style = mapStyle;
     this.utils = new Utils();
@@ -74,10 +84,13 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.unitRouteMapBoundaries = unitRouteMapBoundaries;
       });
 
-    this.positionService.subscribe();
-    this.positionService.invoke();
-    this.subscribeToUnitPositionUpdates();
-    this.subscribeToUnitTailUpdates();
+    // this.positionService.subscribe();
+    // this.positionService.invoke();
+    // this.subscribeToUnitPositionUpdates();
+    // this.subscribeToUnitTailUpdates();
+    this.subscribeToUnitRouteSelect();
+    this.subscribeToZoomEvents();
+    this.subscribeToUnitRouteHovers();
 
     this.generateRoutePopup();
     this.onResize();
@@ -87,6 +100,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this._unitPositionSubscription.unsubscribe();
     this._unitTailSubscription.unsubscribe();
+    this._unitRouteSelectSub.unsubscribe();
+    this._zoomSub.unsubscribe();
+    this._unitRouteHoverSub.unsubscribe();
     this.positionService.close();
   }
 
@@ -125,7 +141,8 @@ export class HomeComponent implements OnInit, OnDestroy {
     const popupInnerHTML = `<p>Trasa pojazdu:</p>
       <hr>
       <p>Nazwa: ${event.features[0].properties.unitName}</p>
-      <p>Seria: ${event.features[0].properties.unitSerial}</p>`;
+      <p>Seria: ${event.features[0].properties.unitSerial}</p>
+      `;
 
     this.popup
       .setLngLat(event.lngLat)
@@ -135,6 +152,10 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   closeRoutePopup() {
     this.popup.remove();
+  }
+
+  setLatestZoom() {
+    this._zoomSubject.next(this.map.getZoom());
   }
 
   private subscribeToUnitPositionUpdates() {
@@ -153,10 +174,75 @@ export class HomeComponent implements OnInit, OnDestroy {
       });
   }
 
+  private subscribeToUnitRouteSelect() {
+    this._unitRouteSelectSub = this.mapRoutesService.selectedUnitRoute$.subscribe(
+      unitId => {
+        this.hideOtherRoutesOnSelectedRouteZoom = true;
+        this.fitBoundsToSelectedRoute(unitId);
+        this.hideOtherRoutesAndUnits(unitId);
+      }
+    );
+  }
+
+  private subscribeToUnitRouteHovers() {
+    this._unitRouteHoverSub = this.mapRoutesService.hoveredUnitRoute$.subscribe(
+      unitId => {
+        if (unitId) {
+          this.hideOtherRoutesAndUnits(unitId);
+        } else {
+          this.showOtherRoutesAndUnits();
+        }
+      }
+    );
+  }
+
+  private subscribeToZoomEvents() {
+    this._zoomSub = this._zoomSubject.subscribe(zoom => {
+      if (zoom < 10) {
+        this.hideOtherRoutesOnSelectedRouteZoom = false;
+        this.showOtherRoutesAndUnits();
+      }
+    });
+  }
+
   private generateRoutePopup() {
     this.popup = new Popup({
       closeButton: false,
       className: "route-popup"
     });
+  }
+
+  private fitBoundsToSelectedRoute(routeId: number) {
+    this.bounds = this.unitRouteMapBoundaries[routeId];
+
+    this.map.fitBounds(this.bounds, {
+      padding: { top: 50, left: 340, bottom: 40, right: 20 }
+    });
+  }
+
+  private hideOtherRoutesAndUnits(routeId: number) {
+    const filter = ["match", ["get", "unitId"], routeId, true, false];
+
+    this.map.setFilter("routes", filter);
+
+    this.map.setFilter("unitPositions", filter);
+
+    if (this.map.getLayer("tail")) {
+      this.map.setFilter("tail", filter);
+    }
+  }
+
+  private showOtherRoutesAndUnits() {
+    if (!this.hideOtherRoutesOnSelectedRouteZoom) {
+      const filter = ["has", "unitId"];
+
+      this.map.setFilter("routes", filter);
+
+      this.map.setFilter("unitPositions", filter);
+
+      if (this.map.getLayer("tail")) {
+        this.map.setFilter("tail", filter);
+      }
+    }
   }
 }

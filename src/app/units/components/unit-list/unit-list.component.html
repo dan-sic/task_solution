@@ -1,7 +1,10 @@
 <ul class="list-group">
   <div
+    (click)="onUnitCardSelect(unit.unitId)"
     class="card unit-card"
     *ngFor="let unit of unitsToDisplay$ | async; trackBy: trackByFn"
+    (mouseenter)="onMouseOverCard(unit.unitId)"
+    (mouseleave)="onMouseOutCard()"
   >
     <div class="card-body">
       <h6 class="card-title">

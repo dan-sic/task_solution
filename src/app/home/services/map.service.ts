@@ -61,7 +61,7 @@ export class MapServiceCustom {
         coordinates: [unit.position.longitude, unit.position.latitude]
       },
       properties: {
-        id: unit.unitId,
+        unitId: unit.unitId,
         direction: unit.direction
       }
     };
@@ -200,6 +200,7 @@ export class MapServiceCustom {
           coordinates: this._tailCoordinates[unitId]
         },
         properties: {
+          unitId: Number(unitId),
           color: this.TAIL_COLOR
         }
       });
@@ -217,9 +218,9 @@ export class MapServiceCustom {
     return {
       type: "FeatureCollection",
       features: this._latestUnitFeatureCollection.features.map(feature => {
-        if (unitPositionObject[feature.properties.id]) {
+        if (unitPositionObject[feature.properties.unitId]) {
           const currentUnitPositionObject =
-            unitPositionObject[feature.properties.id];
+            unitPositionObject[feature.properties.unitId];
           return this.createUnitFeature(currentUnitPositionObject);
         } else {
           return feature;
