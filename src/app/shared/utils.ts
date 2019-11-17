@@ -1,11 +1,11 @@
-import * as moment from 'moment';
+import * as moment from "moment";
+import { throwError, of } from "rxjs";
 
 export class Utils {
-
   private readonly dateTimeFormat: string;
 
   constructor() {
-    this.dateTimeFormat = 'YYYY-MM-DD HH:mm:ss';
+    this.dateTimeFormat = "YYYY-MM-DD HH:mm:ss";
   }
 
   dateToUtc(date) {
@@ -27,7 +27,8 @@ export class Utils {
   debounce(func, wait, immediate?) {
     let timeout;
     return function() {
-      const context = this, args = arguments;
+      const context = this,
+        args = arguments;
       const callNow = immediate && !timeout;
       const later = function() {
         timeout = null;
@@ -43,4 +44,18 @@ export class Utils {
     };
   }
 
+  convertToObjectOfUnits<T extends { unitId: number }>(
+    units: T[]
+  ): { [key: number]: T } {
+    return units.reduce((obj, unit) => {
+      obj[unit.unitId] = unit;
+      return obj;
+    }, {});
+  }
+
+  checkForHubConnectionError<T>(unitPositions: T[]) {
+    return !unitPositions
+      ? throwError("SignalR connection error")
+      : of(unitPositions);
+  }
 }
