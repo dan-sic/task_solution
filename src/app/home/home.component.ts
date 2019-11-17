@@ -8,6 +8,7 @@ import { PositionService } from "./services/position.service";
 import { Subscription, Subject } from "rxjs";
 import { UnitRouteMapBoundaries } from "./models/UnitRoutesModels";
 import { MapRoutesService } from "./services/map-routes.service";
+import { UnitService } from "../units/services/unit.service";
 
 @Component({
   selector: "app-home",
@@ -23,6 +24,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   public style;
   public cursorStyle: string;
   public greenImageLoaded = false;
+  public showErrorModal = false;
   public supercluster: any;
   public selectedCluster: GeoJSON.Feature<GeoJSON.Point>;
   public selectedUnitPopup: GeoJSON.Feature<GeoJSON.Point>;
@@ -46,7 +48,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   constructor(
     private readonly mapService: MapServiceCustom,
     private readonly positionService: PositionService,
-    private readonly mapRoutesService: MapRoutesService
+    private readonly mapRoutesService: MapRoutesService,
+    private readonly unitService: UnitService
   ) {
     this.style = mapStyle;
     this.utils = new Utils();
@@ -66,28 +69,37 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.mapService
       .getInitialUnitFeatureCollection()
       .pipe(take(1))
-      .subscribe(unitFeatureCollection => {
-        this.unitFeatureCollection = unitFeatureCollection;
-      });
+      .subscribe(
+        unitFeatureCollection => {
+          this.unitFeatureCollection = unitFeatureCollection;
+        },
+        err => this.handleConnectionError()
+      );
 
     this.mapService
       .getUnitRoutesFeatureCollection()
       .pipe(take(1))
-      .subscribe(unitRouteCollection => {
-        this.unitRouteCollection = unitRouteCollection;
-      });
+      .subscribe(
+        unitRouteCollection => {
+          this.unitRouteCollection = unitRouteCollection;
+        },
+        err => this.handleConnectionError()
+      );
 
     this.mapService
       .getUnitRoutesMapBoundaries()
       .pipe(take(1))
-      .subscribe(unitRouteMapBoundaries => {
-        this.unitRouteMapBoundaries = unitRouteMapBoundaries;
-      });
+      .subscribe(
+        unitRouteMapBoundaries => {
+          this.unitRouteMapBoundaries = unitRouteMapBoundaries;
+        },
+        err => this.handleConnectionError()
+      );
 
-    // this.positionService.subscribe();
-    // this.positionService.invoke();
-    // this.subscribeToUnitPositionUpdates();
-    // this.subscribeToUnitTailUpdates();
+    this.positionService.subscribe();
+    this.positionService.invoke();
+    this.subscribeToUnitPositionUpdates();
+    this.subscribeToUnitTailUpdates();
     this.subscribeToUnitRouteSelect();
     this.subscribeToZoomEvents();
     this.subscribeToUnitRouteHovers();
@@ -161,17 +173,23 @@ export class HomeComponent implements OnInit, OnDestroy {
   private subscribeToUnitPositionUpdates() {
     this._unitPositionSubscription = this.mapService
       .getUnitFeaturesUpdate()
-      .subscribe(unitFeatureCollection => {
-        this.unitFeatureCollection = unitFeatureCollection;
-      });
+      .subscribe(
+        unitFeatureCollection => {
+          this.unitFeatureCollection = unitFeatureCollection;
+        },
+        err => this.handleConnectionError()
+      );
   }
 
   private subscribeToUnitTailUpdates() {
     this._unitTailSubscription = this.mapService
       .getUnitTailFeaturesUpdate()
-      .subscribe(unitTailFeatureCollection => {
-        this.unitTailFeatureCollection = unitTailFeatureCollection;
-      });
+      .subscribe(
+        unitTailFeatureCollection => {
+          this.unitTailFeatureCollection = unitTailFeatureCollection;
+        },
+        err => this.handleConnectionError()
+      );
   }
 
   private subscribeToUnitRouteSelect() {
@@ -225,7 +243,9 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     this.map.setFilter("routes", filter);
 
-    this.map.setFilter("unitPositions", filter);
+    if (this.map.getLayer("unitPositions")) {
+      this.map.setFilter("unitPositions", filter);
+    }
 
     if (this.map.getLayer("tail")) {
       this.map.setFilter("tail", filter);
@@ -238,11 +258,19 @@ export class HomeComponent implements OnInit, OnDestroy {
 
       this.map.setFilter("routes", filter);
 
-      this.map.setFilter("unitPositions", filter);
+      if (this.map.getLayer("unitPositions")) {
+        this.map.setFilter("unitPositions", filter);
+      }
 
       if (this.map.getLayer("tail")) {
         this.map.setFilter("tail", filter);
       }
     }
+  }
+
+  private handleConnectionError() {
+    this.showErrorModal = true;
+
+    this.unitService.hideUnitListings();
   }
 }

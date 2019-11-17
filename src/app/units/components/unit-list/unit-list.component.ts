@@ -28,6 +28,7 @@ export class UnitListComponent implements OnInit, OnDestroy {
         if (units) {
           this.unitsToDisplay = units;
         } else {
+          this.unitsToDisplay = [];
           this.error = true;
         }
       }

@@ -64,4 +64,8 @@ export class UnitService implements OnDestroy {
     }
     this._unitsToDisplay.next(filteredOutUnits);
   }
+
+  hideUnitListings() {
+    this._unitsToDisplay.next(null);
+  }
 }
