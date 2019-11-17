@@ -28,11 +28,13 @@ export class HomeComponent implements OnInit, OnDestroy {
   public selectedUnitPopup: GeoJSON.Feature<GeoJSON.Point>;
   private bounds: LngLatBounds;
   private utils: Utils;
+  private hideOtherRoutesOnSelectedRouteZoom = false;
 
   private _unitPositionSubscription: Subscription;
   private _unitTailSubscription: Subscription;
   private _unitRouteSelectSub: Subscription;
   private _zoomSub: Subscription;
+  private _unitRouteHoverSub: Subscription;
 
   private _zoomSubject = new Subject<number>();
 
@@ -88,6 +90,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     // this.subscribeToUnitTailUpdates();
     this.subscribeToUnitRouteSelect();
     this.subscribeToZoomEvents();
+    this.subscribeToUnitRouteHovers();
 
     this.generateRoutePopup();
     this.onResize();
@@ -99,6 +102,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this._unitTailSubscription.unsubscribe();
     this._unitRouteSelectSub.unsubscribe();
     this._zoomSub.unsubscribe();
+    this._unitRouteHoverSub.unsubscribe();
     this.positionService.close();
   }
 
@@ -173,8 +177,21 @@ export class HomeComponent implements OnInit, OnDestroy {
   private subscribeToUnitRouteSelect() {
     this._unitRouteSelectSub = this.mapRoutesService.selectedUnitRoute$.subscribe(
       unitId => {
+        this.hideOtherRoutesOnSelectedRouteZoom = true;
         this.fitBoundsToSelectedRoute(unitId);
         this.hideOtherRoutesAndUnits(unitId);
+      }
+    );
+  }
+
+  private subscribeToUnitRouteHovers() {
+    this._unitRouteHoverSub = this.mapRoutesService.hoveredUnitRoute$.subscribe(
+      unitId => {
+        if (unitId) {
+          this.hideOtherRoutesAndUnits(unitId);
+        } else {
+          this.showOtherRoutesAndUnits();
+        }
       }
     );
   }
@@ -182,6 +199,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   private subscribeToZoomEvents() {
     this._zoomSub = this._zoomSubject.subscribe(zoom => {
       if (zoom < 10) {
+        this.hideOtherRoutesOnSelectedRouteZoom = false;
         this.showOtherRoutesAndUnits();
       }
     });
@@ -208,12 +226,23 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.map.setFilter("routes", filter);
 
     this.map.setFilter("unitPositions", filter);
+
+    if (this.map.getLayer("tail")) {
+      this.map.setFilter("tail", filter);
+    }
   }
 
   private showOtherRoutesAndUnits() {
-    const filter = ["has", "unitId"];
-    this.map.setFilter("routes", filter);
+    if (!this.hideOtherRoutesOnSelectedRouteZoom) {
+      const filter = ["has", "unitId"];
 
-    this.map.setFilter("unitPositions", filter);
+      this.map.setFilter("routes", filter);
+
+      this.map.setFilter("unitPositions", filter);
+
+      if (this.map.getLayer("tail")) {
+        this.map.setFilter("tail", filter);
+      }
+    }
   }
 }

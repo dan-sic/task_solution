@@ -200,6 +200,7 @@ export class MapServiceCustom {
           coordinates: this._tailCoordinates[unitId]
         },
         properties: {
+          unitId: Number(unitId),
           color: this.TAIL_COLOR
         }
       });
