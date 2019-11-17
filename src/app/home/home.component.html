@@ -25,9 +25,6 @@
         (render)="render()"
         (zoomEnd)="setLatestZoom()"
       >
-        <!-- <mgl-popup [closeOnClick]="false" (load)="popup = $event">
-          <h1>Hello world !</h1>
-        </mgl-popup> -->
         <mgl-geojson-source
           *ngIf="unitFeatureCollection && greenImageLoaded"
           id="unitPositions"
@@ -90,13 +87,6 @@
         <mgl-image
           id="greencar"
           url="../../assets/icons/car-green.png"
-          (loaded)="greenImageLoaded = true"
-        >
-        </mgl-image>
-
-        <mgl-image
-          id="redcar"
-          url="../../assets/icons/car-red.png"
           (loaded)="greenImageLoaded = true"
         >
         </mgl-image>
