@@ -5,6 +5,13 @@
 
   <div class="map col col-12 ">
     <div class="home-map">
+      <div class="error-modal-overlay" *ngIf="showErrorModal">
+        <div class="error-modal card">
+          <div class="card-body">
+            Wystąpił problem z wyświetleniem mapy. Spróbuj ponownie później.
+          </div>
+        </div>
+      </div>
       <mgl-map
         [style]="style"
         [zoom]="zoom"
