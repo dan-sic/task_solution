@@ -9,9 +9,10 @@ import { SearchService } from "src/app/core/sidebar/service/search.service";
   providedIn: "root"
 })
 export class UnitService implements OnDestroy {
-  private _allUnits: UnitModel[] = [];
-  private _unitsToDisplay: Subject<UnitModel[]> = new Subject();
+  private readonly _unitsToDisplay: Subject<UnitModel[]> = new Subject();
+
   private _searchTextInputSubscription: Subscription;
+  private _allUnits: UnitModel[] = [];
 
   public unitsToDisplay$: Observable<
     UnitModel[]
@@ -39,6 +40,10 @@ export class UnitService implements OnDestroy {
     this._searchTextInputSubscription.unsubscribe();
   }
 
+  hideUnitListings() {
+    this._unitsToDisplay.next(null);
+  }
+
   private listenToSearchTextInput() {
     this._searchTextInputSubscription = this.searchService.searchInputText$.subscribe(
       input => {
@@ -63,9 +68,5 @@ export class UnitService implements OnDestroy {
       }
     }
     this._unitsToDisplay.next(filteredOutUnits);
-  }
-
-  hideUnitListings() {
-    this._unitsToDisplay.next(null);
   }
 }
