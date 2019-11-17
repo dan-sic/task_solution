@@ -12,6 +12,7 @@ export class PositionService {
   private readonly hubEndpoint: string;
   private readonly hubChannel: string;
   private _signalRHubHubPositions: Subject<UnitPositionModel[]> = new Subject();
+  private connectionSuccessful = true;
 
   public signalRHubHubPositions$ = this._signalRHubHubPositions.asObservable();
 
@@ -26,13 +27,18 @@ export class PositionService {
       .configureLogging(LogLevel.Information)
       .build();
 
-    this.connection.start();
+    this.connection.start().catch(err => {
+      this.connectionSuccessful = false;
+      this._signalRHubHubPositions.next(null);
+    });
   }
 
   invoke() {
-    this.connection.on(this.hubChannel, (data: UnitPositionModel[]) => {
-      this._signalRHubHubPositions.next(data);
-    });
+    if (this.connectionSuccessful) {
+      this.connection.on(this.hubChannel, (data: UnitPositionModel[]) => {
+        this._signalRHubHubPositions.next(data);
+      });
+    }
   }
 
   close() {

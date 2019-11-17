@@ -1,5 +1,5 @@
-import { Component, OnInit } from "@angular/core";
-import { Observable } from "rxjs";
+import { Component, OnInit, OnDestroy } from "@angular/core";
+import { Observable, Subscription } from "rxjs";
 import { UnitModel } from "./UnitModel";
 import { UnitService } from "../../services/unit.service";
 import { TranslatePipe } from "../../../core/translate/translate.pipe";
@@ -11,8 +11,11 @@ import { MapRoutesService } from "src/app/home/services/map-routes.service";
   styleUrls: ["./unit-list.component.scss"],
   providers: [TranslatePipe]
 })
-export class UnitListComponent implements OnInit {
-  unitsToDisplay$: Observable<UnitModel[]>;
+export class UnitListComponent implements OnInit, OnDestroy {
+  private _unitsSubscription: Subscription;
+
+  public unitsToDisplay: UnitModel[] = [];
+  public error = false;
 
   constructor(
     private unitService: UnitService,
@@ -20,7 +23,20 @@ export class UnitListComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.unitsToDisplay$ = this.unitService.unitsToDisplay$;
+    this._unitsSubscription = this.unitService.unitsToDisplay$.subscribe(
+      units => {
+        if (units) {
+          this.unitsToDisplay = units;
+        } else {
+          this.unitsToDisplay = [];
+          this.error = true;
+        }
+      }
+    );
+  }
+
+  ngOnDestroy() {
+    this._unitsSubscription.unsubscribe();
   }
 
   trackByFn(index, unit: UnitModel) {

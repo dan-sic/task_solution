@@ -1,8 +1,8 @@
 import { Injectable } from "@angular/core";
 import { ApiJSONService } from "src/app/core/api/api-json.service";
 import { UnitPositionModel } from "../models/UnitPositionModels";
-import { Observable } from "rxjs";
-import { map, tap, withLatestFrom } from "rxjs/operators";
+import { Observable, throwError, of } from "rxjs";
+import { map, tap, withLatestFrom, mergeMap } from "rxjs/operators";
 import { PositionService } from "./position.service";
 import {
   UnitRouteModel,
@@ -71,6 +71,7 @@ export class MapServiceCustom {
     GeoJSON.FeatureCollection<GeoJSON.Point>
   > {
     return this.positionService.signalRHubHubPositions$.pipe(
+      mergeMap(this.checkForHubConnectionError),
       map(this.convertToObjectOfUnits),
       map(unitPositionObject => {
         this._latestUnitFeatureCollection = this.generateUnitFeatureCollection(
@@ -85,6 +86,7 @@ export class MapServiceCustom {
     GeoJSON.FeatureCollection<GeoJSON.LineString>
   > {
     return this.positionService.signalRHubHubPositions$.pipe(
+      mergeMap(this.checkForHubConnectionError),
       tap(units => this.updateUnitTailCoords(units)),
       map(units => {
         return this.generateUnitTailFeatureCollection();
@@ -253,5 +255,11 @@ export class MapServiceCustom {
       obj[unit.unitId] = unit;
       return obj;
     }, {});
+  }
+
+  private checkForHubConnectionError(unitPositions: UnitPositionModel[]) {
+    return !unitPositions
+      ? throwError("SignalR connection error")
+      : of(unitPositions);
   }
 }
