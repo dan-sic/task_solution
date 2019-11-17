@@ -218,9 +218,9 @@ export class MapServiceCustom {
     return {
       type: "FeatureCollection",
       features: this._latestUnitFeatureCollection.features.map(feature => {
-        if (unitPositionObject[feature.properties.id]) {
+        if (unitPositionObject[feature.properties.unitId]) {
           const currentUnitPositionObject =
-            unitPositionObject[feature.properties.id];
+            unitPositionObject[feature.properties.unitId];
           return this.createUnitFeature(currentUnitPositionObject);
         } else {
           return feature;
