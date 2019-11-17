@@ -30,4 +30,12 @@ export class UnitListComponent implements OnInit {
   onUnitCardSelect(unitId: number) {
     this.mapRoutesService.selectUnitRoute(unitId);
   }
+
+  onMouseOverCard(unitId: number) {
+    this.mapRoutesService.hoverOverUnitRouteCard(unitId);
+  }
+
+  onMouseOutCard() {
+    this.mapRoutesService.hoverOutUnitRouteCard();
+  }
 }
