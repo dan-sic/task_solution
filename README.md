@@ -1,6 +1,24 @@
-# Teagle
+# Dynamic maps task solution
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.5.
+This is a project I've made as a part of a recruitment process. This is an Angular project, which dynamically displays positions of vehicles on the map.
+
+## Project functionalities
+
+To the predefined scaffolding I've added the following functionalities:
+
+* Displaying vehicles on the map, according to their initial position
+* Dynamically updating position of vehicles, based on updates comming from an API
+* Displaying planned routes for each vehicle
+* Displaying history of fixed number of previous positions for each vehicle
+* Displaying a list of all vehcles with corresponding data
+* Adding search functionality for list of vehicles
+
+## Technologies used
+
+* Angular 7
+* Mapbox GL JS
+* ngx-mapbox-gl
+
 
 ## Development server
 
@@ -13,14 +31,6 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further help
 
